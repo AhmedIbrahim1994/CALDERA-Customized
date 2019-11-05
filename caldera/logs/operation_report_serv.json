@@ -1,0 +1,106 @@
+{
+    "adversary": {
+        "adversary_id": "7220bcf1-2a28-4e21-93da-05041e827476",
+        "description": "serv",
+        "id": 27,
+        "name": "serv",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "088b8639-3f37-42cc-9dc8-01aabb64T1050-1",
+                    "adversary_map_id": 170,
+                    "cleanup": "",
+                    "description": "New Service",
+                    "executor": "cmd",
+                    "id": 170,
+                    "name": "New Service - Create & Start",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 170,
+                            "payload": "MITREDSLABS.exe"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "privilege-escalation",
+                    "technique_id": "T1050",
+                    "technique_name": "New Service (T1050)",
+                    "test": "c2MuZXhlIGNyZWF0ZSBtaXRyZWRzbGFicyBiaW5QYXRoPSAuXE1JVFJFRFNMQUJTLmV4ZTsKc2MuZXhlIHN0YXJ0IG1pdHJlZHNsYWJz"
+                }
+            ]
+        }
+    },
+    "facts": [],
+    "finish": "2019-10-29 06:44:02",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "cmd",
+                    "preferred": 1
+                },
+                {
+                    "executor": "psh",
+                    "preferred": 0
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-29 06:44:01",
+            "last_trusted_seen": "2019-10-29 06:44:01",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "AJ-Win7x64$AJ-Win7x64\\testuser",
+            "pid": 3084,
+            "platform": "windows",
+            "ppid": 4028,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 1,
+    "jitter": "4/8",
+    "name": "serv",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "AJ-Win7x64$AJ-Win7x64\\testuser": []
+        }
+    ],
+    "start": "2019-10-29 06:43:23",
+    "steps": {
+        "AJ-Win7x64$AJ-Win7x64\\testuser": {
+            "agent_id": 1,
+            "steps": [
+                {
+                    "ability_id": "088b8639-3f37-42cc-9dc8-01aabb64T1050-1",
+                    "attack": {
+                        "tactic": "privilege-escalation",
+                        "technique_id": "T1050",
+                        "technique_name": "New Service (T1050)"
+                    },
+                    "command": "sc.exe create mitredslabs binPath= .\\MITREDSLABS.exe;sc.exe start mitredslabs",
+                    "delegated": "2019-10-29 06:44:01.254782",
+                    "description": "New Service",
+                    "executor": "cmd",
+                    "name": "New Service - Create & Start",
+                    "platform": "windows",
+                    "run": "2019-10-29 06:44:01",
+                    "status": 1
+                }
+            ]
+        }
+    }
+}

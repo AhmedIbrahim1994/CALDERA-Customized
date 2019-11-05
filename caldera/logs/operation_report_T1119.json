@@ -1,0 +1,101 @@
+{
+    "adversary": {
+        "adversary_id": "d08c7c7f-95a6-4ce3-bb4c-1c33f21e233b",
+        "description": "T1119",
+        "id": 33,
+        "name": "T1119",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1119",
+                    "adversary_map_id": 211,
+                    "cleanup": "",
+                    "description": "Native API call(s) were used to collect a screenshot.",
+                    "executor": "cmd",
+                    "id": 183,
+                    "name": "Automated Collection - cmd",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "collection",
+                    "technique_id": "T1119",
+                    "technique_name": "Automated Collection",
+                    "test": "bWtkaXIgYzpcdGVtcFw7CmZvciAvUiBjOiAlZiBpbiAoKi5kb2N4KSBkbyBjb3B5ICVmIGM6XHRlbXBc"
+                }
+            ]
+        }
+    },
+    "facts": [],
+    "finish": "2019-10-30 18:41:11",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "cmd",
+                    "preferred": 1
+                },
+                {
+                    "executor": "psh",
+                    "preferred": 0
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-30 18:41:11",
+            "last_trusted_seen": "2019-10-30 18:41:11",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "AJ-Win7x64$AJ-Win7x64\\testuser",
+            "pid": 2744,
+            "platform": "windows",
+            "ppid": 3716,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 1,
+    "jitter": "4/8",
+    "name": "T1119",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "AJ-Win7x64$AJ-Win7x64\\testuser": []
+        }
+    ],
+    "start": "2019-10-30 18:41:02",
+    "steps": {
+        "AJ-Win7x64$AJ-Win7x64\\testuser": {
+            "agent_id": 1,
+            "steps": [
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1119",
+                    "attack": {
+                        "tactic": "collection",
+                        "technique_id": "T1119",
+                        "technique_name": "Automated Collection"
+                    },
+                    "command": "mkdir c:\\temp\\;for /R c: %f in (*.docx) do copy %f c:\\temp\\",
+                    "delegated": "2019-10-30 18:41:11.256045",
+                    "description": "Native API call(s) were used to collect a screenshot.",
+                    "executor": "cmd",
+                    "name": "Automated Collection - cmd",
+                    "platform": "windows",
+                    "run": "2019-10-30 18:41:11",
+                    "status": 1
+                }
+            ]
+        }
+    }
+}

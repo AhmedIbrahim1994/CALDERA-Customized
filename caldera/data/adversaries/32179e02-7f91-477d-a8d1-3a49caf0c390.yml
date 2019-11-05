@@ -1,0 +1,9 @@
+description: 1.A.1 - User Execution (T1204) via Scripting (T1064) with Rundll32 (T1085).1.B.1
+  - Registry Run Keys / Start Folder (T1060).1.C.1 - Commonly Used Port (T1043), Standard
+  Application Layer Protocol (T1071), Data Encoding (T1132)
+id: 32179e02-7f91-477d-a8d1-3a49caf0c390
+name: APT3 - Scenario1 - Initial Compromise
+phases:
+  1:
+  - 3864fd22-5c63-41c9-bdbc-a66b5ffa3f5e
+  - 3796a00b-b11d-4731-b4ca-275a07d83299

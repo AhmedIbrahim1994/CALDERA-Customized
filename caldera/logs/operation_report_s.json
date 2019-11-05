@@ -1,0 +1,110 @@
+{
+    "adversary": {
+        "adversary_id": "c4115aac-6fd6-456f-a3dc-f7c847eff44c",
+        "description": "Full DSLABS APT3 Evaluation - Scenario1 ",
+        "id": 15,
+        "name": "ATT&CK Eval APT3 - Full Custom - Scenario1 - DSLABS",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "3796a00b-b11d-4731-b4ca-275a07d83299",
+                    "adversary_map_id": 114,
+                    "cleanup": "",
+                    "description": "Run an application as a different user",
+                    "executor": "psh",
+                    "id": 99,
+                    "name": "Impersonate user",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1064",
+                    "technique_name": "Scripting",
+                    "test": "JGpvYiA9IFN0YXJ0LUpvYiAtU2NyaXB0QmxvY2sgewogICR1c2VybmFtZSA9ICcje2hvc3QudXNlci5uYW1lfSc7CiAgJHBhc3N3b3JkID0gJyN7aG9zdC51c2VyLnBhc3N3b3JkfSc7CiAgJHNlY3VyZVBhc3N3b3JkID0gQ29udmVydFRvLVNlY3VyZVN0cmluZyAkcGFzc3dvcmQgLUFzUGxhaW5UZXh0IC1Gb3JjZTsKICAkY3JlZGVudGlhbCA9IE5ldy1PYmplY3QgU3lzdGVtLk1hbmFnZW1lbnQuQXV0b21hdGlvbi5QU0NyZWRlbnRpYWwgJHVzZXJuYW1lLCAkc2VjdXJlUGFzc3dvcmQ7CiAgU3RhcnQtUHJvY2VzcyBOb3RlcGFkLmV4ZSAtTm9OZXdXaW5kb3cgLVBhc3NUaHJ1IC1DcmVkZW50aWFsICRjcmVkZW50aWFsOwp9OwpSZWNlaXZlLUpvYiAtSm9iICRqb2IgLVdhaXQ7"
+                }
+            ]
+        }
+    },
+    "facts": [
+        {
+            "id": 5,
+            "link_id": 0,
+            "property": "remote.file.share",
+            "relationships": [],
+            "score": 1,
+            "source_id": "2",
+            "value": "\\\\VBOXSVR\\Resume_Viewer"
+        },
+        {
+            "id": 6,
+            "link_id": 0,
+            "property": "remote.file.name",
+            "relationships": [],
+            "score": 1,
+            "source_id": "2",
+            "value": "Resume.pdf"
+        }
+    ],
+    "finish": "2019-10-25 14:17:10",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "cmd",
+                    "preferred": 1
+                },
+                {
+                    "executor": "psh",
+                    "preferred": 0
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-25 14:01:26",
+            "last_trusted_seen": "2019-10-25 14:01:26",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "AJ-Win7x64$AJ-Win7x64\\testuser",
+            "pid": 4888,
+            "platform": "windows",
+            "ppid": 2432,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 0
+        }
+    ],
+    "id": 3,
+    "jitter": "10/20",
+    "name": "s",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "AJ-Win7x64$AJ-Win7x64\\testuser": [
+                {
+                    "ability_id": "3796a00b-b11d-4731-b4ca-275a07d83299",
+                    "ability_name": "Impersonate user",
+                    "reason": "Fact dependency not fulfilled",
+                    "reason_id": 2
+                }
+            ]
+        }
+    ],
+    "start": "2019-10-25 14:17:10",
+    "steps": {
+        "AJ-Win7x64$AJ-Win7x64\\testuser": {
+            "agent_id": 1,
+            "steps": []
+        }
+    }
+}

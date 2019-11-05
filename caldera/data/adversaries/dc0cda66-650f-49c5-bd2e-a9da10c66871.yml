@@ -1,0 +1,13 @@
+description: We emulated a second round of discovery using a sequence of common discovery
+  commands executed through PowerShell. Discovery techniques in Step 13 targeted knowledge
+  about the system and network specifically related to enabling lateral movement.
+id: dc0cda66-650f-49c5-bd2e-a9da10c66871
+name: APT3 Scenario 2 Step 13 - Discovery for Lateral Movement
+phases:
+  1:
+  - 59592c35-8207-4896-8d8b-36ad4600245d
+  - 24ed020e-4730-4000-b6b4-6b5d3e95314f
+  2:
+  - ba0b398d-91b8-490a-bed2-f959afa8e1aa
+  3:
+  - 5c23f638-9cfc-4fc4-9cab-4af628fef70a

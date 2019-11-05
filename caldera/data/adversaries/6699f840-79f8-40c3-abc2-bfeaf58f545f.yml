@@ -1,0 +1,8 @@
+description: we cover 4 MiTRE Tecniques
+id: 6699f840-79f8-40c3-abc2-bfeaf58f545f
+name: APT29 - EXTRA - After  Final Step
+phases:
+  1:
+  - 03afada1-1714-408f-bde5-f528b91dc89d
+  2:
+  - 5c23f638-9cfc-4fc4-9cab-4af628fef70a

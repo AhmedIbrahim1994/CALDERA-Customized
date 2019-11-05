@@ -1,0 +1,9 @@
+description: We emulated collection via a sequence of actions to identify and stage
+  collected files. Step 18 included locating files of interest within remote file
+  shares and staging target files on the initially compromised host.
+id: 37b4991d-89b6-4641-8599-3a5d518dd8ba
+name: APT3 Scenario 2 Step 18 - Collection
+phases:
+  2:
+  - 6469befa-748a-4b9c-a96d-f191fde47d89
+  - 4e97e699-93d7-4040-b5a3-2e906a58199e

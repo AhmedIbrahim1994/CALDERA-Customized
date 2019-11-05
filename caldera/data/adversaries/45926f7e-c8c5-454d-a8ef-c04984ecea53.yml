@@ -1,0 +1,14 @@
+description: we cover around 7 Techniques
+id: 45926f7e-c8c5-454d-a8ef-c04984ecea53
+name: APT29 - Privilege Escalation
+phases:
+  1:
+  - 1345bff7-6f26-43b2-a92a-9aabccdb3db0
+  2:
+  - 088b8639-3f37-42cc-9dc8-01aabb645461
+  3:
+  - 088b8639-3f37-42cc-9dc8-01aabb64T103
+  4:
+  - 088b8639-3f37-42cc-9dc8-01aabb64T1050-1
+  5:
+  - 52771610-2322-44cf-816b-a7df42b4c086

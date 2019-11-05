@@ -1,0 +1,20 @@
+description: we cover 7 MITRE Techniques
+id: fd07d5a9-667c-49b5-a8b8-b1fcd3936ccc
+name: APT29 - Collection
+phases:
+  1:
+  - 0b1841bd-ef8b-475c-bce7-8fcb2860T1119-phase1
+  - 0b1841bd-ef8b-475c-bce7-8fcb2860T1119-phase2
+  - 0b1841bd-ef8b-475c-bce7-8fcb2860T1119-2
+  2:
+  - 0b1841bd-ef8b-475c-bce7-8fcb2860T1115
+  3:
+  - 90c2efaa-8205-480d-8bb6-61d90dbaf81b
+  4:
+  - 6469befa-748a-4b9c-a96d-f191fde47d89
+  5:
+  - 0b1841bd-ef8b-475c-bce7-8fcb2860T1114
+  6:
+  - 1345bff7-6f26-43b2-a92a-9aabccdbT1056
+  7:
+  - 0b1841bd-ef8b-475c-bce7-8fcb2860984a

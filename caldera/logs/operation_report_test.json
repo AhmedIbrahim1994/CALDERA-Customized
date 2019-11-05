@@ -1,0 +1,134 @@
+{
+    "adversary": {
+        "adversary_id": "b6ee7dd8-3183-4007-a4ae-b0d56870f1ba",
+        "description": "custom",
+        "id": 13,
+        "name": "APT3 - Test",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "3796a00b-b11d-4731-b4ca-275a07d83299",
+                    "adversary_map_id": 106,
+                    "cleanup": "",
+                    "description": "Run an application as a different user",
+                    "executor": "psh",
+                    "id": 99,
+                    "name": "Impersonate user",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1064",
+                    "technique_name": "Scripting",
+                    "test": "JGpvYiA9IFN0YXJ0LUpvYiAtU2NyaXB0QmxvY2sgewogICR1c2VybmFtZSA9ICd0ZXN0dXNlcic7CiAgJHBhc3N3b3JkID0gJ0hxbG9jYWwxJzsKICAkc2VjdXJlUGFzc3dvcmQgPSBDb252ZXJ0VG8tU2VjdXJlU3RyaW5nICRwYXNzd29yZCAtQXNQbGFpblRleHQgLUZvcmNlOwogICRjcmVkZW50aWFsID0gTmV3LU9iamVjdCBTeXN0ZW0uTWFuYWdlbWVudC5BdXRvbWF0aW9uLlBTQ3JlZGVudGlhbCAkdXNlcm5hbWUsICRzZWN1cmVQYXNzd29yZDsKICBTdGFydC1Qcm9jZXNzIE5vdGVwYWQuZXhlIC1Ob05ld1dpbmRvdyAtUGFzc1RocnUgLUNyZWRlbnRpYWwgJGNyZWRlbnRpYWw7Cn07ClJlY2VpdmUtSm9iIC1Kb2IgJGpvYjs="
+                },
+                {
+                    "ability_id": "3864fd22-5c63-41c9-bdbc-a66b5ffa3f5e",
+                    "adversary_map_id": 107,
+                    "cleanup": "",
+                    "description": "Ensure the ExecutionPolicy is turned to Bypass",
+                    "executor": "psh",
+                    "id": 72,
+                    "name": "Bypass ExecutionPolicy",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "defense-evasion",
+                    "technique_id": "T1064",
+                    "technique_name": "Scripting",
+                    "test": "U2V0LUl0ZW1Qcm9wZXJ0eSAtUGF0aCBIS0xNOlxTb2Z0d2FyZVxQb2xpY2llc1xNaWNyb3NvZnRcV2luZG93c1xQb3dlclNoZWxsIC1OYW1lIEV4ZWN1dGlvblBvbGljeSAtVmFsdWUgQnlQYXNzOwogICAgICAgICRzaGVsbCA9IE5ldy1PYmplY3QgLUNvbU9iamVjdCBXc2NyaXB0LlNoZWxsCiAgICAgICAgU2V0LUV4ZWN1dGlvblBvbGljeSBCeXBhc3MgfCBlY2hvICRzaGVsbC5zZW5ka2V5cygiWWByYG4iKQ=="
+                }
+            ]
+        }
+    },
+    "facts": [],
+    "finish": "2019-10-25 15:09:09",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "cmd",
+                    "preferred": 1
+                },
+                {
+                    "executor": "psh",
+                    "preferred": 0
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-25 15:09:09",
+            "last_trusted_seen": "2019-10-25 15:09:09",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "AJ-Win7x64$AJ-Win7x64\\testuser",
+            "pid": 2816,
+            "platform": "windows",
+            "ppid": 2432,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 1,
+    "jitter": "4/8",
+    "name": "test",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "AJ-Win7x64$AJ-Win7x64\\testuser": []
+        }
+    ],
+    "start": "2019-10-25 15:09:00",
+    "steps": {
+        "AJ-Win7x64$AJ-Win7x64\\testuser": {
+            "agent_id": 1,
+            "steps": [
+                {
+                    "ability_id": "3796a00b-b11d-4731-b4ca-275a07d83299",
+                    "attack": {
+                        "tactic": "execution",
+                        "technique_id": "T1064",
+                        "technique_name": "Scripting"
+                    },
+                    "command": "$job = Start-Job -ScriptBlock {  $username = 'testuser';  $password = 'Hqlocal1';  $securePassword = ConvertTo-SecureString $password -AsPlainText -Force;  $credential = New-Object System.Management.Automation.PSCredential $username, $securePassword;  Start-Process Notepad.exe -NoNewWindow -PassThru -Credential $credential;};Receive-Job -Job $job;",
+                    "delegated": "2019-10-25 15:09:01.975744",
+                    "description": "Run an application as a different user",
+                    "executor": "psh",
+                    "name": "Impersonate user",
+                    "platform": "windows",
+                    "run": "2019-10-25 15:09:04",
+                    "status": 0
+                },
+                {
+                    "ability_id": "3864fd22-5c63-41c9-bdbc-a66b5ffa3f5e",
+                    "attack": {
+                        "tactic": "defense-evasion",
+                        "technique_id": "T1064",
+                        "technique_name": "Scripting"
+                    },
+                    "command": "Set-ItemProperty -Path HKLM:\\Software\\Policies\\Microsoft\\Windows\\PowerShell -Name ExecutionPolicy -Value ByPass;        $shell = New-Object -ComObject Wscript.Shell        Set-ExecutionPolicy Bypass | echo $shell.sendkeys(\"Y`r`n\")",
+                    "delegated": "2019-10-25 15:09:01.975885",
+                    "description": "Ensure the ExecutionPolicy is turned to Bypass",
+                    "executor": "psh",
+                    "name": "Bypass ExecutionPolicy",
+                    "platform": "windows",
+                    "run": "2019-10-25 15:09:09",
+                    "status": 1
+                }
+            ]
+        }
+    }
+}

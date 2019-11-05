@@ -1,0 +1,11 @@
+description: Discovery for Lateral Movement
+id: f7d28c2c-0830-4c6f-8f4a-882de739ea7d
+name: APT3 - Scenario 1 - Discovery for Lateral Movement
+phases:
+  1:
+  - 59592c35-8207-4896-8d8b-36ad4600245d
+  - 24ed020e-4730-4000-b6b4-6b5d3e95314f
+  2:
+  - 5f4263c4-7ff1-4098-b5f5-f41faa31cf5b
+  3:
+  - ba0b398d-91b8-490a-bed2-f959afa8e1aa

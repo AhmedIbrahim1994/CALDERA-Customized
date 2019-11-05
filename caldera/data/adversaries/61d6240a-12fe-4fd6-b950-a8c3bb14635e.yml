@@ -1,0 +1,15 @@
+description: "We emulated privilege escalation by elevating our RAT\u2019s process\
+  \ integrity level from medium to high, while maintaining the current user. Step\
+  \ 3 began with the execution of a User Account Control (UAC) bypass technique included\
+  \ in Cobalt Strike. The UAC Bypass technique resulted in a high integrity process\
+  \ that had limited functionality, but it allowed us to inject into an already existing\
+  \ high-integrity process, which was not limited in functionality. The targeted high-integrity\
+  \ process in this case was an elevated command-prompt started previously as the\
+  \ legitimate user."
+id: 61d6240a-12fe-4fd6-b950-a8c3bb14635e
+name: APT3 Scenario 1 Step 3 - Privilege Escalation
+phases:
+  1:
+  - 1345bff7-6f26-43b2-a92a-9aabccdb3db0
+  2:
+  - 088b8639-3f37-42cc-9dc8-01aabb645461

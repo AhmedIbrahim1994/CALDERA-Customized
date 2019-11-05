@@ -1,0 +1,133 @@
+{
+    "adversary": {
+        "adversary_id": "e55da81a-9ce7-4da8-8313-074362fd5dee",
+        "description": "Execution of Persistence",
+        "id": 12,
+        "name": "ATT&CK Eval APT3 - 10",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9c4fe",
+                    "adversary_map_id": 105,
+                    "cleanup": "",
+                    "description": "",
+                    "executor": "psh",
+                    "id": 177,
+                    "name": "10.A.1 \u2013 Registry Run Key / Startup Folder (T1060) from 1.B, 10.A.2 \u2013 Scheduled Task (T1053) from 7.C",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1086",
+                    "technique_name": "PowerShell",
+                    "test": "UmVzdGFydC1Db21wdXRlciAtRm9yY2U="
+                },
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9c4fe",
+                    "adversary_map_id": 105,
+                    "cleanup": "",
+                    "description": "",
+                    "executor": "pwsh",
+                    "id": 178,
+                    "name": "10.A.1 \u2013 Registry Run Key / Startup Folder (T1060) from 1.B, 10.A.2 \u2013 Scheduled Task (T1053) from 7.C",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1086",
+                    "technique_name": "PowerShell",
+                    "test": "UmVzdGFydC1Db21wdXRlciAtRm9yY2U="
+                }
+            ]
+        }
+    },
+    "facts": [
+        {
+            "id": 5,
+            "link_id": 0,
+            "property": "remote.file.share",
+            "relationships": [],
+            "score": 1,
+            "source_id": "2",
+            "value": "\\\\VBOXSVR\\Resume_Viewer"
+        },
+        {
+            "id": 6,
+            "link_id": 0,
+            "property": "remote.file.name",
+            "relationships": [],
+            "score": 1,
+            "source_id": "2",
+            "value": "Resume.pdf"
+        }
+    ],
+    "finish": "2019-10-24 14:33:37",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "psh",
+                    "preferred": 1
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-24 14:33:35",
+            "last_trusted_seen": "2019-10-24 14:33:35",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "AJ-Win7x64$AJ-Win7x64\\testuser",
+            "pid": 4340,
+            "platform": "windows",
+            "ppid": 3640,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 1,
+    "jitter": "10/20",
+    "name": "APT3-10.A.1",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "AJ-Win7x64$AJ-Win7x64\\testuser": []
+        }
+    ],
+    "start": "2019-10-24 14:33:07",
+    "steps": {
+        "AJ-Win7x64$AJ-Win7x64\\testuser": {
+            "agent_id": 1,
+            "steps": [
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9c4fe",
+                    "attack": {
+                        "tactic": "execution",
+                        "technique_id": "T1086",
+                        "technique_name": "PowerShell"
+                    },
+                    "command": "Restart-Computer -Force",
+                    "delegated": "2019-10-24 14:33:34.823379",
+                    "description": "",
+                    "executor": "psh",
+                    "name": "10.A.1 \u2013 Registry Run Key / Startup Folder (T1060) from 1.B, 10.A.2 \u2013 Scheduled Task (T1053) from 7.C",
+                    "platform": "windows",
+                    "run": "2019-10-24 14:33:35",
+                    "status": 0
+                }
+            ]
+        }
+    }
+}

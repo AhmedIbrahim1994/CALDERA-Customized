@@ -1,0 +1,12 @@
+description: "We emulated credential access in a way such that it exposed different\
+  \ formats of legitimate credentials. Step 5 consisted of dumping both plaintext\
+  \ and hashed user passwords, as well as theft of a separate user\u2019s authentication\
+  \ token."
+id: 0a861f88-33d2-4edc-aab2-5a8447b2abf6
+name: APT3 Scenario 1 Step 5 - Credential Access
+phases:
+  1:
+  - 4ef6009d-2d62-4bb4-8de9-0458df2e9567
+  - effbedc1-1bc8-4a75-9395-980559700008
+  2:
+  - 03afada1-1714-408f-bde5-f528b91dc89d

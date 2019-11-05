@@ -1,0 +1,118 @@
+{
+    "adversary": {
+        "adversary_id": "5d0b807d-8959-4b27-b6a5-644b408f51d0",
+        "description": "clean",
+        "id": 28,
+        "name": "WMI clearn",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "c1cd6388-3ced-48c7-a511-0434c6baT1084-1",
+                    "adversary_map_id": 265,
+                    "cleanup": "",
+                    "description": "Windows Management Instrumentation (WMI) can be used to install event filters, providers, consumers, and bindings that execute code when a defined event occurs. Adversaries may use the capabilities of WMI to subscribe to an event and execute arbitrary code when that event occurs, providing persistence on a system",
+                    "executor": "psh",
+                    "id": 183,
+                    "name": "WMI Event Subscription - Clean",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1078",
+                    "technique_name": "Windows Management Instrumentation Event Subscription",
+                    "test": "JEV2ZW50RmlsdGVyVG9DbGVhbnVwID0gR2V0LVdtaU9iamVjdCAtTmFtZXNwYWNlIHJvb3Qvc3Vic2NyaXB0aW9uIC1DbGFzcyBfX0V2ZW50RmlsdGVyIC1GaWx0ZXIgIk5hbWUgPSAnU2VydmljZUZpbHRlckRzbGFicyciOwokRXZlbnRGaWx0ZXJUb0NsZWFudXAgfCBSZW1vdmUtV21pT2JqZWN0OwokRXZlbnRDb25zdW1lclRvQ2xlYW51cCA9IEdldC1XbWlPYmplY3QgLU5hbWVzcGFjZSByb290L3N1YnNjcmlwdGlvbiAtQ2xhc3MgQ29tbWFuZExpbmVFdmVudENvbnN1bWVyIC1GaWx0ZXIgIk5hbWUgPSAnU2VydmljZUNvbnN1bWVyRHNsYWJzJyI7CiRFdmVudENvbnN1bWVyVG9DbGVhbnVwIHwgUmVtb3ZlLVdtaU9iamVjdDsKJEZpbHRlckNvbnN1bWVyQmluZGluZ1RvQ2xlYW51cCA9IEdldC1XbWlPYmplY3QgLU5hbWVzcGFjZSByb290L3N1YnNjcmlwdGlvbiAtQ2xhc3MgX19GaWx0ZXJUb0NvbnN1bWVyQmluZGluZyAtRmlsdGVyICJfX1BhdGggTElLRSAnJVNlcnZpY2VGaWx0ZXJEc2xhYnMlJyI7CiRGaWx0ZXJDb25zdW1lckJpbmRpbmdUb0NsZWFudXAgfCBSZW1vdmUtV21pT2JqZWN0Ow=="
+                },
+                {
+                    "ability_id": "c1cd6388-3ced-48c7-a511-0434c6baT1084-1",
+                    "adversary_map_id": 265,
+                    "cleanup": "",
+                    "description": "Windows Management Instrumentation (WMI) can be used to install event filters, providers, consumers, and bindings that execute code when a defined event occurs. Adversaries may use the capabilities of WMI to subscribe to an event and execute arbitrary code when that event occurs, providing persistence on a system",
+                    "executor": "pwsh",
+                    "id": 184,
+                    "name": "WMI Event Subscription - Clean",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1078",
+                    "technique_name": "Windows Management Instrumentation Event Subscription",
+                    "test": "JEV2ZW50RmlsdGVyVG9DbGVhbnVwID0gR2V0LVdtaU9iamVjdCAtTmFtZXNwYWNlIHJvb3Qvc3Vic2NyaXB0aW9uIC1DbGFzcyBfX0V2ZW50RmlsdGVyIC1GaWx0ZXIgIk5hbWUgPSAnU2VydmljZUZpbHRlckRzbGFicyciOwokRXZlbnRGaWx0ZXJUb0NsZWFudXAgfCBSZW1vdmUtV21pT2JqZWN0OwokRXZlbnRDb25zdW1lclRvQ2xlYW51cCA9IEdldC1XbWlPYmplY3QgLU5hbWVzcGFjZSByb290L3N1YnNjcmlwdGlvbiAtQ2xhc3MgQ29tbWFuZExpbmVFdmVudENvbnN1bWVyIC1GaWx0ZXIgIk5hbWUgPSAnU2VydmljZUNvbnN1bWVyRHNsYWJzJyI7CiRFdmVudENvbnN1bWVyVG9DbGVhbnVwIHwgUmVtb3ZlLVdtaU9iamVjdDsKJEZpbHRlckNvbnN1bWVyQmluZGluZ1RvQ2xlYW51cCA9IEdldC1XbWlPYmplY3QgLU5hbWVzcGFjZSByb290L3N1YnNjcmlwdGlvbiAtQ2xhc3MgX19GaWx0ZXJUb0NvbnN1bWVyQmluZGluZyAtRmlsdGVyICJfX1BhdGggTElLRSAnJVNlcnZpY2VGaWx0ZXJEc2xhYnMlJyI7CiRGaWx0ZXJDb25zdW1lckJpbmRpbmdUb0NsZWFudXAgfCBSZW1vdmUtV21pT2JqZWN0Ow=="
+                }
+            ]
+        }
+    },
+    "facts": [],
+    "finish": "2019-10-29 18:16:10",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "cmd",
+                    "preferred": 1
+                },
+                {
+                    "executor": "psh",
+                    "preferred": 0
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-29 18:16:10",
+            "last_trusted_seen": "2019-10-29 18:16:10",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "AJ-Win7x64$AJ-Win7x64\\testuser",
+            "pid": 4084,
+            "platform": "windows",
+            "ppid": 1904,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 1,
+    "jitter": "4/8",
+    "name": "clean",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "AJ-Win7x64$AJ-Win7x64\\testuser": []
+        }
+    ],
+    "start": "2019-10-29 18:15:31",
+    "steps": {
+        "AJ-Win7x64$AJ-Win7x64\\testuser": {
+            "agent_id": 1,
+            "steps": [
+                {
+                    "ability_id": "c1cd6388-3ced-48c7-a511-0434c6baT1084-1",
+                    "attack": {
+                        "tactic": "execution",
+                        "technique_id": "T1078",
+                        "technique_name": "Windows Management Instrumentation Event Subscription"
+                    },
+                    "command": "$EventFilterToCleanup = Get-WmiObject -Namespace root/subscription -Class __EventFilter -Filter \"Name = 'ServiceFilterDslabs'\";$EventFilterToCleanup | Remove-WmiObject;$EventConsumerToCleanup = Get-WmiObject -Namespace root/subscription -Class CommandLineEventConsumer -Filter \"Name = 'ServiceConsumerDslabs'\";$EventConsumerToCleanup | Remove-WmiObject;$FilterConsumerBindingToCleanup = Get-WmiObject -Namespace root/subscription -Class __FilterToConsumerBinding -Filter \"__Path LIKE '%ServiceFilterDslabs%'\";$FilterConsumerBindingToCleanup | Remove-WmiObject;",
+                    "delegated": "2019-10-29 18:16:09.845753",
+                    "description": "Windows Management Instrumentation (WMI) can be used to install event filters, providers, consumers, and bindings that execute code when a defined event occurs. Adversaries may use the capabilities of WMI to subscribe to an event and execute arbitrary code when that event occurs, providing persistence on a system",
+                    "executor": "psh",
+                    "name": "WMI Event Subscription - Clean",
+                    "platform": "windows",
+                    "run": "2019-10-29 18:16:10",
+                    "status": 0
+                }
+            ]
+        }
+    }
+}

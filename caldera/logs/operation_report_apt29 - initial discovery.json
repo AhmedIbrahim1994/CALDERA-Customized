@@ -1,0 +1,1111 @@
+{
+    "adversary": {
+        "adversary_id": "10922d44-fd95-4190-ad3e-3dcfdaa433d6",
+        "description": "this adversary tests 10 Techniques that APT29 uses.",
+        "id": 25,
+        "name": "APT29 - Initial Discovery",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "1c353eb4-29ab-4dfe-88ed-f34f5a60848e",
+                    "adversary_map_id": 245,
+                    "cleanup": "",
+                    "description": "Find or discover files on the file system",
+                    "executor": "psh",
+                    "id": 7,
+                    "name": "File and Directory Discovery",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1083",
+                    "technique_name": "File and Directory Discovery",
+                    "test": "R2V0LUNoaWxkSXRlbSAtcmVjdXJzZSAtUGF0aCAnQzpcUHJvZ3JhbSBGaWxlc1wn"
+                },
+                {
+                    "ability_id": "d5170a60-3bdc-44e0-9870-a38db5c0cf81",
+                    "adversary_map_id": 246,
+                    "cleanup": "",
+                    "description": "PowerShell's Get-ChildItem alias 'ls' is used to enumerate files in a remote file share.",
+                    "executor": "psh",
+                    "id": 157,
+                    "name": "9.A.1 - File and Directory Discovery (T1083)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1083",
+                    "technique_name": "File and Directory Discovery",
+                    "test": "bHMgJ0M6XFByb2dyYW0gRmlsZXNcJw=="
+                },
+                {
+                    "ability_id": "d5170a60-3bdc-44e0-9870-a38db5c0cf81",
+                    "adversary_map_id": 246,
+                    "cleanup": "",
+                    "description": "PowerShell's Get-ChildItem alias 'ls' is used to enumerate files in a remote file share.",
+                    "executor": "pwsh",
+                    "id": 158,
+                    "name": "9.A.1 - File and Directory Discovery (T1083)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1083",
+                    "technique_name": "File and Directory Discovery",
+                    "test": "bHMgJ0M6XFByb2dyYW0gRmlsZXNcJw=="
+                }
+            ],
+            "2": [
+                {
+                    "ability_id": "26181249-be75-41ed-9fe7-5c30ea8c2d4d",
+                    "adversary_map_id": 247,
+                    "cleanup": "",
+                    "description": "The net utility is executed via cmd to enumerate members of the domain controller\u2019s administrators group.",
+                    "executor": "cmd",
+                    "id": 162,
+                    "name": "2.F.2 - Permissions Groups Discovery (T1069)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1069",
+                    "technique_name": "Permission Groups Discovery",
+                    "test": "bmV0IGxvY2FsZ3JvdXAgYWRtaW5pc3RyYXRvcnMgL2RvbWFpbg=="
+                },
+                {
+                    "ability_id": "84377d7a-0363-44fd-a082-44657ca1858f",
+                    "adversary_map_id": 248,
+                    "cleanup": "",
+                    "description": "The net utility is executed via cmd to enumerate members of the domain administrators group.",
+                    "executor": "psh",
+                    "id": 168,
+                    "name": "2.F.3 - Permissions Groups Discovery (T1069)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1069",
+                    "technique_name": "Permission Groups Discovery",
+                    "test": "Y21kLmV4ZSAvYyBuZXQgZ3JvdXAgIkRvbWFpbiBBZG1pbnMiIC9kb21haW4="
+                },
+                {
+                    "ability_id": "84377d7a-0363-44fd-a082-44657ca1858f",
+                    "adversary_map_id": 248,
+                    "cleanup": "",
+                    "description": "The net utility is executed via cmd to enumerate members of the domain administrators group.",
+                    "executor": "pwsh",
+                    "id": 169,
+                    "name": "2.F.3 - Permissions Groups Discovery (T1069)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1069",
+                    "technique_name": "Permission Groups Discovery",
+                    "test": "Y21kLmV4ZSAvYyBuZXQgZ3JvdXAgIkRvbWFpbiBBZG1pbnMiIC9kb21haW4="
+                },
+                {
+                    "ability_id": "faa96e7f-081a-40b7-a743-a6a7f2627ea3",
+                    "adversary_map_id": 249,
+                    "cleanup": "",
+                    "description": "The net utility is executed via cmd to enumerate members of the local system's administrators group.",
+                    "executor": "cmd",
+                    "id": 155,
+                    "name": "2.F.1 - Permissions Groups Discovery (T1069)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1069",
+                    "technique_name": "Permission Groups Discovery",
+                    "test": "bmV0IGxvY2FsZ3JvdXAgYWRtaW5pc3RyYXRvcnM="
+                }
+            ],
+            "3": [
+                {
+                    "ability_id": "3b5db901-2cb8-4df7-8043-c4628a6a5d5a",
+                    "adversary_map_id": 250,
+                    "cleanup": "",
+                    "description": "Get process info for processes running a user",
+                    "executor": "sh",
+                    "id": 45,
+                    "name": "Find user processes",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "darwin",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1057",
+                    "technique_name": "Process Discovery",
+                    "test": "cHMgYXV4IHwgZ3JlcCAje2hvc3QudXNlci5uYW1lfQ=="
+                },
+                {
+                    "ability_id": "3b5db901-2cb8-4df7-8043-c4628a6a5d5a",
+                    "adversary_map_id": 250,
+                    "cleanup": "",
+                    "description": "Get process info for processes running a user",
+                    "executor": "sh",
+                    "id": 46,
+                    "name": "Find user processes",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "linux",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1057",
+                    "technique_name": "Process Discovery",
+                    "test": "cHMgYXV4IHwgZ3JlcCAje2hvc3QudXNlci5uYW1lfQ=="
+                },
+                {
+                    "ability_id": "3b5db901-2cb8-4df7-8043-c4628a6a5d5a",
+                    "adversary_map_id": 250,
+                    "cleanup": "",
+                    "description": "Get process info for processes running a user",
+                    "executor": "psh",
+                    "id": 47,
+                    "name": "Find user processes",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1057",
+                    "technique_name": "Process Discovery",
+                    "test": "JG93bmVycyA9IEB7fQpnd21pIHdpbjMyX3Byb2Nlc3MgfCUgeyRvd25lcnNbJF8uaGFuZGxlXSA9ICRfLmdldG93bmVyKCkudXNlcn0KJHBzID0gZ2V0LXByb2Nlc3MgfCBzZWxlY3QgcHJvY2Vzc25hbWUsSWQsQHtsPSJPd25lciI7ZT17JG93bmVyc1skXy5pZC50b3N0cmluZygpXX19CmZvcmVhY2goJHAgaW4gJHBzKSB7CiAgICBpZigkcC5Pd25lciAtZXEgIiN7aG9zdC51c2VyLm5hbWV9IikgewogICAgICAgICRwCiAgICB9Cn0="
+                },
+                {
+                    "ability_id": "41610306-087c-4c34-874b-37b8ed633a36",
+                    "adversary_map_id": 251,
+                    "cleanup": "",
+                    "description": "The tasklist utility is executed via cmd to enumerate local running processes.",
+                    "executor": "cmd",
+                    "id": 144,
+                    "name": "2.C.2 - Process Discovery (T1057)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1057",
+                    "technique_name": "Process Discovery",
+                    "test": "dGFza2xpc3QgL3Y="
+                },
+                {
+                    "ability_id": "5df12481-9d8c-4235-b550-9cefc8ed7361",
+                    "adversary_map_id": 252,
+                    "cleanup": "",
+                    "description": "API call(s) are executed to enumerate local running processes.",
+                    "executor": "psh",
+                    "id": 147,
+                    "name": "2.C.1 - Process Discovery (T1057)",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 147,
+                            "payload": "ps.ps1"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1057",
+                    "technique_name": "Process Discovery",
+                    "test": "SW1wb3J0LU1vZHVsZSAuXHBzLnBzMSAtVmVyYm9zZSAtRm9yY2U7ClByb2Nlc3NMaXN0"
+                },
+                {
+                    "ability_id": "5df12481-9d8c-4235-b550-9cefc8ed7361",
+                    "adversary_map_id": 252,
+                    "cleanup": "",
+                    "description": "API call(s) are executed to enumerate local running processes.",
+                    "executor": "pwsh",
+                    "id": 148,
+                    "name": "2.C.1 - Process Discovery (T1057)",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 148,
+                            "payload": "ps.ps1"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1057",
+                    "technique_name": "Process Discovery",
+                    "test": "SW1wb3J0LU1vZHVsZSAuXHBzLnBzMSAtVmVyYm9zZSAtRm9yY2U7ClByb2Nlc3NMaXN0"
+                }
+            ],
+            "4": [
+                {
+                    "ability_id": "2488245e-bcbd-405d-920e-2de27db882b3",
+                    "adversary_map_id": 253,
+                    "cleanup": "",
+                    "description": "Query Registry using PowerShell Get-ItemProperty",
+                    "executor": "psh",
+                    "id": 36,
+                    "name": "Query Registry",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1012",
+                    "technique_name": "Query Registry",
+                    "test": "R2V0LUl0ZW1Qcm9wZXJ0eSAtUGF0aCBIS0xNOlxTT0ZUV0FSRVxNaWNyb3NvZnRcV2luZG93c1xDdXJyZW50VmVyc2lvbg=="
+                },
+                {
+                    "ability_id": "5c23f638-9cfc-4fc4-9cab-4af628fef70a",
+                    "adversary_map_id": 254,
+                    "cleanup": "",
+                    "description": "The reg utility is executed via cmd to enumerate a specific Registry key associated with local system policies to ensure that the user will not be prompted for credentials when elevating permissions.",
+                    "executor": "cmd",
+                    "id": 151,
+                    "name": "2.H.1 - Query Registry (T1012)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1012",
+                    "technique_name": "Query Registry",
+                    "test": "cmVnIHF1ZXJ5IEhLTE1cU09GVFdBUkVcTWljcm9zb2Z0XFdpbmRvd3NcQ3VycmVudFZlcnNpb25cUG9saWNpZXNcU3lzdGVt"
+                }
+            ],
+            "5": [
+                {
+                    "ability_id": "24ed020e-4730-4000-b6b4-6b5d3e95314f",
+                    "adversary_map_id": 255,
+                    "cleanup": "",
+                    "description": "The net utility is executed via cmd to enumerate hosts within the domain.",
+                    "executor": "psh",
+                    "id": 166,
+                    "name": "4.A.2 - Remote System Discovery (T1018)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remote System Discovery",
+                    "test": "Y21kLmV4ZSAvYyBuZXQgZ3JvdXAgIkRvbWFpbiBDb21wdXRlcnMiIC9kb21haW4="
+                },
+                {
+                    "ability_id": "24ed020e-4730-4000-b6b4-6b5d3e95314f",
+                    "adversary_map_id": 255,
+                    "cleanup": "",
+                    "description": "The net utility is executed via cmd to enumerate hosts within the domain.",
+                    "executor": "pwsh",
+                    "id": 167,
+                    "name": "4.A.2 - Remote System Discovery (T1018)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remote System Discovery",
+                    "test": "Y21kLmV4ZSAvYyBuZXQgZ3JvdXAgIkRvbWFpbiBDb21wdXRlcnMiIC9kb21haW4="
+                },
+                {
+                    "ability_id": "59592c35-8207-4896-8d8b-36ad4600245d",
+                    "adversary_map_id": 256,
+                    "cleanup": "",
+                    "description": "The net utility is executed via cmd to enumerate DCs within the domain",
+                    "executor": "psh",
+                    "id": 160,
+                    "name": "4.A.1 - Remote System Discovery (T1018)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remote System Discovery",
+                    "test": "Y21kLmV4ZSAvYyBuZXQgZ3JvdXAgIkRvbWFpbiBDb250cm9sbGVycyIgL2RvbWFpbg=="
+                },
+                {
+                    "ability_id": "59592c35-8207-4896-8d8b-36ad4600245d",
+                    "adversary_map_id": 256,
+                    "cleanup": "",
+                    "description": "The net utility is executed via cmd to enumerate DCs within the domain",
+                    "executor": "pwsh",
+                    "id": 161,
+                    "name": "4.A.1 - Remote System Discovery (T1018)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remote System Discovery",
+                    "test": "Y21kLmV4ZSAvYyBuZXQgZ3JvdXAgIkRvbWFpbiBDb250cm9sbGVycyIgL2RvbWFpbg=="
+                },
+                {
+                    "ability_id": "85341c8c-4ecb-4579-8f53-43e3e91d7617",
+                    "adversary_map_id": 257,
+                    "cleanup": "",
+                    "description": "Locate all active IP and FQDNs on the network",
+                    "executor": "sh",
+                    "id": 41,
+                    "name": "Collect ARP details",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "darwin",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remove System Discovery",
+                    "test": "YXJwIC1h"
+                },
+                {
+                    "ability_id": "85341c8c-4ecb-4579-8f53-43e3e91d7617",
+                    "adversary_map_id": 257,
+                    "cleanup": "",
+                    "description": "Locate all active IP and FQDNs on the network",
+                    "executor": "sh",
+                    "id": 42,
+                    "name": "Collect ARP details",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "linux",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remove System Discovery",
+                    "test": "YXJwIC1h"
+                },
+                {
+                    "ability_id": "85341c8c-4ecb-4579-8f53-43e3e91d7617",
+                    "adversary_map_id": 257,
+                    "cleanup": "",
+                    "description": "Locate all active IP and FQDNs on the network",
+                    "executor": "cmd",
+                    "id": 44,
+                    "name": "Collect ARP details",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remove System Discovery",
+                    "test": "YXJwIC1h"
+                },
+                {
+                    "ability_id": "85341c8c-4ecb-4579-8f53-43e3e91d7617",
+                    "adversary_map_id": 257,
+                    "cleanup": "",
+                    "description": "Locate all active IP and FQDNs on the network",
+                    "executor": "psh",
+                    "id": 43,
+                    "name": "Collect ARP details",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remove System Discovery",
+                    "test": "YXJwIC1h"
+                },
+                {
+                    "ability_id": "ce485320-41a4-42e8-a510-f5a8fe96a644",
+                    "adversary_map_id": 258,
+                    "cleanup": "",
+                    "description": "Identify the organizations mail server",
+                    "executor": "sh",
+                    "id": 30,
+                    "name": "Discover Mail Server",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "darwin",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remote System Discovery",
+                    "test": "aG9zdCAiI3t0YXJnZXQub3JnLmRvbWFpbn0iIHwgZ3JlcCBtYWlsIHwgZ3JlcCAtb0UgJ1teIF0rJCcgfCByZXYgfCBjdXQgLWMgMi0gfCByZXY="
+                },
+                {
+                    "ability_id": "ce485320-41a4-42e8-a510-f5a8fe96a644",
+                    "adversary_map_id": 258,
+                    "cleanup": "",
+                    "description": "Identify the organizations mail server",
+                    "executor": "sh",
+                    "id": 29,
+                    "name": "Discover Mail Server",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "linux",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remote System Discovery",
+                    "test": "aG9zdCAiI3t0YXJnZXQub3JnLmRvbWFpbn0iIHwgZ3JlcCBtYWlsIHwgZ3JlcCAtb0UgJ1teIF0rJCcgfCByZXYgfCBjdXQgLWMgMi0gfCByZXY="
+                },
+                {
+                    "ability_id": "ce485320-41a4-42e8-a510-f5a8fe96a644",
+                    "adversary_map_id": 258,
+                    "cleanup": "",
+                    "description": "Identify the organizations mail server",
+                    "executor": "psh",
+                    "id": 31,
+                    "name": "Discover Mail Server",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remote System Discovery",
+                    "test": "KG5zbG9va3VwIC1xdWVyeXR5cGU9bXggI3t0YXJnZXQub3JnLmRvbWFpbn0uIHwgU2VsZWN0LVN0cmluZyAtcGF0dGVybiAnbWFpbCcgfCBPdXQtU3RyaW5nKS5UcmltKCk="
+                }
+            ],
+            "6": [
+                {
+                    "ability_id": "2dece965-37a0-4f70-a391-0f30e3331aba",
+                    "adversary_map_id": 259,
+                    "cleanup": "",
+                    "description": "Identify AV using WMIC",
+                    "executor": "psh",
+                    "id": 6,
+                    "name": "Discover antivirus programs",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1063",
+                    "technique_name": "Security Software Discovery",
+                    "test": "d21pYyAvTkFNRVNQQUNFOlxccm9vdFxTZWN1cml0eUNlbnRlcjIgUEFUSCBBbnRpVmlydXNQcm9kdWN0IEdFVCAvdmFsdWU="
+                },
+                {
+                    "ability_id": "8c06ebf8-bacf-486b-bd77-21ba8c5a5777",
+                    "adversary_map_id": 260,
+                    "cleanup": "",
+                    "description": "Identify Firewalls",
+                    "executor": "psh",
+                    "id": 27,
+                    "name": "Identify Firewalls",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1063",
+                    "technique_name": "Security Software Discovery",
+                    "test": "JE5hbWVTcGFjZSA9IEdldC1XbWlPYmplY3QgLU5hbWVzcGFjZSAicm9vdCIgLUNsYXNzICJfX05hbWVzcGFjZSIgfCBTZWxlY3QgTmFtZSB8IE91dC1TdHJpbmcgLVN0cmVhbSB8IFNlbGVjdC1TdHJpbmcgIlNlY3VyaXR5Q2VudGVyIjsKJFNlY3VyaXR5Q2VudGVyID0gJE5hbWVTcGFjZSB8IFNlbGVjdC1PYmplY3QgLUZpcnN0IDE7CkdldC1XbWlPYmplY3QgLU5hbWVzcGFjZSAicm9vdFwkU2VjdXJpdHlDZW50ZXIiIC1DbGFzcyBBbnRpVmlydXNQcm9kdWN0IHwgU2VsZWN0IERpc3BsYXlOYW1lLCBJbnN0YW5jZUd1aWQsIFBhdGhUb1NpZ25lZFByb2R1Y3RFeGUsIFBhdGhUb1NpZ25lZFJlcG9ydGluZ0V4ZSwgUHJvZHVjdFN0YXRlLCBUaW1lc3RhbXAgfCBGb3JtYXQtTGlzdDs="
+                }
+            ],
+            "7": [
+                {
+                    "ability_id": "29451844-9b76-4e16-a9ee-d6feab4b24db",
+                    "adversary_map_id": 261,
+                    "cleanup": "",
+                    "description": "Discover the PowerShell version",
+                    "executor": "psh",
+                    "id": 2,
+                    "name": "PowerShell version",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1082",
+                    "technique_name": "System Information Discovery",
+                    "test": "JFBTVmVyc2lvblRhYmxl"
+                },
+                {
+                    "ability_id": "29451844-9b76-4e16-a9ee-d6feab4b24db",
+                    "adversary_map_id": 261,
+                    "cleanup": "",
+                    "description": "Discover the PowerShell version",
+                    "executor": "pwsh",
+                    "id": 3,
+                    "name": "PowerShell version",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1082",
+                    "technique_name": "System Information Discovery",
+                    "test": "JFBTVmVyc2lvblRhYmxl"
+                },
+                {
+                    "ability_id": "7c2a6e5b-1adb-464f-a581-4677391f8dd6",
+                    "adversary_map_id": 262,
+                    "cleanup": "",
+                    "description": "The net utility is executed via cmd to enumerate local operating system configuration.",
+                    "executor": "cmd",
+                    "id": 152,
+                    "name": "2.E.2 - System Information Discovery (T1082)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1082",
+                    "technique_name": "System Information Discovery",
+                    "test": "bmV0IGNvbmZpZyB3b3Jrc3RhdGlvbg=="
+                },
+                {
+                    "ability_id": "d2ea2676-7f85-4228-b980-ab3c0e1adc03",
+                    "adversary_map_id": 263,
+                    "cleanup": "",
+                    "description": "The systeminfo utility is executed via cmd to enumerate local operating system configuration.",
+                    "executor": "cmd",
+                    "id": 154,
+                    "name": "2.E.1 - System Information Discovery (T1082)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1082",
+                    "technique_name": "System Information Discovery",
+                    "test": "c3lzdGVtaW5mbw=="
+                }
+            ],
+            "8": [
+                {
+                    "ability_id": "35d95b64-c1f8-4ac7-a2f2-8959218239cd",
+                    "adversary_map_id": 264,
+                    "cleanup": "",
+                    "description": "The native echo command is executed via cmd to enumerate local environment variables associated with current user and domain.",
+                    "executor": "cmd",
+                    "id": 149,
+                    "name": "2.B.1 - System Owner / User Discovery (T1033)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1033",
+                    "technique_name": "System Owner/User Discovery",
+                    "test": "ZWNobyAlVVNFUkRPTUFJTiVcJVVTRVJOQU1FJQ=="
+                },
+                {
+                    "ability_id": "aaf34d82-aea9-4278-8ec4-789653e4f5d9",
+                    "adversary_map_id": 265,
+                    "cleanup": "",
+                    "description": "Get Administrator users for a computer",
+                    "executor": "psh",
+                    "id": 51,
+                    "name": "GetAdminMembers",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 51,
+                            "payload": "PowerView.ps1"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1033",
+                    "technique_name": "System Owner/User Discovery",
+                    "test": "SW1wb3J0LU1vZHVsZSAuXFBvd2VyVmlldy5wczEgLUZvcmNlOwpHZXQtTmV0VXNlciB8IENvbnZlcnRUby1Kc29u"
+                },
+                {
+                    "ability_id": "c0da588f-79f0-4263-8998-7496b1a40596",
+                    "adversary_map_id": 266,
+                    "cleanup": "",
+                    "description": "Find user running agent",
+                    "executor": "sh",
+                    "id": 32,
+                    "name": "Identify active user",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "darwin",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1033",
+                    "technique_name": "System Owner/User Discovery",
+                    "test": "d2hvYW1p"
+                },
+                {
+                    "ability_id": "c0da588f-79f0-4263-8998-7496b1a40596",
+                    "adversary_map_id": 266,
+                    "cleanup": "",
+                    "description": "Find user running agent",
+                    "executor": "sh",
+                    "id": 33,
+                    "name": "Identify active user",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "linux",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1033",
+                    "technique_name": "System Owner/User Discovery",
+                    "test": "d2hvYW1p"
+                },
+                {
+                    "ability_id": "c0da588f-79f0-4263-8998-7496b1a40596",
+                    "adversary_map_id": 266,
+                    "cleanup": "",
+                    "description": "Find user running agent",
+                    "executor": "cmd",
+                    "id": 35,
+                    "name": "Identify active user",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1033",
+                    "technique_name": "System Owner/User Discovery",
+                    "test": "d2hvYW1p"
+                },
+                {
+                    "ability_id": "c0da588f-79f0-4263-8998-7496b1a40596",
+                    "adversary_map_id": 266,
+                    "cleanup": "",
+                    "description": "Find user running agent",
+                    "executor": "psh",
+                    "id": 34,
+                    "name": "Identify active user",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1033",
+                    "technique_name": "System Owner/User Discovery",
+                    "test": "d2hvYW1p"
+                }
+            ],
+            "9": [
+                {
+                    "ability_id": "5c23f638-9cfc-4fc4-9cab-4af628feT149",
+                    "adversary_map_id": 267,
+                    "cleanup": "",
+                    "description": "dversaries may check for the presence of a virtual machine environment (VME) or sandbox to avoid potential detection of tools and activities..",
+                    "executor": "psh",
+                    "id": 163,
+                    "name": "Virtualization/SandBox Evasion(T1497)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1497",
+                    "technique_name": "Virtualization/SandBox Evasion(T1497)",
+                    "test": "cmVnIHF1ZXJ5IEhLTE1cU09GVFdBUkVcIlZNd2FyZSwgSW5jLiJcIlZNd2FyZSBUb29scyI="
+                }
+            ]
+        }
+    },
+    "facts": [],
+    "finish": "2019-10-28 18:52:11",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "cmd",
+                    "preferred": 1
+                },
+                {
+                    "executor": "psh",
+                    "preferred": 0
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-28 18:52:09",
+            "last_trusted_seen": "2019-10-28 18:52:09",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "AJ-Win7x64$AJ-Win7x64\\testuser",
+            "pid": 2816,
+            "platform": "windows",
+            "ppid": 2432,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 2,
+    "jitter": "4/8",
+    "name": "apt29 - initial discovery",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "AJ-Win7x64$AJ-Win7x64\\testuser": [
+                {
+                    "ability_id": "3b5db901-2cb8-4df7-8043-c4628a6a5d5a",
+                    "ability_name": "Find user processes",
+                    "reason": "Fact dependency not fulfilled",
+                    "reason_id": 2
+                },
+                {
+                    "ability_id": "ce485320-41a4-42e8-a510-f5a8fe96a644",
+                    "ability_name": "Discover Mail Server",
+                    "reason": "Fact dependency not fulfilled",
+                    "reason_id": 2
+                }
+            ]
+        }
+    ],
+    "start": "2019-10-28 18:48:25",
+    "steps": {
+        "AJ-Win7x64$AJ-Win7x64\\testuser": {
+            "agent_id": 1,
+            "steps": [
+                {
+                    "ability_id": "1c353eb4-29ab-4dfe-88ed-f34f5a60848e",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1083",
+                        "technique_name": "File and Directory Discovery"
+                    },
+                    "command": "Get-ChildItem -recurse -Path 'C:\\Program Files\\'",
+                    "delegated": "2019-10-28 18:49:02.927871",
+                    "description": "Find or discover files on the file system",
+                    "executor": "psh",
+                    "name": "File and Directory Discovery",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:49:08",
+                    "status": 0
+                },
+                {
+                    "ability_id": "d5170a60-3bdc-44e0-9870-a38db5c0cf81",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1083",
+                        "technique_name": "File and Directory Discovery"
+                    },
+                    "command": "ls 'C:\\Program Files\\'",
+                    "delegated": "2019-10-28 18:49:02.928033",
+                    "description": "PowerShell's Get-ChildItem alias 'ls' is used to enumerate files in a remote file share.",
+                    "executor": "psh",
+                    "name": "9.A.1 - File and Directory Discovery (T1083)",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:49:09",
+                    "status": 0
+                },
+                {
+                    "ability_id": "26181249-be75-41ed-9fe7-5c30ea8c2d4d",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1069",
+                        "technique_name": "Permission Groups Discovery"
+                    },
+                    "command": "net localgroup administrators /domain",
+                    "delegated": "2019-10-28 18:49:13.936739",
+                    "description": "The net utility is executed via cmd to enumerate members of the domain controller\u2019s administrators group.",
+                    "executor": "cmd",
+                    "name": "2.F.2 - Permissions Groups Discovery (T1069)",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:49:13",
+                    "status": 1
+                },
+                {
+                    "ability_id": "84377d7a-0363-44fd-a082-44657ca1858f",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1069",
+                        "technique_name": "Permission Groups Discovery"
+                    },
+                    "command": "cmd.exe /c net group \"Domain Admins\" /domain",
+                    "delegated": "2019-10-28 18:49:13.936875",
+                    "description": "The net utility is executed via cmd to enumerate members of the domain administrators group.",
+                    "executor": "psh",
+                    "name": "2.F.3 - Permissions Groups Discovery (T1069)",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:49:20",
+                    "status": 1
+                },
+                {
+                    "ability_id": "faa96e7f-081a-40b7-a743-a6a7f2627ea3",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1069",
+                        "technique_name": "Permission Groups Discovery"
+                    },
+                    "command": "net localgroup administrators",
+                    "delegated": "2019-10-28 18:49:13.936981",
+                    "description": "The net utility is executed via cmd to enumerate members of the local system's administrators group.",
+                    "executor": "cmd",
+                    "name": "2.F.1 - Permissions Groups Discovery (T1069)",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:49:27",
+                    "status": 0
+                },
+                {
+                    "ability_id": "41610306-087c-4c34-874b-37b8ed633a36",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1057",
+                        "technique_name": "Process Discovery"
+                    },
+                    "command": "tasklist /v",
+                    "delegated": "2019-10-28 18:49:33.960088",
+                    "description": "The tasklist utility is executed via cmd to enumerate local running processes.",
+                    "executor": "cmd",
+                    "name": "2.C.2 - Process Discovery (T1057)",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:49:34",
+                    "status": 0
+                },
+                {
+                    "ability_id": "5df12481-9d8c-4235-b550-9cefc8ed7361",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1057",
+                        "technique_name": "Process Discovery"
+                    },
+                    "command": "Import-Module .\\ps.ps1 -Verbose -Force;ProcessList",
+                    "delegated": "2019-10-28 18:49:33.960221",
+                    "description": "API call(s) are executed to enumerate local running processes.",
+                    "executor": "psh",
+                    "name": "2.C.1 - Process Discovery (T1057)",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:50:41",
+                    "status": 124
+                },
+                {
+                    "ability_id": "2488245e-bcbd-405d-920e-2de27db882b3",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1012",
+                        "technique_name": "Query Registry"
+                    },
+                    "command": "Get-ItemProperty -Path HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion",
+                    "delegated": "2019-10-28 18:50:46.975058",
+                    "description": "Query Registry using PowerShell Get-ItemProperty",
+                    "executor": "psh",
+                    "name": "Query Registry",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:50:47",
+                    "status": 0
+                },
+                {
+                    "ability_id": "5c23f638-9cfc-4fc4-9cab-4af628fef70a",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1012",
+                        "technique_name": "Query Registry"
+                    },
+                    "command": "reg query HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
+                    "delegated": "2019-10-28 18:50:46.975195",
+                    "description": "The reg utility is executed via cmd to enumerate a specific Registry key associated with local system policies to ensure that the user will not be prompted for credentials when elevating permissions.",
+                    "executor": "cmd",
+                    "name": "2.H.1 - Query Registry (T1012)",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:50:55",
+                    "status": 0
+                },
+                {
+                    "ability_id": "24ed020e-4730-4000-b6b4-6b5d3e95314f",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1018",
+                        "technique_name": "Remote System Discovery"
+                    },
+                    "command": "cmd.exe /c net group \"Domain Computers\" /domain",
+                    "delegated": "2019-10-28 18:51:02.992000",
+                    "description": "The net utility is executed via cmd to enumerate hosts within the domain.",
+                    "executor": "psh",
+                    "name": "4.A.2 - Remote System Discovery (T1018)",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:51:03",
+                    "status": 1
+                },
+                {
+                    "ability_id": "59592c35-8207-4896-8d8b-36ad4600245d",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1018",
+                        "technique_name": "Remote System Discovery"
+                    },
+                    "command": "cmd.exe /c net group \"Domain Controllers\" /domain",
+                    "delegated": "2019-10-28 18:51:02.992145",
+                    "description": "The net utility is executed via cmd to enumerate DCs within the domain",
+                    "executor": "psh",
+                    "name": "4.A.1 - Remote System Discovery (T1018)",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:51:10",
+                    "status": 1
+                },
+                {
+                    "ability_id": "85341c8c-4ecb-4579-8f53-43e3e91d7617",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1018",
+                        "technique_name": "Remove System Discovery"
+                    },
+                    "command": "arp -a",
+                    "delegated": "2019-10-28 18:51:02.992251",
+                    "description": "Locate all active IP and FQDNs on the network",
+                    "executor": "cmd",
+                    "name": "Collect ARP details",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:51:14",
+                    "status": 0
+                },
+                {
+                    "ability_id": "2dece965-37a0-4f70-a391-0f30e3331aba",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1063",
+                        "technique_name": "Security Software Discovery"
+                    },
+                    "command": "wmic /NAMESPACE:\\\\root\\SecurityCenter2 PATH AntiVirusProduct GET /value",
+                    "delegated": "2019-10-28 18:51:22.020041",
+                    "description": "Identify AV using WMIC",
+                    "executor": "psh",
+                    "name": "Discover antivirus programs",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:51:22",
+                    "status": 0
+                },
+                {
+                    "ability_id": "8c06ebf8-bacf-486b-bd77-21ba8c5a5777",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1063",
+                        "technique_name": "Security Software Discovery"
+                    },
+                    "command": "$NameSpace = Get-WmiObject -Namespace \"root\" -Class \"__Namespace\" | Select Name | Out-String -Stream | Select-String \"SecurityCenter\";$SecurityCenter = $NameSpace | Select-Object -First 1;Get-WmiObject -Namespace \"root\\$SecurityCenter\" -Class AntiVirusProduct | Select DisplayName, InstanceGuid, PathToSignedProductExe, PathToSignedReportingExe, ProductState, Timestamp | Format-List;",
+                    "delegated": "2019-10-28 18:51:22.020177",
+                    "description": "Identify Firewalls",
+                    "executor": "psh",
+                    "name": "Identify Firewalls",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:51:26",
+                    "status": 1
+                },
+                {
+                    "ability_id": "29451844-9b76-4e16-a9ee-d6feab4b24db",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1082",
+                        "technique_name": "System Information Discovery"
+                    },
+                    "command": "$PSVersionTable",
+                    "delegated": "2019-10-28 18:51:33.031905",
+                    "description": "Discover the PowerShell version",
+                    "executor": "psh",
+                    "name": "PowerShell version",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:51:33",
+                    "status": 0
+                },
+                {
+                    "ability_id": "7c2a6e5b-1adb-464f-a581-4677391f8dd6",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1082",
+                        "technique_name": "System Information Discovery"
+                    },
+                    "command": "net config workstation",
+                    "delegated": "2019-10-28 18:51:33.032041",
+                    "description": "The net utility is executed via cmd to enumerate local operating system configuration.",
+                    "executor": "cmd",
+                    "name": "2.E.2 - System Information Discovery (T1082)",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:51:37",
+                    "status": 1
+                },
+                {
+                    "ability_id": "d2ea2676-7f85-4228-b980-ab3c0e1adc03",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1082",
+                        "technique_name": "System Information Discovery"
+                    },
+                    "command": "systeminfo",
+                    "delegated": "2019-10-28 18:51:33.032146",
+                    "description": "The systeminfo utility is executed via cmd to enumerate local operating system configuration.",
+                    "executor": "cmd",
+                    "name": "2.E.1 - System Information Discovery (T1082)",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:51:46",
+                    "status": 0
+                },
+                {
+                    "ability_id": "35d95b64-c1f8-4ac7-a2f2-8959218239cd",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1033",
+                        "technique_name": "System Owner/User Discovery"
+                    },
+                    "command": "echo %USERDOMAIN%\\%USERNAME%",
+                    "delegated": "2019-10-28 18:51:49.036655",
+                    "description": "The native echo command is executed via cmd to enumerate local environment variables associated with current user and domain.",
+                    "executor": "cmd",
+                    "name": "2.B.1 - System Owner / User Discovery (T1033)",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:51:49",
+                    "status": 0
+                },
+                {
+                    "ability_id": "aaf34d82-aea9-4278-8ec4-789653e4f5d9",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1033",
+                        "technique_name": "System Owner/User Discovery"
+                    },
+                    "command": "Import-Module .\\PowerView.ps1 -Force;Get-NetUser | ConvertTo-Json",
+                    "delegated": "2019-10-28 18:51:49.036806",
+                    "description": "Get Administrator users for a computer",
+                    "executor": "psh",
+                    "name": "GetAdminMembers",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:51:55",
+                    "status": 1
+                },
+                {
+                    "ability_id": "c0da588f-79f0-4263-8998-7496b1a40596",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1033",
+                        "technique_name": "System Owner/User Discovery"
+                    },
+                    "command": "whoami",
+                    "delegated": "2019-10-28 18:51:49.036919",
+                    "description": "Find user running agent",
+                    "executor": "cmd",
+                    "name": "Identify active user",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:52:03",
+                    "status": 0
+                },
+                {
+                    "ability_id": "5c23f638-9cfc-4fc4-9cab-4af628feT149",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1497",
+                        "technique_name": "Virtualization/SandBox Evasion(T1497)"
+                    },
+                    "command": "reg query HKLM\\SOFTWARE\\\"VMware, Inc.\"\\\"VMware Tools\"",
+                    "delegated": "2019-10-28 18:52:09.055091",
+                    "description": "dversaries may check for the presence of a virtual machine environment (VME) or sandbox to avoid potential detection of tools and activities..",
+                    "executor": "psh",
+                    "name": "Virtualization/SandBox Evasion(T1497)",
+                    "platform": "windows",
+                    "run": "2019-10-28 18:52:09",
+                    "status": 0
+                }
+            ]
+        }
+    }
+}

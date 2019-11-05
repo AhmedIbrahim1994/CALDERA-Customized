@@ -1,0 +1,8 @@
+description: Privilege Escalation
+id: e0d55295-c42c-420e-9ffe-7f67e1104771
+name: APT3 - Scenario 1 - Privilege Escalation
+phases:
+  1:
+  - 1345bff7-6f26-43b2-a92a-9aabccdb3db0
+  2:
+  - 088b8639-3f37-42cc-9dc8-01aabb645461

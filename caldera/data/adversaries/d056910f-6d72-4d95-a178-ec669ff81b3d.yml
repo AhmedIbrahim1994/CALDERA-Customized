@@ -1,0 +1,12 @@
+description: We emulated initial compromise via a malicious executable sent in a spearphishing
+  email. Delivery was out of scope for our evaluation, so Step 1 began with a legitimate
+  user executing the payload on the victim host, which was a Remote Access Tool (RAT)
+  that connected back to our attacker infrastructure for tasking. The malicious executable
+  was a self-extracting archive that established persistence and launched an initial
+  callback through a C2 channel.
+id: d056910f-6d72-4d95-a178-ec669ff81b3d
+name: APT3 Scenario 1 Step 1 - Initial Compromise
+phases:
+  '1':
+  - 3796a00b-b11d-4731-b4ca-275a07d83299
+  - 3864fd22-5c63-41c9-bdbc-a66b5ffa3f5e

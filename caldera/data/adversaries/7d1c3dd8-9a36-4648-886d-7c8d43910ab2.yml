@@ -1,0 +1,10 @@
+description: We emulated exfiltration by locating and stealing data. Step 9 began
+  with the discovery of specific directories of interest followed by exfiltration
+  of a file through the existing C2 channel.
+id: 7d1c3dd8-9a36-4648-886d-7c8d43910ab2
+name: APT3 Scenario 1 Step 9 - Exfiltration
+phases:
+  1:
+  - d5170a60-3bdc-44e0-9870-a38db5c0cf81
+  2:
+  - 2d18c8ec-4593-49dc-9bf4-11d0673d6ae6

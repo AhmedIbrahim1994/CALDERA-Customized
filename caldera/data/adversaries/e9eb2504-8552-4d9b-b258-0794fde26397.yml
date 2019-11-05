@@ -1,0 +1,23 @@
+description: Discovery 
+
+ 
+id: e9eb2504-8552-4d9b-b258-0794fde26397
+name: APT3 - Scenario1 - Initial Discovery
+phases:
+  '1':
+  - 64f1fcb4-399d-4f3b-9a6b-13ec00e1c2ce
+  - ee08a427-1e1d-4d8a-aeb1-978a7fcf9087
+  1:
+  - 35d95b64-c1f8-4ac7-a2f2-8959218239cd
+  - 5df12481-9d8c-4235-b550-9cefc8ed7361
+  - 41610306-087c-4c34-874b-37b8ed633a36
+  - 2ff877b4-0c00-401e-9d3f-070c70b610df
+  - d2ea2676-7f85-4228-b980-ab3c0e1adc03
+  - 7c2a6e5b-1adb-464f-a581-4677391f8dd6
+  - faa96e7f-081a-40b7-a743-a6a7f2627ea3
+  - 26181249-be75-41ed-9fe7-5c30ea8c2d4d
+  - 84377d7a-0363-44fd-a082-44657ca1858f
+  - 61221fb9-cb32-46d5-98fd-90567a621526
+  - 9ce5bf9f-44ec-44c4-bbe0-6d68a83e1b76
+  - 5c23f638-9cfc-4fc4-9cab-4af628fef70a
+  - 144b1384-5060-494f-80eb-91772695cdf3

@@ -1,0 +1,14 @@
+description: We emulated a second round of discovery using a sequence of discovery
+  commands executed through the high-integrity command-line interface that was injected
+  into during Step 3.C.1. Discovery techniques in Step 4 targeted knowledge about
+  the system and network specifically related to enabling lateral movement.
+id: f62bd25e-9cae-4bfc-984a-32291b2fd59c
+name: APT3 Scenario 1 Step 4 - Discovery for Lateral Movement
+phases:
+  1:
+  - 59592c35-8207-4896-8d8b-36ad4600245d
+  - 24ed020e-4730-4000-b6b4-6b5d3e95314f
+  2:
+  - 5f4263c4-7ff1-4098-b5f5-f41faa31cf5b
+  3:
+  - ba0b398d-91b8-490a-bed2-f959afa8e1aa

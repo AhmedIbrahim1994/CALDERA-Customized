@@ -1,0 +1,11 @@
+description: we cover 5 MITRE Techniques
+id: 2335beff-cd83-4d71-88a6-a47588fe3bb7
+name: APT29 - Exfiltration
+phases:
+  1:
+  - 300157e5-f4ad-4569-b533-9d1fa0e74d74
+  2:
+  - 2d18c8ec-4593-49dc-9bf4-11d0673d6ae6
+  - ea713bc4-63f0-491c-9a6f-0b01d560b87e
+  3:
+  - 2d18c8ec-4593-49dc-9bf4-11d0673dT1048

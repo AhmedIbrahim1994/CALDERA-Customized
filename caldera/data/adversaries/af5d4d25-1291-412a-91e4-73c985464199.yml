@@ -1,0 +1,10 @@
+description: Persistence
+id: af5d4d25-1291-412a-91e4-73c985464199
+name: APT3 - Scenario 1 - Persistence
+phases:
+  1:
+  - c1cd6388-3ced-48c7-a511-0434c6ba8f48
+  - c5e75d70-09ae-469f-8717-621a1b7ef946
+  - 4908fdc4-74fc-4d7c-8935-26d11ad26a8d
+  - 47d08617-5ce1-424a-8cc5-c9c978ce6bf9
+  - bddc0abc-07a0-41b7-813f-e0c64d9226b3

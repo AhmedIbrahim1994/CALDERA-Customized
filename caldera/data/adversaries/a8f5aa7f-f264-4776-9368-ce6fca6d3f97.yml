@@ -1,0 +1,11 @@
+description: We emulated persistence via a sequence of actions to maliciously abuse
+  accessibility programs as a persistence mechanism. Step 17 began with discovery
+  to ensure RDP was enabled on the domain controller before swapping the binary of
+  the magnify accessibility feature. These techniques are performed using the RAT
+  on the domain controller.
+id: a8f5aa7f-f264-4776-9368-ce6fca6d3f97
+name: APT3 Scenario 2 Step 17 - Persistence
+phases:
+  1:
+  - c6607391-d02c-44b5-9b13-d3492ca58599
+  - 2488245e-bcbd-405d-920e-2de27db882b3

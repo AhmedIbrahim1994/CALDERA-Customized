@@ -1,0 +1,6 @@
+description: We emulated persistence using two distinct mechanisms. Step 7 included
+  both the addition of a new user (through the previously established lateral movement
+  RDP connection) as well as the creation of a scheduled task on the compromised host.
+id: 7a24dbaa-dcff-4b82-a019-c5585d11d611
+name: APT3 Scenario 1 Step 7 - Persistence
+phases: {}

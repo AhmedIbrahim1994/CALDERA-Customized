@@ -1,0 +1,128 @@
+{
+    "adversary": {
+        "adversary_id": "c03d8d59-4df1-4c21-902b-3147ae91c1e0",
+        "description": "T1122",
+        "id": 18,
+        "name": "T1122",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9T1122",
+                    "adversary_map_id": 139,
+                    "cleanup": "",
+                    "description": "",
+                    "executor": "psh",
+                    "id": 199,
+                    "name": "T1122 - Component Object Model Hijacking",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 199,
+                            "payload": "upload.ps1,update.ps1,COMHijack.reg"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1122",
+                    "technique_name": "T1122 - Component Object Model Hijacking",
+                    "test": "cmVnIGltcG9ydCAuL0NPTUhpamFjay5yZWcmCmNlcnR1dGlsLmV4ZSAtQ0FJbmZv"
+                },
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9T1122",
+                    "adversary_map_id": 139,
+                    "cleanup": "",
+                    "description": "",
+                    "executor": "pwsh",
+                    "id": 200,
+                    "name": "T1122 - Component Object Model Hijacking",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 200,
+                            "payload": "upload.ps1,update.ps1,COMHijack.reg"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1122",
+                    "technique_name": "T1122 - Component Object Model Hijacking",
+                    "test": "cmVnIGltcG9ydCAuL0NPTUhpamFjay5yZWcmCmNlcnR1dGlsLmV4ZSAtQ0FJbmZv"
+                }
+            ]
+        }
+    },
+    "facts": [],
+    "finish": "2019-10-30 17:15:13",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "cmd",
+                    "preferred": 1
+                },
+                {
+                    "executor": "psh",
+                    "preferred": 0
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-30 17:15:12",
+            "last_trusted_seen": "2019-10-30 17:15:12",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "AJ-Win7x64$AJ-Win7x64\\testuser",
+            "pid": 2744,
+            "platform": "windows",
+            "ppid": 3716,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 1,
+    "jitter": "4/8",
+    "name": "T1122",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "AJ-Win7x64$AJ-Win7x64\\testuser": []
+        }
+    ],
+    "start": "2019-10-30 17:15:01",
+    "steps": {
+        "AJ-Win7x64$AJ-Win7x64\\testuser": {
+            "agent_id": 1,
+            "steps": [
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9T1122",
+                    "attack": {
+                        "tactic": "execution",
+                        "technique_id": "T1122",
+                        "technique_name": "T1122 - Component Object Model Hijacking"
+                    },
+                    "command": "reg import ./COMHijack.reg&certutil.exe -CAInfo",
+                    "delegated": "2019-10-30 17:15:12.030602",
+                    "description": "",
+                    "executor": "psh",
+                    "name": "T1122 - Component Object Model Hijacking",
+                    "platform": "windows",
+                    "run": "2019-10-30 17:15:12",
+                    "status": 0
+                }
+            ]
+        }
+    }
+}

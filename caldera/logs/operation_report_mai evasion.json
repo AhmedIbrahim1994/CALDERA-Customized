@@ -1,0 +1,101 @@
+{
+    "adversary": {
+        "adversary_id": "c75fc6c9-bf1a-4f44-8b5e-7bd5b34d61bf",
+        "description": "mai evasion",
+        "id": 21,
+        "name": "mai evasion",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "5c23f638-9cfc-4fc4-9cab-4af628feT149",
+                    "adversary_map_id": 144,
+                    "cleanup": "",
+                    "description": "dversaries may check for the presence of a virtual machine environment (VME) or sandbox to avoid potential detection of tools and activities..",
+                    "executor": "cmd",
+                    "id": 163,
+                    "name": "Virtualization/SandBox Evasion(T1497)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1497",
+                    "technique_name": "Virtualization/SandBox Evasion(T1497)",
+                    "test": "cmVnIHF1ZXJ5ICJIS0xNXFNPRlRXQVJFXFZNd2FyZSwgSW5jLlxWTXdhcmUgVG9vbHMi"
+                }
+            ]
+        }
+    },
+    "facts": [],
+    "finish": "2019-10-28 17:28:50",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "cmd",
+                    "preferred": 1
+                },
+                {
+                    "executor": "psh",
+                    "preferred": 0
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-28 17:28:49",
+            "last_trusted_seen": "2019-10-28 17:28:49",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "AJ-Win7x64$AJ-Win7x64\\testuser",
+            "pid": 2816,
+            "platform": "windows",
+            "ppid": 2432,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 1,
+    "jitter": "4/8",
+    "name": "mai evasion",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "AJ-Win7x64$AJ-Win7x64\\testuser": []
+        }
+    ],
+    "start": "2019-10-28 17:28:35",
+    "steps": {
+        "AJ-Win7x64$AJ-Win7x64\\testuser": {
+            "agent_id": 1,
+            "steps": [
+                {
+                    "ability_id": "5c23f638-9cfc-4fc4-9cab-4af628feT149",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1497",
+                        "technique_name": "Virtualization/SandBox Evasion(T1497)"
+                    },
+                    "command": "reg query \"HKLM\\SOFTWARE\\VMware, Inc.\\VMware Tools\"",
+                    "delegated": "2019-10-28 17:28:49.689589",
+                    "description": "dversaries may check for the presence of a virtual machine environment (VME) or sandbox to avoid potential detection of tools and activities..",
+                    "executor": "cmd",
+                    "name": "Virtualization/SandBox Evasion(T1497)",
+                    "platform": "windows",
+                    "run": "2019-10-28 17:28:49",
+                    "status": 1
+                }
+            ]
+        }
+    }
+}

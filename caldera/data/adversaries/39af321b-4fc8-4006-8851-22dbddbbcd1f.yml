@@ -1,0 +1,9 @@
+description: Credential Access
+id: 39af321b-4fc8-4006-8851-22dbddbbcd1f
+name: APT3 - Scenario 1 - Credential Access
+phases:
+  1:
+  - 4ef6009d-2d62-4bb4-8de9-0458df2e9567
+  - effbedc1-1bc8-4a75-9395-980559700008
+  2:
+  - 03afada1-1714-408f-bde5-f528b91dc89d

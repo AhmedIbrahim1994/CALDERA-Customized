@@ -1,0 +1,9 @@
+description: "We emulated privilege escalation by elevating our RAT\u2019s process\
+  \ integrity level from medium to high, while maintaining our current user. Step\
+  \ 14 consisted of a UAC bypass technique native to Empire to download and execute\
+  \ a new stager, spawning a new high-integrity RAT."
+id: 2be83145-0520-4112-abf9-ecf0c3059cd5
+name: APT3 Scenario 2 Step 14 - Privilege Escalation
+phases:
+  1:
+  - 1345bff7-6f26-43b2-a92a-9aabccdb3db0

@@ -1,0 +1,6 @@
+description: Lateral Movement
+id: 4a9c7aab-c269-4009-a16e-cd6ab20bdfab
+name: APT3 - Scenario 1 - Lateral Movement
+phases:
+  1:
+  - 2488245e-bcbd-405d-920e-2de27db882b3

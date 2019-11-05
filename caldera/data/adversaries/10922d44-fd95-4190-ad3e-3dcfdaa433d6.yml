@@ -1,0 +1,36 @@
+description: this adversary tests 10 Techniques that APT29 uses.
+id: 10922d44-fd95-4190-ad3e-3dcfdaa433d6
+name: APT29 - Initial Discovery
+phases:
+  '1':
+  - 1c353eb4-29ab-4dfe-88ed-f34f5a60848e
+  - d5170a60-3bdc-44e0-9870-a38db5c0cf81
+  '2':
+  - 26181249-be75-41ed-9fe7-5c30ea8c2d4d
+  - 84377d7a-0363-44fd-a082-44657ca1858f
+  - faa96e7f-081a-40b7-a743-a6a7f2627ea3
+  '3':
+  - 3b5db901-2cb8-4df7-8043-c4628a6a5d5a
+  - 41610306-087c-4c34-874b-37b8ed633a36
+  - 5df12481-9d8c-4235-b550-9cefc8ed7361
+  '4':
+  - 2488245e-bcbd-405d-920e-2de27db882b3
+  - 5c23f638-9cfc-4fc4-9cab-4af628fef70a
+  '5':
+  - 24ed020e-4730-4000-b6b4-6b5d3e95314f
+  - 59592c35-8207-4896-8d8b-36ad4600245d
+  - 85341c8c-4ecb-4579-8f53-43e3e91d7617
+  - ce485320-41a4-42e8-a510-f5a8fe96a644
+  '6':
+  - 2dece965-37a0-4f70-a391-0f30e3331aba
+  - 8c06ebf8-bacf-486b-bd77-21ba8c5a5777
+  '7':
+  - 29451844-9b76-4e16-a9ee-d6feab4b24db
+  - 7c2a6e5b-1adb-464f-a581-4677391f8dd6
+  - d2ea2676-7f85-4228-b980-ab3c0e1adc03
+  '8':
+  - 35d95b64-c1f8-4ac7-a2f2-8959218239cd
+  - aaf34d82-aea9-4278-8ec4-789653e4f5d9
+  - c0da588f-79f0-4263-8998-7496b1a40596
+  '9':
+  - 5c23f638-9cfc-4fc4-9cab-4af628feT149

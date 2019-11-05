@@ -1,0 +1,16 @@
+description: we cover 5 MITRE Techniques
+id: 024ac1e3-de6a-4c0b-bb35-d75ba1e59d66
+name: APT29 - Credential Access
+phases:
+  1:
+  - effbedc1-1bc8-4a75-9395-980559700008
+  - 4ef6009d-2d62-4bb4-8de9-0458df2e9567
+  - baac2c6d-4652-4b7e-ab0a-f1bf246edd12
+  2:
+  - 1345bff7-6f26-43b2-a92a-9aabccdbT1081
+  3:
+  - 1345bff7-6f26-43b2-a92a-9aabccdbT1056
+  4:
+  - 3aad5312-d48b-4206-9de4-39866c12e60f
+  5:
+  - de632c2d-a729-4b77-b781-6a6b09c148ba

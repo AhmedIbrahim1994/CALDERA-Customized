@@ -1,0 +1,8 @@
+description: We emulated collection to identify and gather information. Step 8 included
+  locating files of interest within local and remote file systems, as well as using
+  API calls to harvest keystrokes and a screenshot.
+id: dbbec380-6cf4-42d1-9335-3276486fe6f6
+name: APT3 Scenario 1 Step 8 - Collection
+phases:
+  1:
+  - 0b1841bd-ef8b-475c-bce7-8fcb2860984a

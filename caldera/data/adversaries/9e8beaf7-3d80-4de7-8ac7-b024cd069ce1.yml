@@ -1,0 +1,29 @@
+description: we cover 17 MITRE Techniques
+id: 9e8beaf7-3d80-4de7-8ac7-b024cd069ce1
+name: APT29 - Defense Evasion
+phases:
+  1:
+  - 03afada1-1714-408f-bde5-f528b91dc89d
+  2:
+  - 1345bff7-6f26-43b2-a92a-9aabccdb3db0
+  3:
+  - 4b2e9574-b1a7-4b38-95b2-6054ded9T1122-1
+  - 4b2e9574-b1a7-4b38-95b2-6054ded9T1122-2
+  - 4b2e9574-b1a7-4b38-95b2-6054ded9T1122-3
+  4:
+  - 088b8639-3f37-42cc-9dc8-01aabb64T103
+  5:
+  - 40161ad0-75bd-11e9-b475-0800200c9a66
+  - 43b3754c-def4-4699-a673-1d85648fda6a
+  6:
+  - 088b8639-3f37-42cc-9dc8-01aabb645461
+  7:
+  - 03afada1-1714-408f-bde5-f528b91dT1085
+  8:
+  - 03afada1-1714-408f-bde5-f528b91dT1099
+  - 03afada1-1714-408f-bde5-f528b91dT1099-1
+  - 03afada1-1714-408f-bde5-f528b91dT1099-2
+  9:
+  - c1cd6388-3ced-48c7-a511-0434c6baT1084-1
+  10:
+  - 5c23f638-9cfc-4fc4-9cab-4af628feT149 

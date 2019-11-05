@@ -1,0 +1,184 @@
+{
+    "adversary": {
+        "adversary_id": "169525de-3f14-4bfd-907a-a416451bb599",
+        "description": "T1119-1",
+        "id": 24,
+        "name": "T1119-1",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1119-2",
+                    "adversary_map_id": 175,
+                    "cleanup": "",
+                    "description": "Native API call(s) were used to collect a screenshot.",
+                    "executor": "psh",
+                    "id": 185,
+                    "name": "Automated Collection - powershell",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "collection",
+                    "technique_id": "T1119",
+                    "technique_name": "Automated Collection",
+                    "test": "R2V0LUNoaWxkSXRlbSAtUmVjdXJzZSAtSW5jbHVkZSAqLnR4dCB8ICUge0NvcHktSXRlbSAkXy5GdWxsTmFtZSAtZGVzdGluYXRpb24gYzpcdGVtcH0="
+                },
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1119-2",
+                    "adversary_map_id": 175,
+                    "cleanup": "",
+                    "description": "Native API call(s) were used to collect a screenshot.",
+                    "executor": "pwsh",
+                    "id": 186,
+                    "name": "Automated Collection - powershell",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "collection",
+                    "technique_id": "T1119",
+                    "technique_name": "Automated Collection",
+                    "test": "R2V0LUNoaWxkSXRlbSAtUmVjdXJzZSAtSW5jbHVkZSAqLnR4dCB8ICUge0NvcHktSXRlbSAkXy5GdWxsTmFtZSAtZGVzdGluYXRpb24gYzpcdGVtcH0="
+                },
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1119-phase1",
+                    "adversary_map_id": 173,
+                    "cleanup": "",
+                    "description": "Native API call(s) were used to collect a screenshot.",
+                    "executor": "cmd",
+                    "id": 184,
+                    "name": "Automated Collection - cmd phase 1",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "collection",
+                    "technique_id": "T1119",
+                    "technique_name": "Automated Collection",
+                    "test": "dHlwZSBudWwgPiBjOlx0ZW1wLnR4dA=="
+                },
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1119-phase2",
+                    "adversary_map_id": 174,
+                    "cleanup": "",
+                    "description": "Auto collext using CMD.",
+                    "executor": "cmd",
+                    "id": 181,
+                    "name": "Automated Collection - cmd - phase2",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "collection",
+                    "technique_id": "T1119",
+                    "technique_name": "Automated Collection",
+                    "test": "Zm9yIC9SIGM6ICVmIGluICgqLnR4dCkgZG8gY29weSAlZiBjOlx0ZW1wLnR4dA=="
+                }
+            ]
+        }
+    },
+    "facts": [],
+    "finish": "2019-10-30 20:12:39",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "cmd",
+                    "preferred": 1
+                },
+                {
+                    "executor": "psh",
+                    "preferred": 0
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-30 20:12:38",
+            "last_trusted_seen": "2019-10-30 20:12:38",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "WIN-M88DFEG2JT7$WIN-M88DFEG2JT7\\Administrator",
+            "pid": 8936,
+            "platform": "windows",
+            "ppid": 8400,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 1,
+    "jitter": "4/8",
+    "name": "input2",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "WIN-M88DFEG2JT7$WIN-M88DFEG2JT7\\Administrator": []
+        }
+    ],
+    "start": "2019-10-30 20:11:57",
+    "steps": {
+        "WIN-M88DFEG2JT7$WIN-M88DFEG2JT7\\Administrator": {
+            "agent_id": 1,
+            "steps": [
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1119-phase1",
+                    "attack": {
+                        "tactic": "collection",
+                        "technique_id": "T1119",
+                        "technique_name": "Automated Collection"
+                    },
+                    "command": "type nul > c:\\temp.txt",
+                    "delegated": "2019-10-30 20:12:27.865343",
+                    "description": "Native API call(s) were used to collect a screenshot.",
+                    "executor": "cmd",
+                    "name": "Automated Collection - cmd phase 1",
+                    "platform": "windows",
+                    "run": "2019-10-30 20:12:27",
+                    "status": 0
+                },
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1119-phase2",
+                    "attack": {
+                        "tactic": "collection",
+                        "technique_id": "T1119",
+                        "technique_name": "Automated Collection"
+                    },
+                    "command": "for /R c: %f in (*.txt) do copy %f c:\\temp.txt",
+                    "delegated": "2019-10-30 20:12:27.865478",
+                    "description": "Auto collext using CMD.",
+                    "executor": "cmd",
+                    "name": "Automated Collection - cmd - phase2",
+                    "platform": "windows",
+                    "run": "2019-10-30 20:12:33",
+                    "status": 0
+                },
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1119-2",
+                    "attack": {
+                        "tactic": "collection",
+                        "technique_id": "T1119",
+                        "technique_name": "Automated Collection"
+                    },
+                    "command": "Get-ChildItem -Recurse -Include *.txt | % {Copy-Item $_.FullName -destination c:\\temp}",
+                    "delegated": "2019-10-30 20:12:27.865594",
+                    "description": "Native API call(s) were used to collect a screenshot.",
+                    "executor": "psh",
+                    "name": "Automated Collection - powershell",
+                    "platform": "windows",
+                    "run": "2019-10-30 20:12:38",
+                    "status": 0
+                }
+            ]
+        }
+    }
+}

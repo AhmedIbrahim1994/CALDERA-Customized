@@ -1,0 +1,657 @@
+{
+    "adversary": {
+        "adversary_id": "0b73bf34-fc5b-48f7-9194-dce993b915b1",
+        "description": "Find preferred WIFI networks & disrupt the current connection",
+        "id": 4,
+        "name": "Nosy Neighbor",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+                    "adversary_map_id": 27,
+                    "cleanup": "",
+                    "description": "Stop terminal from logging history",
+                    "executor": "sh",
+                    "id": 69,
+                    "name": "Avoid logs",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "darwin",
+                    "requirements": [],
+                    "tactic": "defense-evasion",
+                    "technique_id": "T1107",
+                    "technique_name": "File Deletion",
+                    "test": "dW5zZXQgSElTVEZJTEU="
+                },
+                {
+                    "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+                    "adversary_map_id": 27,
+                    "cleanup": "",
+                    "description": "Stop terminal from logging history",
+                    "executor": "sh",
+                    "id": 70,
+                    "name": "Avoid logs",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "linux",
+                    "requirements": [],
+                    "tactic": "defense-evasion",
+                    "technique_id": "T1107",
+                    "technique_name": "File Deletion",
+                    "test": "dW5zZXQgSElTVEZJTEU="
+                },
+                {
+                    "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+                    "adversary_map_id": 27,
+                    "cleanup": "",
+                    "description": "Stop terminal from logging history",
+                    "executor": "psh",
+                    "id": 71,
+                    "name": "Avoid logs",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "defense-evasion",
+                    "technique_id": "T1107",
+                    "technique_name": "File Deletion",
+                    "test": "Q2xlYXItSGlzdG9yeTtDbGVhcg=="
+                }
+            ],
+            "2": [
+                {
+                    "ability_id": "5a39d7ed-45c9-4a79-b581-e5fb99e24f65",
+                    "adversary_map_id": 30,
+                    "cleanup": "",
+                    "description": "Identify system processes",
+                    "executor": "sh",
+                    "id": 14,
+                    "name": "System processes",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "darwin",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1057",
+                    "technique_name": "Process Discovery",
+                    "test": "cHMgYXV4"
+                },
+                {
+                    "ability_id": "5a39d7ed-45c9-4a79-b581-e5fb99e24f65",
+                    "adversary_map_id": 30,
+                    "cleanup": "",
+                    "description": "Identify system processes",
+                    "executor": "sh",
+                    "id": 15,
+                    "name": "System processes",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "linux",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1057",
+                    "technique_name": "Process Discovery",
+                    "test": "cHMgYXV4"
+                },
+                {
+                    "ability_id": "5a39d7ed-45c9-4a79-b581-e5fb99e24f65",
+                    "adversary_map_id": 30,
+                    "cleanup": "",
+                    "description": "Identify system processes",
+                    "executor": "cmd",
+                    "id": 13,
+                    "name": "System processes",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1057",
+                    "technique_name": "Process Discovery",
+                    "test": "dGFza2xpc3Q="
+                },
+                {
+                    "ability_id": "5a39d7ed-45c9-4a79-b581-e5fb99e24f65",
+                    "adversary_map_id": 30,
+                    "cleanup": "",
+                    "description": "Identify system processes",
+                    "executor": "psh",
+                    "id": 12,
+                    "name": "System processes",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1057",
+                    "technique_name": "Process Discovery",
+                    "test": "R2V0LVByb2Nlc3M="
+                },
+                {
+                    "ability_id": "85341c8c-4ecb-4579-8f53-43e3e91d7617",
+                    "adversary_map_id": 29,
+                    "cleanup": "",
+                    "description": "Locate all active IP and FQDNs on the network",
+                    "executor": "sh",
+                    "id": 41,
+                    "name": "Collect ARP details",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "darwin",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remove System Discovery",
+                    "test": "YXJwIC1h"
+                },
+                {
+                    "ability_id": "85341c8c-4ecb-4579-8f53-43e3e91d7617",
+                    "adversary_map_id": 29,
+                    "cleanup": "",
+                    "description": "Locate all active IP and FQDNs on the network",
+                    "executor": "sh",
+                    "id": 42,
+                    "name": "Collect ARP details",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "linux",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remove System Discovery",
+                    "test": "YXJwIC1h"
+                },
+                {
+                    "ability_id": "85341c8c-4ecb-4579-8f53-43e3e91d7617",
+                    "adversary_map_id": 29,
+                    "cleanup": "",
+                    "description": "Locate all active IP and FQDNs on the network",
+                    "executor": "cmd",
+                    "id": 44,
+                    "name": "Collect ARP details",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remove System Discovery",
+                    "test": "YXJwIC1h"
+                },
+                {
+                    "ability_id": "85341c8c-4ecb-4579-8f53-43e3e91d7617",
+                    "adversary_map_id": 29,
+                    "cleanup": "",
+                    "description": "Locate all active IP and FQDNs on the network",
+                    "executor": "psh",
+                    "id": 43,
+                    "name": "Collect ARP details",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1018",
+                    "technique_name": "Remove System Discovery",
+                    "test": "YXJwIC1h"
+                },
+                {
+                    "ability_id": "c0da588f-79f0-4263-8998-7496b1a40596",
+                    "adversary_map_id": 28,
+                    "cleanup": "",
+                    "description": "Find user running agent",
+                    "executor": "sh",
+                    "id": 32,
+                    "name": "Identify active user",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "darwin",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1033",
+                    "technique_name": "System Owner/User Discovery",
+                    "test": "d2hvYW1p"
+                },
+                {
+                    "ability_id": "c0da588f-79f0-4263-8998-7496b1a40596",
+                    "adversary_map_id": 28,
+                    "cleanup": "",
+                    "description": "Find user running agent",
+                    "executor": "sh",
+                    "id": 33,
+                    "name": "Identify active user",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "linux",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1033",
+                    "technique_name": "System Owner/User Discovery",
+                    "test": "d2hvYW1p"
+                },
+                {
+                    "ability_id": "c0da588f-79f0-4263-8998-7496b1a40596",
+                    "adversary_map_id": 28,
+                    "cleanup": "",
+                    "description": "Find user running agent",
+                    "executor": "cmd",
+                    "id": 35,
+                    "name": "Identify active user",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1033",
+                    "technique_name": "System Owner/User Discovery",
+                    "test": "d2hvYW1p"
+                },
+                {
+                    "ability_id": "c0da588f-79f0-4263-8998-7496b1a40596",
+                    "adversary_map_id": 28,
+                    "cleanup": "",
+                    "description": "Find user running agent",
+                    "executor": "psh",
+                    "id": 34,
+                    "name": "Identify active user",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1033",
+                    "technique_name": "System Owner/User Discovery",
+                    "test": "d2hvYW1p"
+                }
+            ],
+            "3": [
+                {
+                    "ability_id": "9a30740d-3aa8-4c23-8efa-d51215e8a5b9",
+                    "adversary_map_id": 31,
+                    "cleanup": "",
+                    "description": "View all potential WIFI networks on host",
+                    "executor": "sh",
+                    "id": 48,
+                    "name": "Scan WIFI networks",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 48,
+                            "payload": "wifi.sh"
+                        }
+                    ],
+                    "platform": "darwin",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1016",
+                    "technique_name": "System Network Configuration Discovery",
+                    "test": "Li93aWZpLnNoIHNjYW4="
+                },
+                {
+                    "ability_id": "9a30740d-3aa8-4c23-8efa-d51215e8a5b9",
+                    "adversary_map_id": 31,
+                    "cleanup": "",
+                    "description": "View all potential WIFI networks on host",
+                    "executor": "sh",
+                    "id": 49,
+                    "name": "Scan WIFI networks",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 49,
+                            "payload": "wifi.sh"
+                        }
+                    ],
+                    "platform": "linux",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1016",
+                    "technique_name": "System Network Configuration Discovery",
+                    "test": "Li93aWZpLnNoIHNjYW4="
+                },
+                {
+                    "ability_id": "9a30740d-3aa8-4c23-8efa-d51215e8a5b9",
+                    "adversary_map_id": 31,
+                    "cleanup": "",
+                    "description": "View all potential WIFI networks on host",
+                    "executor": "psh",
+                    "id": 50,
+                    "name": "Scan WIFI networks",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 50,
+                            "payload": "wifi.ps1"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1016",
+                    "technique_name": "System Network Configuration Discovery",
+                    "test": "Llx3aWZpLnBzMSAtU2Nhbg=="
+                }
+            ],
+            "4": [
+                {
+                    "ability_id": "a0676fe1-cd52-482e-8dde-349b73f9aa69",
+                    "adversary_map_id": 32,
+                    "cleanup": "",
+                    "description": "See the most used WIFI networks of a machine",
+                    "executor": "sh",
+                    "id": 19,
+                    "name": "Preferred WIFI",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 19,
+                            "payload": "wifi.sh"
+                        }
+                    ],
+                    "platform": "darwin",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1016",
+                    "technique_name": "System Network Configuration Discovery",
+                    "test": "Li93aWZpLnNoIHByZWY="
+                },
+                {
+                    "ability_id": "a0676fe1-cd52-482e-8dde-349b73f9aa69",
+                    "adversary_map_id": 32,
+                    "cleanup": "",
+                    "description": "See the most used WIFI networks of a machine",
+                    "executor": "sh",
+                    "id": 20,
+                    "name": "Preferred WIFI",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 20,
+                            "payload": "wifi.sh"
+                        }
+                    ],
+                    "platform": "linux",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1016",
+                    "technique_name": "System Network Configuration Discovery",
+                    "test": "Li93aWZpLnNoIHByZWY="
+                },
+                {
+                    "ability_id": "a0676fe1-cd52-482e-8dde-349b73f9aa69",
+                    "adversary_map_id": 32,
+                    "cleanup": "",
+                    "description": "See the most used WIFI networks of a machine",
+                    "executor": "psh",
+                    "id": 21,
+                    "name": "Preferred WIFI",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 21,
+                            "payload": "wifi.ps1"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "discovery",
+                    "technique_id": "T1016",
+                    "technique_name": "System Network Configuration Discovery",
+                    "test": "Llx3aWZpLnBzMSAtUHJlZg=="
+                }
+            ],
+            "5": [
+                {
+                    "ability_id": "2fe2d5e6-7b06-4fc0-bf71-6966a1226731",
+                    "adversary_map_id": 33,
+                    "cleanup": "Li93aWZpLnNoIG9u",
+                    "description": "Turn a computers WIFI off",
+                    "executor": "sh",
+                    "id": 104,
+                    "name": "Disrupt WIFI",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 104,
+                            "payload": "wifi.sh"
+                        }
+                    ],
+                    "platform": "darwin",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1059",
+                    "technique_name": "Command-Line Interface",
+                    "test": "Li93aWZpLnNoIG9mZg=="
+                },
+                {
+                    "ability_id": "2fe2d5e6-7b06-4fc0-bf71-6966a1226731",
+                    "adversary_map_id": 33,
+                    "cleanup": "Li93aWZpLnNoIG9u",
+                    "description": "Turn a computers WIFI off",
+                    "executor": "sh",
+                    "id": 105,
+                    "name": "Disrupt WIFI",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 105,
+                            "payload": "wifi.sh"
+                        }
+                    ],
+                    "platform": "linux",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1059",
+                    "technique_name": "Command-Line Interface",
+                    "test": "Li93aWZpLnNoIG9mZg=="
+                },
+                {
+                    "ability_id": "2fe2d5e6-7b06-4fc0-bf71-6966a1226731",
+                    "adversary_map_id": 33,
+                    "cleanup": "Llx3aWZpLnBzMSAtT24=",
+                    "description": "Turn a computers WIFI off",
+                    "executor": "psh",
+                    "id": 106,
+                    "name": "Disrupt WIFI",
+                    "parsers": [],
+                    "payload": [
+                        {
+                            "ability": 106,
+                            "payload": "wifi.ps1"
+                        }
+                    ],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1059",
+                    "technique_name": "Command-Line Interface",
+                    "test": "Llx3aWZpLnBzMSAtT2Zm"
+                }
+            ]
+        }
+    },
+    "facts": [],
+    "finish": "2019-10-25 19:09:20",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "cmd",
+                    "preferred": 1
+                },
+                {
+                    "executor": "psh",
+                    "preferred": 0
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group2",
+            "id": 2,
+            "last_seen": "2019-10-25 19:09:18",
+            "last_trusted_seen": "2019-10-25 19:09:18",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "WIN-C21U8B8KTKE$WIN-C21U8B8KTKE\\Administrator",
+            "pid": 4632,
+            "platform": "windows",
+            "ppid": 1896,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 1,
+    "jitter": "4/8",
+    "name": "Hello World",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "WIN-C21U8B8KTKE$WIN-C21U8B8KTKE\\Administrator": []
+        }
+    ],
+    "start": "2019-10-25 19:08:20",
+    "steps": {
+        "WIN-C21U8B8KTKE$WIN-C21U8B8KTKE\\Administrator": {
+            "agent_id": 2,
+            "steps": [
+                {
+                    "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+                    "attack": {
+                        "tactic": "defense-evasion",
+                        "technique_id": "T1107",
+                        "technique_name": "File Deletion"
+                    },
+                    "command": "Clear-History;Clear",
+                    "delegated": "2019-10-25 19:08:28.930587",
+                    "description": "Stop terminal from logging history",
+                    "executor": "psh",
+                    "name": "Avoid logs",
+                    "platform": "windows",
+                    "run": "2019-10-25 19:08:29",
+                    "status": 0
+                },
+                {
+                    "ability_id": "c0da588f-79f0-4263-8998-7496b1a40596",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1033",
+                        "technique_name": "System Owner/User Discovery"
+                    },
+                    "command": "whoami",
+                    "delegated": "2019-10-25 19:08:36.942832",
+                    "description": "Find user running agent",
+                    "executor": "cmd",
+                    "name": "Identify active user",
+                    "platform": "windows",
+                    "run": "2019-10-25 19:08:37",
+                    "status": 0
+                },
+                {
+                    "ability_id": "85341c8c-4ecb-4579-8f53-43e3e91d7617",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1018",
+                        "technique_name": "Remove System Discovery"
+                    },
+                    "command": "arp -a",
+                    "delegated": "2019-10-25 19:08:36.943025",
+                    "description": "Locate all active IP and FQDNs on the network",
+                    "executor": "cmd",
+                    "name": "Collect ARP details",
+                    "platform": "windows",
+                    "run": "2019-10-25 19:08:44",
+                    "status": 0
+                },
+                {
+                    "ability_id": "5a39d7ed-45c9-4a79-b581-e5fb99e24f65",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1057",
+                        "technique_name": "Process Discovery"
+                    },
+                    "command": "tasklist",
+                    "delegated": "2019-10-25 19:08:36.943164",
+                    "description": "Identify system processes",
+                    "executor": "cmd",
+                    "name": "System processes",
+                    "platform": "windows",
+                    "run": "2019-10-25 19:08:51",
+                    "status": 0
+                },
+                {
+                    "ability_id": "9a30740d-3aa8-4c23-8efa-d51215e8a5b9",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1016",
+                        "technique_name": "System Network Configuration Discovery"
+                    },
+                    "command": ".\\wifi.ps1 -Scan",
+                    "delegated": "2019-10-25 19:08:59.054435",
+                    "description": "View all potential WIFI networks on host",
+                    "executor": "psh",
+                    "name": "Scan WIFI networks",
+                    "platform": "windows",
+                    "run": "2019-10-25 19:09:01",
+                    "status": 0
+                },
+                {
+                    "ability_id": "a0676fe1-cd52-482e-8dde-349b73f9aa69",
+                    "attack": {
+                        "tactic": "discovery",
+                        "technique_id": "T1016",
+                        "technique_name": "System Network Configuration Discovery"
+                    },
+                    "command": ".\\wifi.ps1 -Pref",
+                    "delegated": "2019-10-25 19:09:06.069980",
+                    "description": "See the most used WIFI networks of a machine",
+                    "executor": "psh",
+                    "name": "Preferred WIFI",
+                    "platform": "windows",
+                    "run": "2019-10-25 19:09:06",
+                    "status": 0
+                },
+                {
+                    "ability_id": "2fe2d5e6-7b06-4fc0-bf71-6966a1226731",
+                    "attack": {
+                        "tactic": "execution",
+                        "technique_id": "T1059",
+                        "technique_name": "Command-Line Interface"
+                    },
+                    "command": ".\\wifi.ps1 -Off",
+                    "delegated": "2019-10-25 19:09:14.083182",
+                    "description": "Turn a computers WIFI off",
+                    "executor": "psh",
+                    "name": "Disrupt WIFI",
+                    "platform": "windows",
+                    "run": "2019-10-25 19:09:14",
+                    "status": 0
+                },
+                {
+                    "ability_id": "2fe2d5e6-7b06-4fc0-bf71-6966a1226731",
+                    "attack": {
+                        "tactic": "execution",
+                        "technique_id": "T1059",
+                        "technique_name": "Command-Line Interface"
+                    },
+                    "command": ".\\wifi.ps1 -On",
+                    "delegated": "2019-10-25 19:09:18.089721",
+                    "description": "Turn a computers WIFI off",
+                    "executor": "psh",
+                    "name": "Disrupt WIFI",
+                    "platform": "windows",
+                    "run": "2019-10-25 19:09:18",
+                    "status": 0
+                }
+            ]
+        }
+    }
+}

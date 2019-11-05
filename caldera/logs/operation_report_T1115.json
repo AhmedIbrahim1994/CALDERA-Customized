@@ -1,0 +1,118 @@
+{
+    "adversary": {
+        "adversary_id": "9d38b40b-3cb7-46f3-ba9a-1a96756e8573",
+        "description": "T1115",
+        "id": 35,
+        "name": "T1115",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1115",
+                    "adversary_map_id": 292,
+                    "cleanup": "",
+                    "description": "Adversaries may collect data stored in the Windows clipboard from users copying information within or between applications.",
+                    "executor": "psh",
+                    "id": 184,
+                    "name": "Clipboard Data - Powershell",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "collection",
+                    "technique_id": "T1115",
+                    "technique_name": "Clipboard Data",
+                    "test": "ZWNobyBHZXQtUHJvY2VzcyB8IGNsaXA7CkdldC1DbGlwYm9hcmQgfCBpZXg="
+                },
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1115",
+                    "adversary_map_id": 292,
+                    "cleanup": "",
+                    "description": "Adversaries may collect data stored in the Windows clipboard from users copying information within or between applications.",
+                    "executor": "pwsh",
+                    "id": 185,
+                    "name": "Clipboard Data - Powershell",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "collection",
+                    "technique_id": "T1115",
+                    "technique_name": "Clipboard Data",
+                    "test": "ZWNobyBHZXQtUHJvY2VzcyB8IGNsaXA7CkdldC1DbGlwYm9hcmQgfCBpZXg="
+                }
+            ]
+        }
+    },
+    "facts": [],
+    "finish": "2019-10-30 20:23:44",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "cmd",
+                    "preferred": 1
+                },
+                {
+                    "executor": "psh",
+                    "preferred": 0
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-30 20:23:42",
+            "last_trusted_seen": "2019-10-30 20:23:42",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "WIN-M88DFEG2JT7$WIN-M88DFEG2JT7\\Administrator",
+            "pid": 8936,
+            "platform": "windows",
+            "ppid": 8400,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 1,
+    "jitter": "4/8",
+    "name": "T1115",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "WIN-M88DFEG2JT7$WIN-M88DFEG2JT7\\Administrator": []
+        }
+    ],
+    "start": "2019-10-30 20:23:11",
+    "steps": {
+        "WIN-M88DFEG2JT7$WIN-M88DFEG2JT7\\Administrator": {
+            "agent_id": 1,
+            "steps": [
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1115",
+                    "attack": {
+                        "tactic": "collection",
+                        "technique_id": "T1115",
+                        "technique_name": "Clipboard Data"
+                    },
+                    "command": "echo Get-Process | clip;Get-Clipboard | iex",
+                    "delegated": "2019-10-30 20:23:41.987862",
+                    "description": "Adversaries may collect data stored in the Windows clipboard from users copying information within or between applications.",
+                    "executor": "psh",
+                    "name": "Clipboard Data - Powershell",
+                    "platform": "windows",
+                    "run": "2019-10-30 20:23:42",
+                    "status": 1
+                }
+            ]
+        }
+    }
+}

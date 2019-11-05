@@ -1,0 +1,9 @@
+description: We emulated the execution of persistence by triggering previously established
+  persistence mechanisms. Step 10 began with a simulated user logon that triggered
+  two RATs to execute and check-in with the attacker infrastructure, followed by a
+  remote logon of a previously added user account.
+id: b44d739c-7c71-43e6-ac1b-f7a75f476e4e
+name: APT3 Scenario 1 Step 10 - Execution of Persistence
+phases:
+  1:
+  - 4b2e9574-b1a7-4b38-95b2-6054ded9c4fe

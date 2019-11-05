@@ -1,0 +1,18 @@
+description: we cover 5 MITRE Techniques
+id: aac2ac4d-a273-40cc-81c9-48ca26ecf38b
+name: APT29 - Lateral Movement
+phases:
+  1:
+  - 47d08617-5ce1-424a-8cc5-c9c978ce6bf9
+  - 4908fdc4-74fc-4d7c-8935-26d11ad26a8d
+  - c5e75d70-09ae-469f-8717-621a1b7ef946
+  - bddc0abc-07a0-41b7-813f-e0c64d9226b3
+  2:
+  - 43b3754c-def4-4699-a673-1d85648fda6a
+  - 40161ad0-75bd-11e9-b475-0800200c9a66
+  3:
+  - 4b2e9574-b1a7-4b38-95b2-6054ded9T1028-1
+  - 4b2e9574-b1a7-4b38-95b2-6054ded9T1028-4
+  - 4b2e9574-b1a7-4b38-95b2-6054ded9T1028-5
+  - 4b2e9574-b1a7-4b38-95b2-6054ded9T1028-2
+  - 4b2e9574-b1a7-4b38-95b2-6054ded9T1028-3

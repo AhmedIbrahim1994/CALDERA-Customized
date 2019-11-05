@@ -1,0 +1,7 @@
+description: We emulated lateral movement by establishing a Remote Desktop Protocol
+  (RDP) connection to a remote host. Step 6 began with discovery targeting the remote
+  host to ensure RDP was enabled before modifying and leveraging the existing C2 channel
+  to establish a RDP session.
+id: 84c8da38-31e6-4d91-8666-311ca15205e9
+name: APT3 Scenario 1 Step 6 - Lateral Movement
+phases: {}

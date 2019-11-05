@@ -1,0 +1,118 @@
+{
+    "adversary": {
+        "adversary_id": "a5a81216-66b5-466d-8d62-2d955dab19f9",
+        "description": "WinRM",
+        "id": 30,
+        "name": "WinRM",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9T1028",
+                    "adversary_map_id": 234,
+                    "cleanup": "",
+                    "description": "",
+                    "executor": "psh",
+                    "id": 182,
+                    "name": "Windows Remote Management",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1028",
+                    "technique_name": "Window Remote Management - Enable WinRM",
+                    "test": "RW5hYmxlLVBTUmVtb3RpbmcgLUZvcmNl"
+                },
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9T1028",
+                    "adversary_map_id": 234,
+                    "cleanup": "",
+                    "description": "",
+                    "executor": "pwsh",
+                    "id": 183,
+                    "name": "Windows Remote Management",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "execution",
+                    "technique_id": "T1028",
+                    "technique_name": "Window Remote Management - Enable WinRM",
+                    "test": "RW5hYmxlLVBTUmVtb3RpbmcgLUZvcmNl"
+                }
+            ]
+        }
+    },
+    "facts": [],
+    "finish": "2019-10-29 08:12:03",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "cmd",
+                    "preferred": 1
+                },
+                {
+                    "executor": "psh",
+                    "preferred": 0
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-29 08:12:02",
+            "last_trusted_seen": "2019-10-29 08:12:02",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "AJ-Win7x64$AJ-Win7x64\\testuser",
+            "pid": 3280,
+            "platform": "windows",
+            "ppid": 3496,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 1,
+    "jitter": "4/8",
+    "name": "winrm",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "AJ-Win7x64$AJ-Win7x64\\testuser": []
+        }
+    ],
+    "start": "2019-10-29 08:11:00",
+    "steps": {
+        "AJ-Win7x64$AJ-Win7x64\\testuser": {
+            "agent_id": 1,
+            "steps": [
+                {
+                    "ability_id": "4b2e9574-b1a7-4b38-95b2-6054ded9T1028",
+                    "attack": {
+                        "tactic": "execution",
+                        "technique_id": "T1028",
+                        "technique_name": "Window Remote Management - Enable WinRM"
+                    },
+                    "command": "Enable-PSRemoting -Force",
+                    "delegated": "2019-10-29 08:11:58.070146",
+                    "description": "",
+                    "executor": "psh",
+                    "name": "Windows Remote Management",
+                    "platform": "windows",
+                    "run": "2019-10-29 08:12:02",
+                    "status": 0
+                }
+            ]
+        }
+    }
+}

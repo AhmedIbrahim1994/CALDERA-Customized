@@ -1,0 +1,6 @@
+description: We emulated credential access to identify and gather passwords. Step
+  15 included harvesting keystrokes from the initially compromised system as well
+  as stealing files containing credentials from a remote file share.
+id: b0c3a73f-798e-41dc-b3bb-fe9820d9a487
+name: APT3 Scenario 2 Step 15 - Credential Access
+phases: {}

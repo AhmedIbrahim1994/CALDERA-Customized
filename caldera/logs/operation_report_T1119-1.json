@@ -1,0 +1,203 @@
+{
+    "adversary": {
+        "adversary_id": "169525de-3f14-4bfd-907a-a416451bb599",
+        "description": "T1119-1",
+        "id": 34,
+        "name": "T1119-1",
+        "phases": {
+            "1": [
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1119-2",
+                    "adversary_map_id": 279,
+                    "cleanup": "",
+                    "description": "Native API call(s) were used to collect a screenshot.",
+                    "executor": "psh",
+                    "id": 185,
+                    "name": "Automated Collection - powershell",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "collection",
+                    "technique_id": "T1119",
+                    "technique_name": "Automated Collection",
+                    "test": "R2V0LUNoaWxkSXRlbSAtUmVjdXJzZSAtSW5jbHVkZSAqLmRvYyB8ICUge0NvcHktSXRlbSAkXy5GdWxsTmFtZSAtZGVzdGluYXRpb24gYzpcdGVtcH0="
+                },
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1119-2",
+                    "adversary_map_id": 279,
+                    "cleanup": "",
+                    "description": "Native API call(s) were used to collect a screenshot.",
+                    "executor": "pwsh",
+                    "id": 186,
+                    "name": "Automated Collection - powershell",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "collection",
+                    "technique_id": "T1119",
+                    "technique_name": "Automated Collection",
+                    "test": "R2V0LUNoaWxkSXRlbSAtUmVjdXJzZSAtSW5jbHVkZSAqLmRvYyB8ICUge0NvcHktSXRlbSAkXy5GdWxsTmFtZSAtZGVzdGluYXRpb24gYzpcdGVtcH0="
+                },
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1119-phase1",
+                    "adversary_map_id": 277,
+                    "cleanup": "",
+                    "description": "Native API call(s) were used to collect a screenshot.",
+                    "executor": "cmd",
+                    "id": 184,
+                    "name": "Automated Collection - cmd phase 1",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "collection",
+                    "technique_id": "T1119",
+                    "technique_name": "Automated Collection",
+                    "test": "dHlwZSBudWwgPiBjOlx0ZW1wXA=="
+                },
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1119-phase2",
+                    "adversary_map_id": 278,
+                    "cleanup": "",
+                    "description": "Auto collext using CMD.",
+                    "executor": "cmd",
+                    "id": 181,
+                    "name": "Automated Collection - cmd - phase2",
+                    "parsers": [],
+                    "payload": [],
+                    "platform": "windows",
+                    "requirements": [],
+                    "tactic": "collection",
+                    "technique_id": "T1119",
+                    "technique_name": "Automated Collection",
+                    "test": "Zm9yIC9SIGM6ICVmIGluICgqLnR4dCkgZG8gY29weSAlZiBjOlx0ZW1wXA=="
+                }
+            ]
+        }
+    },
+    "facts": [
+        {
+            "id": 5,
+            "link_id": 0,
+            "property": "remote.file.share",
+            "relationships": [],
+            "score": 1,
+            "source_id": "2",
+            "value": "\\\\VBOXSVR\\Resume_Viewer"
+        },
+        {
+            "id": 6,
+            "link_id": 0,
+            "property": "remote.file.name",
+            "relationships": [],
+            "score": 1,
+            "source_id": "2",
+            "value": "Resume.pdf"
+        }
+    ],
+    "finish": "2019-10-30 19:50:11",
+    "host_group": [
+        {
+            "architecture": "amd64",
+            "executors": [
+                {
+                    "executor": "cmd",
+                    "preferred": 1
+                },
+                {
+                    "executor": "psh",
+                    "preferred": 0
+                },
+                {
+                    "executor": "shellcode_amd64",
+                    "preferred": 0
+                }
+            ],
+            "host_group": "my_group",
+            "id": 1,
+            "last_seen": "2019-10-30 19:50:10",
+            "last_trusted_seen": "2019-10-30 19:50:10",
+            "location": "C:\\Users\\Public\\sandcat.exe",
+            "paw": "WIN-M88DFEG2JT7$WIN-M88DFEG2JT7\\Administrator",
+            "pid": 8936,
+            "platform": "windows",
+            "ppid": 8400,
+            "server": "http://10.203.202.154:8888",
+            "sleep_max": 60,
+            "sleep_min": 60,
+            "trusted": 1
+        }
+    ],
+    "id": 2,
+    "jitter": "4/8",
+    "name": "T1119-1",
+    "planner": {
+        "id": 1,
+        "module": "plugins.stockpile.app.sequential",
+        "name": "sequential",
+        "params": {}
+    },
+    "skipped_abilities": [
+        {
+            "WIN-M88DFEG2JT7$WIN-M88DFEG2JT7\\Administrator": []
+        }
+    ],
+    "start": "2019-10-30 19:49:41",
+    "steps": {
+        "WIN-M88DFEG2JT7$WIN-M88DFEG2JT7\\Administrator": {
+            "agent_id": 1,
+            "steps": [
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1119-phase1",
+                    "attack": {
+                        "tactic": "collection",
+                        "technique_id": "T1119",
+                        "technique_name": "Automated Collection"
+                    },
+                    "command": "type nul > c:\\temp\\",
+                    "delegated": "2019-10-30 19:49:58.600436",
+                    "description": "Native API call(s) were used to collect a screenshot.",
+                    "executor": "cmd",
+                    "name": "Automated Collection - cmd phase 1",
+                    "platform": "windows",
+                    "run": "2019-10-30 19:49:58",
+                    "status": 1
+                },
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1119-phase2",
+                    "attack": {
+                        "tactic": "collection",
+                        "technique_id": "T1119",
+                        "technique_name": "Automated Collection"
+                    },
+                    "command": "for /R c: %f in (*.txt) do copy %f c:\\temp\\",
+                    "delegated": "2019-10-30 19:49:58.600593",
+                    "description": "Auto collext using CMD.",
+                    "executor": "cmd",
+                    "name": "Automated Collection - cmd - phase2",
+                    "platform": "windows",
+                    "run": "2019-10-30 19:50:02",
+                    "status": 0
+                },
+                {
+                    "ability_id": "0b1841bd-ef8b-475c-bce7-8fcb2860T1119-2",
+                    "attack": {
+                        "tactic": "collection",
+                        "technique_id": "T1119",
+                        "technique_name": "Automated Collection"
+                    },
+                    "command": "Get-ChildItem -Recurse -Include *.doc | % {Copy-Item $_.FullName -destination c:\\temp}",
+                    "delegated": "2019-10-30 19:49:58.600710",
+                    "description": "Native API call(s) were used to collect a screenshot.",
+                    "executor": "psh",
+                    "name": "Automated Collection - powershell",
+                    "platform": "windows",
+                    "run": "2019-10-30 19:50:10",
+                    "status": 0
+                }
+            ]
+        }
+    }
+}

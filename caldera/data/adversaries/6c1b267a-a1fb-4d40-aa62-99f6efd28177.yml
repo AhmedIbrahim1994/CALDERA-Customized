@@ -1,0 +1,15 @@
+description: We emulated exfiltration by compressing, encrypting, and stealing data
+  previously staged. Step 19 began with uploading and using a renamed archiving utility,
+  WinRAR, followed by exfiltration through a network connection separate from the
+  existing C2 channel, and finally deletion of the files that were created.
+id: 6c1b267a-a1fb-4d40-aa62-99f6efd28177
+name: APT3 Scenario 2 Step 19 - Exfiltration
+phases:
+  1:
+  - 47d08617-5ce1-424a-8cc5-c9c978ce6bf9
+  2:
+  - 300157e5-f4ad-4569-b533-9d1fa0e74d74
+  3:
+  - ea713bc4-63f0-491c-9a6f-0b01d560b87e
+  4:
+  - 43b3754c-def4-4699-a673-1d85648fda6a

@@ -1,0 +1,30 @@
+description: We emulated initial discovery using a succession of common discovery
+  commands executed through both the command-line interface and API calls. Discovery
+  techniques in Step 2 targeted gaining fundamental knowledge about the system and
+  network required before follow-on activity.
+id: ad39fd91-d83f-41e1-8f46-d0a1d22027ba
+name: APT3 Scenario 1 Step 2 - Initial Discovery
+phases:
+  '1':
+  - ee08a427-1e1d-4d8a-aeb1-978a7fcf9087
+  - 64f1fcb4-399d-4f3b-9a6b-13ec00e1c2ce
+  '2':
+  - 35d95b64-c1f8-4ac7-a2f2-8959218239cd
+  '3':
+  - 41610306-087c-4c34-874b-37b8ed633a36
+  - 5df12481-9d8c-4235-b550-9cefc8ed7361
+  '4':
+  - 144b1384-5060-494f-80eb-91772695cdf3
+  - 2ff877b4-0c00-401e-9d3f-070c70b610df
+  '5':
+  - 7c2a6e5b-1adb-464f-a581-4677391f8dd6
+  - d2ea2676-7f85-4228-b980-ab3c0e1adc03
+  '6':
+  - 26181249-be75-41ed-9fe7-5c30ea8c2d4d
+  - 84377d7a-0363-44fd-a082-44657ca1858f
+  - faa96e7f-081a-40b7-a743-a6a7f2627ea3
+  '7':
+  - 61221fb9-cb32-46d5-98fd-90567a621526
+  - 9ce5bf9f-44ec-44c4-bbe0-6d68a83e1b76
+  '8':
+  - 5c23f638-9cfc-4fc4-9cab-4af628fef70a

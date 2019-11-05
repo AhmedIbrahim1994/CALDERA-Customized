@@ -1,0 +1,11 @@
+description: We emulated initial compromise via a malicious VBScript delivered through
+  a drive-by compromise. Delivery was out of scope for our evaluation, so Step 11
+  began with an emulated legitimate user executing the payload on the victim host.
+  The malicious script was a first stage payload that downloaded and executed a PowerShell
+  payload to establish a C2 channel.
+id: b5a35fb1-eccb-4b44-910b-49579c65e6db
+name: APT3 Scenario 2 Step 11 - Initial Compromise
+phases:
+  '1':
+  - 3796a00b-b11d-4731-b4ca-275a07d83299
+  - 3864fd22-5c63-41c9-bdbc-a66b5ffa3f5e
