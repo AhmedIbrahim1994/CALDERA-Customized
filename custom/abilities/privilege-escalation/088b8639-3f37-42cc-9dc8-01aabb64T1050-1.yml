@@ -1,0 +1,16 @@
+---
+
+- id: 088b8639-3f37-42cc-9dc8-01aabb64T1050-1
+  name: New Service - Create & Start
+  description: New Service 
+  tactic: privilege-escalation
+  technique:
+    attack_id: T1050
+    name: New Service (T1050)
+  platforms:
+    windows:
+      cmd:
+        command: |
+         sc.exe create mitredslabs binPath= C:\Windows\System32\cmd.exe&
+         sc.exe start mitredslabs;
+        payload: mitredslabs.exe

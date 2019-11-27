@@ -1,0 +1,14 @@
+---
+
+- id: 0b1841bd-ef8b-475c-bce7-8fcb2860T1119-phase2
+  name: Automated Collection - cmd - phase2
+  description: Auto collext using CMD.
+  tactic: collection
+  technique:
+    attack_id: T1119
+    name: Automated Collection
+  platforms:
+    windows:
+      cmd:
+        command: |
+          for /R c: %f in (*.txt) do copy %f c:\temp.txt

@@ -1,0 +1,16 @@
+---
+
+- id: 4b2e9574-b1a7-4b38-95b2-6054ded9T1122-3
+  name: T1122 - Component Object Model Hijacking - cleaning
+  description: 
+  tactic: defense-evasion
+  technique:
+    attack_id: T1122
+    name: T1122 - Component Object Model Hijacking
+  platforms:
+    windows:
+      cmd:
+        command: |
+          reg import ./COMHijackCleanup.reg
+        payload:
+           upload.ps1,update.ps1,COMHijackCleanup.reg

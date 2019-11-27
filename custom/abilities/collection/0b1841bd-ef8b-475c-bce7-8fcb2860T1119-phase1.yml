@@ -1,0 +1,14 @@
+---
+
+- id: 0b1841bd-ef8b-475c-bce7-8fcb2860T1119-phase1
+  name: Automated Collection - cmd phase 1
+  description: Native API call(s) were used to collect a screenshot.
+  tactic: collection
+  technique:
+    attack_id: T1119
+    name: Automated Collection
+  platforms:
+    windows:
+      cmd:
+        command: |
+          type nul > c:\temp.txt

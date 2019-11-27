@@ -1,0 +1,15 @@
+---
+
+- id: 0b1841bd-ef8b-475c-bce7-8fcb2860T1114
+  name: Email Collection - cmd
+  description: Adversaries may target user email to collect sensitive information from a target.
+  tactic: collection
+  technique:
+    attack_id: T1114
+    name: Email Collection
+  platforms:
+    windows:
+      psh,pwsh:
+        command: |
+          .\Get-Inbox.ps1
+        payload: Get-Inbox.ps1

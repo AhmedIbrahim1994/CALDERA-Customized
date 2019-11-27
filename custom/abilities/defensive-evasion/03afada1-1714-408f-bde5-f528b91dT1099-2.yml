@@ -1,0 +1,14 @@
+---
+
+- id: 03afada1-1714-408f-bde5-f528b91dT1099-2
+  name: Modify file creation timestamp with PowerShell - 2 
+  description: Timestomping is a technique that modifies the timestamps of a file (the modify, access, create, and change times), often to mimic files that are in the same folder. 
+  tactic: defense-evasion
+  technique:
+    attack_id: T1099
+    name: Timestomp
+  platforms:
+    windows:
+      cmd:
+       command: |
+         powershell.exe Get-ChildItem C:\Windows\System32\notepad.exe | % { $_.LastAccessTime = 1970-01-01 00:00:00 }

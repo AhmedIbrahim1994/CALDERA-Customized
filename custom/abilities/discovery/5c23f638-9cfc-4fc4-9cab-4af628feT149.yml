@@ -1,0 +1,15 @@
+---
+
+- id: 5c23f638-9cfc-4fc4-9cab-4af628feT149
+  name:  Virtualization/SandBox Evasion(T1497)
+  description: dversaries may check for the presence of a virtual machine environment (VME) or sandbox to avoid potential detection of tools and activities..
+  tactic: discovery
+  technique:
+    attack_id: T1497
+    name: Virtualization/SandBox Evasion(T1497)
+  platforms:
+    windows:
+      psh:
+        command: |
+          reg query HKLM\SOFTWARE\"VMware, Inc."\"VMware Tools"
+

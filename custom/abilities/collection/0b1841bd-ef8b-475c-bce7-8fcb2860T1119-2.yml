@@ -1,0 +1,14 @@
+---
+
+- id: 0b1841bd-ef8b-475c-bce7-8fcb2860T1119-2
+  name: Automated Collection - powershell
+  description: Native API call(s) were used to collect a screenshot.
+  tactic: collection
+  technique:
+    attack_id: T1119
+    name: Automated Collection
+  platforms:
+    windows:
+      psh,pwsh:
+        command: |
+          Get-ChildItem -Recurse -Include *.txt | % {Copy-Item $_.FullName -destination c:\temp}

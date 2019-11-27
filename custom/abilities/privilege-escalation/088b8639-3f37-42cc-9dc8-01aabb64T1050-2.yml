@@ -1,0 +1,15 @@
+---
+
+- id: 088b8639-3f37-42cc-9dc8-01aabb64T1050-2
+  name: New Service - Stop 
+  description: New Service
+  tactic: privilege-escalation
+  technique:
+    attack_id: T1050
+    name: New Service (T1050)
+  platforms:
+    windows:
+      cmd:
+        command: |
+         sc.exe stop mitredslabs;
+        payload: mitredslabs.exe

@@ -1,0 +1,15 @@
+---
+
+- id: 1345bff7-6f26-43b2-a92a-9aabccdbT1081
+  name: Credentials in Files
+  description: Adversaries may search local file systems and remote file shares for files containing passwords.
+  tactic: credential-access
+  technique:
+    attack_id: T1081
+    name: Credentials in Files - findstr
+  platforms:
+    windows:
+      psh,pwsh:
+        command: |
+          findstr /si pass *.txt;
+          ls -R | select-string -Pattern password;

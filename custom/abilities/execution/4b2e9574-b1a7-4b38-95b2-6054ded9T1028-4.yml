@@ -1,0 +1,14 @@
+---
+
+- id: 4b2e9574-b1a7-4b38-95b2-6054ded9T1028-4
+  name: Windows Remote Management - Psexec
+  description: 
+  tactic: lateral-movement
+  technique:
+    attack_id: T1028
+    name: Window Remote Management
+  platforms:
+    windows:
+      cmd:
+        command: |
+          psexec \\host -u domain\user -p password -s cmd.exe

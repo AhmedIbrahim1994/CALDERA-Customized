@@ -1,0 +1,15 @@
+---
+
+- id: 0b1841bd-ef8b-475c-bce7-8fcb2860T1115
+  name: Clipboard Data - Powershell
+  description: Adversaries may collect data stored in the Windows clipboard from users copying information within or between applications.
+  tactic: collection
+  technique:
+    attack_id: T1115
+    name: Clipboard Data
+  platforms:
+    windows:
+      psh,pwsh:
+        command: |
+          echo Get-Process | clip;
+          Get-Clipboard | iex

